@@ -11,8 +11,8 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelParams = ["nvidia.NVreg_RegistryDwords=EnableBrightnessControl=1"];
-  boot.supportedFilesystems = ["ntfs"];
+  boot.kernelParams = [ "nvidia.NVreg_RegistryDwords=EnableBrightnessControl=1" ];
+  boot.supportedFilesystems = [ "ntfs" ];
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
@@ -32,7 +32,7 @@
     desktopManager = {
       gnome.enable = true;
     };
-    videoDrivers = ["nvidia"];
+    videoDrivers = [ "nvidia" ];
   };
 
   services.openssh.enable = true;
@@ -155,7 +155,7 @@
 
       # Editor
       (vscode-with-extensions.override {
-       vscode = vscodium;
+        vscode = vscodium;
         vscodeExtensions = with vscode-extensions; [
           llvm-vs-code-extensions.vscode-clangd
           editorconfig.editorconfig
