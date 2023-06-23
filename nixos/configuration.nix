@@ -66,6 +66,7 @@
       enable = true;
       package = pkgs.vscodium;
       extensions = with pkgs.vscode-extensions; [
+        scalameta.metals
         llvm-vs-code-extensions.vscode-clangd
         editorconfig.editorconfig
         usernamehw.errorlens
@@ -74,6 +75,7 @@
         jdinhlife.gruvbox
         golang.go
         haskell.haskell
+        justusadam.language-haskell
         christian-kohler.path-intellisense
         alefragnani.project-manager
         timonwong.shellcheck
@@ -108,6 +110,8 @@
       git
       gnomeExtensions.dash-to-dock
       gnomeExtensions.appindicator
+      # Editor
+      jetbrains.idea-community
       # Documents
       doxygen
       obsidian
@@ -154,6 +158,7 @@
       nodejs_20
       nodePackages.pnpm
       # Scala
+      metals
       dotty
       # scala
       sbt
