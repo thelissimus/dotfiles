@@ -4,6 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      <home-manager/nixos>
     ];
 
   nixpkgs.config.allowUnfree = true;
@@ -11,6 +12,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelParams = ["nvidia.NVreg_RegistryDwords=EnableBrightnessControl=1"];
+  boot.supportedFilesystems = ["ntfs"];
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
@@ -48,7 +50,6 @@
 
   users.users.helix = {
     isNormalUser = true;
-    description = "helix";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
@@ -75,28 +76,6 @@
 
       gnomeExtensions.dash-to-dock
       gnomeExtensions.appindicator
-
-      # Editor
-      vscodium
-      (vscode-with-extensions.override {
-        vscode = vscodium;
-        vscodeExtensions = with vscode-extensions; [
-          llvm-vs-code-extensions.vscode-clangd
-          editorconfig.editorconfig
-          usernamehw.errorlens
-          dbaeumer.vscode-eslint
-          tamasfe.even-better-toml
-          jdinhlife.gruvbox
-          golang.go
-          haskell.haskell
-          pkief.material-product-icons
-          christian-kohler.path-intellisense
-          alefragnani.project-manager
-          timonwong.shellcheck
-          vscodevim.vim
-          jnoortheen.nix-ide
-        ];
-      })
 
       # Documents
       doxygen
@@ -161,6 +140,38 @@
       scalafmt
       scalafix
       scala-cli
+    ];
+  };
+  home-manager.users.helix = { pkgs, ... }: {
+    nixpkgs.config.allowUnfree = true;
+
+    programs.bash.enable = true;
+    programs.home-manager.enable = true;
+
+    home.stateVersion = config.system.stateVersion;
+    home.packages = with pkgs; [
+      rnix-lsp
+      nixpkgs-fmt
+
+      # Editor
+      (vscode-with-extensions.override {
+       vscode = vscodium;
+        vscodeExtensions = with vscode-extensions; [
+          llvm-vs-code-extensions.vscode-clangd
+          editorconfig.editorconfig
+          usernamehw.errorlens
+          dbaeumer.vscode-eslint
+          tamasfe.even-better-toml
+          jdinhlife.gruvbox
+          golang.go
+          haskell.haskell
+          christian-kohler.path-intellisense
+          alefragnani.project-manager
+          timonwong.shellcheck
+          vscodevim.vim
+          jnoortheen.nix-ide
+        ];
+      })
     ];
   };
 
