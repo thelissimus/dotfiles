@@ -252,7 +252,7 @@
           end,
         })
 
-        local servers = { 'rust_analyzer' }
+        local servers = { 'rnix', 'rust_analyzer' }
         for _, lsp in ipairs(servers) do
           lspconfig[lsp].setup {
             capabilities = capabilities,
@@ -264,7 +264,7 @@
           settings = {
             haskell = {
               cabalFormattingProvider = "cabalfmt",
-              formattingProvider = "fourmolu"
+              formattingProvider = "fourmolu",
             }
           }
         }
@@ -316,10 +316,10 @@
           auto_install = false,
           highlight = {
             enable = true,
-            additional_vim_regex_highlighting = false
+            additional_vim_regex_highlighting = false,
           },
           indent = {
-            enable = false
+            enable = false,
           }
         })
         require("nvim-tree").setup()
@@ -351,6 +351,7 @@
       pinentry
       difftastic
       git
+      gnome.gnome-tweaks
       gnomeExtensions.dash-to-dock
       gnomeExtensions.appindicator
       # Editor
