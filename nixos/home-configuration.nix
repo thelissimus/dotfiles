@@ -355,7 +355,6 @@
       gnomeExtensions.appindicator
       # Editor
       jetbrains.idea-community
-      vimPlugins.vim-plug
       # Documents
       doxygen
       obsidian
@@ -391,6 +390,7 @@
       haskell-language-server
       cabal-install
       stack
+      haskellPackages.cabal-fmt
       haskellPackages.fourmolu
       # Java
       maven
