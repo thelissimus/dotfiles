@@ -55,6 +55,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    file
     vim
     wget
     gnumake
