@@ -252,7 +252,7 @@
           end,
         })
 
-        local servers = { 'rnix', 'rust_analyzer' }
+        local servers = { 'rnix', 'rust_analyzer', 'vhdl_ls' }
         for _, lsp in ipairs(servers) do
           lspconfig[lsp].setup {
             capabilities = capabilities,
@@ -335,6 +335,7 @@
       baobab
       gcolor3
       flameshot
+      libqalculate
       qalculate-gtk
       rename
       rlwrap
@@ -356,6 +357,8 @@
       gnomeExtensions.appindicator
       # Editor
       jetbrains.idea-community
+      ghdl
+      vhdl-ls
       # Documents
       doxygen
       obsidian
@@ -363,6 +366,7 @@
       # Media
       mpv
       vlc
+      yt-dlp
       obs-studio
       figma-agent
       figma-linux
@@ -403,6 +407,8 @@
       # Node.js
       nodejs_20
       nodePackages.pnpm
+      # Raku
+      rakudo
       # Scala
       metals
       dotty
