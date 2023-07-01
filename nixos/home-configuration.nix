@@ -31,6 +31,7 @@
         jnoortheen.nix-ide
         christian-kohler.path-intellisense
         alefragnani.project-manager
+        scala-lang.scala
         scalameta.metals
         timonwong.shellcheck
         vscodevim.vim
@@ -46,6 +47,11 @@
         "editor.tabSize" = 4;
         "explorer.autoReveal" = false;
         "explorer.sortOrder" = "type";
+        "files.watcherExclude" = {
+          "**/.bloop" = true;
+          "**/.metals" = true;
+          "**/.ammonite" = true;
+        };
         "terminal.integrated.fontSize" = 15;
         "terminal.integrated.fontWeight" = "600";
         "haskell.formattingProvider" = "fourmolu";
@@ -252,7 +258,7 @@
           end,
         })
 
-        local servers = { 'rnix', 'rust_analyzer', 'vhdl_ls' }
+        local servers = { 'metals', 'rnix', 'rust_analyzer', 'vhdl_ls' }
         for _, lsp in ipairs(servers) do
           lspconfig[lsp].setup {
             capabilities = capabilities,
@@ -329,7 +335,6 @@
 
     home.packages = with pkgs; [
       firefox
-      telegram-desktop
       keepassxc
       qbittorrent
       baobab
@@ -364,6 +369,7 @@
       obsidian
       zathura
       # Media
+      ffmpeg
       mpv
       vlc
       yt-dlp
@@ -397,6 +403,8 @@
       stack
       haskellPackages.cabal-fmt
       haskellPackages.fourmolu
+      haskellPackages.hpack
+      haskellPackages.hlint
       # Java
       maven
       # jdk8
