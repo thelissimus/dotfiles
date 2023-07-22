@@ -334,7 +334,10 @@
     };
 
     home.packages = with pkgs; [
+      anki
       firefox
+      librewolf
+      telegram-desktop
       keepassxc
       qbittorrent
       baobab
@@ -362,39 +365,41 @@
       gnomeExtensions.appindicator
       # Editor
       jetbrains.idea-community
-      ghdl
-      vhdl-ls
       # Documents
       doxygen
       obsidian
       zathura
+      poppler_utils
       # Media
       ffmpeg
       mpv
       vlc
       yt-dlp
       obs-studio
-      figma-agent
-      figma-linux
       feh
+      imagemagick
       optipng
       peek
       # Database
       postgresql_15
+      sqlite
       # Message Queue
       rabbitmq-server
       # Tools
       android-tools
       # C
-      clang_16
-      llvmPackages_16.clang-unwrapped
+      gcc
       gdb
       tinycc
+      llvmPackages_16.clang-unwrapped
       # Clojure
       clojure
       leiningen
       # Go
       go
+      gopls
+      delve
+      go-tools
       # Haskell
       ghc
       ghcid
@@ -415,16 +420,18 @@
       # Node.js
       nodejs_20
       nodePackages.pnpm
-      # Raku
-      rakudo
+      # Rust
+      rustup
       # Scala
       metals
       dotty
-      # scala
       sbt
       scalafmt
       scalafix
       scala-cli
+      # VHDL
+      ghdl
+      vhdl-ls
     ];
   };
 }

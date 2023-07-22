@@ -8,6 +8,7 @@
       ./home-configuration.nix
     ];
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
   boot.loader.systemd-boot.enable = true;
@@ -20,6 +21,10 @@
 
   time.timeZone = "Etc/GMT-5";
   i18n.defaultLocale = "en_US.UTF-8";
+  i18n.extraLocaleSettings = {
+    LANGUAGE = "en_US";
+    LC_ALL = "en_GB.UTF-8";
+  };
 
   services.xserver = {
     enable = true;
@@ -64,6 +69,11 @@
     strace
     unzip
     fdupes
+  ];
+
+  fonts.fonts = with pkgs; [
+    iosevka
+    noto-fonts-cjk
   ];
 
   programs.gnupg.agent = {
