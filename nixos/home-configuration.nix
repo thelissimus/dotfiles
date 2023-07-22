@@ -341,6 +341,7 @@
       keepassxc
       qbittorrent
       baobab
+      smartmontools
       gcolor3
       flameshot
       libqalculate
