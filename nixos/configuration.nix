@@ -42,6 +42,7 @@
   };
 
   services.openssh.enable = true;
+  services.pcscd.enable = true;
   services.printing.enable = true;
 
   sound.enable = true;
@@ -74,11 +75,13 @@
   fonts.fonts = with pkgs; [
     iosevka
     noto-fonts-cjk
+    noto-fonts-cjk-sans
   ];
 
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
+    pinentryFlavor = "tty";
   };
 
   hardware.opengl = {
