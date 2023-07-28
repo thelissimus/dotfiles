@@ -350,11 +350,13 @@
       rlwrap
       ripgrep
       fzf
+      tmux
       tokei
       tree
       nicotine-plus
       htop
       nvtop
+      onefetch
       pfetch
       sakura
       insomnia
@@ -371,12 +373,14 @@
       obsidian
       zathura
       poppler_utils
+      newsboat
       # Media
       ffmpeg
       mpv
       vlc
       yt-dlp
       obs-studio
+      cmus
       feh
       imagemagick
       optipng
