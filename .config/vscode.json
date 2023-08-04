@@ -76,5 +76,6 @@
 	"window.titleBarStyle": "native",
 	"window.zoomLevel": 0.5,
 	"workbench.colorTheme": "Gruvbox Dark Medium",
-	"workbench.iconTheme": "material-icon-theme"
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.productIconTheme": "material-product-icons"
 }
