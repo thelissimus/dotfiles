@@ -20,10 +20,10 @@
   networking.networkmanager.enable = true;
 
   time.timeZone = "Etc/GMT-5";
-  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "de_DE.UTF-8";
   i18n.extraLocaleSettings = {
-    LANGUAGE = "en_US";
-    LC_ALL = "en_GB.UTF-8";
+    LANGUAGE = "de_DE";
+    LC_ALL = "de_DE.UTF-8";
   };
 
   services.xserver = {
@@ -68,6 +68,7 @@
     xclip
     lsof
     strace
+    zip
     unzip
     fdupes
   ];
