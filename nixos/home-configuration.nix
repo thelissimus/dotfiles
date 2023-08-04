@@ -194,7 +194,7 @@
       # jdk8
       jdk17
       # Nix
-      rnix-lsp
+      nil
       nixpkgs-fmt
       # JS
       deno
