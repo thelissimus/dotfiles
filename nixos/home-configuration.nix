@@ -22,21 +22,29 @@
       package = pkgs.vscode-fhs;
       extensions = with pkgs.vscode-extensions; [
         llvm-vs-code-extensions.vscode-clangd
+        dhall.vscode-dhall-lsp-server
         editorconfig.editorconfig
         usernamehw.errorlens
         dbaeumer.vscode-eslint
         tamasfe.even-better-toml
+        donjayamanne.githistory
         golang.go
         jdinhlife.gruvbox
         haskell.haskell
         justusadam.language-haskell
+        pkief.material-icon-theme
+        pkief.material-product-icons
         jnoortheen.nix-ide
         christian-kohler.path-intellisense
+        esbenp.prettier-vscode
         alefragnani.project-manager
-        scala-lang.scala
+        # nwolverson.ide-purescript
+        # nwolverson.language-purescript
         scalameta.metals
+        scala-lang.scala
         timonwong.shellcheck
         vscodevim.vim
+        zxh404.vscode-proto3
       ];
       keybindings = [
         {
@@ -196,6 +204,7 @@
       purescript
       spago
       nodePackages.purescript-language-server
+      dhall-lsp-server
       # Rust
       rustup
       # Scala
