@@ -32,6 +32,7 @@
         jdinhlife.gruvbox
         haskell.haskell
         justusadam.language-haskell
+        sumneko.lua
         pkief.material-icon-theme
         pkief.material-product-icons
         jnoortheen.nix-ide
@@ -102,6 +103,10 @@
         ${builtins.readFile ../.config/nvim/lua/lsp.lua}
         EOF
       '';
+    };
+    programs.wezterm = {
+      enable = true;
+      extraConfig = builtins.readFile ../.config/wezterm/wezterm.lua;
     };
 
     home.packages = with pkgs; [
