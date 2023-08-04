@@ -47,24 +47,8 @@
         vscodevim.vim
         zxh404.vscode-proto3
       ];
-      keybindings = [
-        {
-          key = "alt+enter";
-          command = "editor.action.quickFix";
-          when = "editorHasCodeActionsProvider && textInputFocus && !editorReadonly";
-        }
-        {
-          key = "ctrl+.";
-          command = "-editor.action.quickFix";
-          when = "editorHasCodeActionsProvider && textInputFocus && !editorReadonly";
-        }
-        {
-          key = "alt+enter";
-          command = "-editor.action.selectAllMatches";
-          when = "editorFocus && findWidgetVisible";
-        }
-      ];
-      userSettings = builtins.fromJSON (builtins.readFile ../.config/vscode.json);
+      keybindings = builtins.fromJSON (builtins.readFile ../.config/Code/User/keybindings.json);
+      userSettings = builtins.fromJSON (builtins.readFile ../.config/Code/User/settings.json);
     };
     programs.neovim = {
       enable = true;
