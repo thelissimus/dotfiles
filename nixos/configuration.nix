@@ -55,11 +55,13 @@
     pulse.enable = true;
   };
 
+  users.defaultUserShell = pkgs.zsh;
   users.users.helix = {
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
+  environment.shells = with pkgs; [ zsh ];
   environment.systemPackages = with pkgs; [
     file
     vim
@@ -79,6 +81,7 @@
     noto-fonts-cjk-sans
   ];
 
+  programs.zsh.enable = true;
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
