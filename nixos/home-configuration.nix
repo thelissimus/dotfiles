@@ -15,6 +15,7 @@
     home.file."jdks/scala".source = pkgs.scala;
 
     programs.bash.enable = true;
+    programs.zsh.enable = true;
     programs.vscode = {
       enable = true;
       enableExtensionUpdateCheck = false;
