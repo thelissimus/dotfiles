@@ -58,9 +58,13 @@
   users.defaultUserShell = pkgs.zsh;
   users.users.helix = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
 
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
   environment.shells = with pkgs; [ zsh ];
   environment.systemPackages = with pkgs; [
     file
@@ -82,6 +86,7 @@
   ];
 
   programs.zsh.enable = true;
+  programs.autojump.enable = true;
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
