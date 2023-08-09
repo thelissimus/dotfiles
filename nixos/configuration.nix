@@ -1,5 +1,4 @@
-{ config
-, pkgs
+{ pkgs
 , ...
 }: {
   imports =
@@ -13,7 +12,10 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelParams = [ "nvidia.NVreg_RegistryDwords=EnableBrightnessControl=1" ];
+  boot.kernelParams = [
+    "nvidia.NVreg_RegistryDwords=EnableBrightnessControl=1"
+    "psmouse.synaptics_intertouch=0"
+  ];
   boot.supportedFilesystems = [ "ntfs" ];
 
   networking.hostName = "nixos";
@@ -78,6 +80,23 @@
     unzip
     fdupes
   ];
+  environment.gnome.excludePackages = (with pkgs; [
+    gnome-photos
+    gnome-tour
+  ]) ++ (with pkgs.gnome; [
+    cheese
+    gnome-music
+    gnome-terminal
+    gedit
+    epiphany
+    geary
+    evince
+    totem
+    tali
+    iagno
+    hitori
+    atomix
+  ]);
 
   fonts.fonts = with pkgs; [
     iosevka
@@ -87,6 +106,7 @@
 
   programs.zsh.enable = true;
   programs.autojump.enable = true;
+  programs.dconf.enable = true;
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
