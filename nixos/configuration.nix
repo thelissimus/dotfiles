@@ -14,7 +14,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelParams = [
     "nvidia.NVreg_RegistryDwords=EnableBrightnessControl=1"
-    "psmouse.synaptics_intertouch=0"
   ];
   boot.supportedFilesystems = [ "ntfs" ];
 
