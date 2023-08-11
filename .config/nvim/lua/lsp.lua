@@ -31,7 +31,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end,
 })
 
-local servers = { 'rnix', 'rust_analyzer', 'vhdl_ls' }
+local servers = { 'nil_ls', 'rust_analyzer', 'vhdl_ls' }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup {
 		capabilities = capabilities,

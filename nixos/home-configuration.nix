@@ -9,7 +9,7 @@
   home-manager.useGlobalPkgs = true;
   home-manager.users.helix = { pkgs, lib, ... }:
     let
-      inherit (lib.hm.gvariant) mkTuple;
+      inherit (lib.hm.gvariant) mkTuple mkUint32;
     in
     {
       home.stateVersion = config.system.stateVersion;
@@ -156,7 +156,7 @@
         };
         "org/gnome/settings-daemon/plugins/color" = {
           night-light-enabled = true;
-          night-light-temperature = 3600;
+          night-light-temperature = mkUint32 3700;
         };
         "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
           name = "Browser";
