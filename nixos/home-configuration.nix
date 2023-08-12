@@ -41,11 +41,13 @@
           pkief.material-icon-theme
           pkief.material-product-icons
           jnoortheen.nix-ide
+          ocamllabs.ocaml-platform
           christian-kohler.path-intellisense
           esbenp.prettier-vscode
           alefragnani.project-manager
           # nwolverson.ide-purescript
           # nwolverson.language-purescript
+          chenglou92.rescript-vscode
           scalameta.metals
           scala-lang.scala
           timonwong.shellcheck
@@ -297,6 +299,16 @@
         deno
         nodejs_20
         nodePackages.pnpm
+        # OCaml
+        ocaml
+        opam
+        dune_3
+        dune-release
+        ocamlformat
+        ocamlPackages.merlin
+        ocamlPackages.ocaml-lsp
+        ocamlPackages.odoc
+        ocamlPackages.utop
         # Purescript
         purescript
         spago
