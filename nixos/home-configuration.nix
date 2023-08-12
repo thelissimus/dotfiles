@@ -14,7 +14,6 @@
     {
       home.stateVersion = config.system.stateVersion;
       home.file."jdks/jdk8".source = pkgs.jdk8;
-      home.file."jdks/jdk17".source = pkgs.jdk17;
       home.file."jdks/scala".source = pkgs.scala;
 
       programs.bash.enable = true;
@@ -290,7 +289,6 @@
         haskellPackages.stylish-haskell
         # Java
         maven
-        # jdk8
         jdk17
         # Nix
         nil
