@@ -31,12 +31,14 @@
           usernamehw.errorlens
           dbaeumer.vscode-eslint
           tamasfe.even-better-toml
+          # flix.flix
           donjayamanne.githistory
           golang.go
           jdinhlife.gruvbox
           haskell.haskell
           justusadam.language-haskell
           sumneko.lua
+          # carlos-algms.make-task-provider
           pkief.material-icon-theme
           pkief.material-product-icons
           jnoortheen.nix-ide
@@ -111,6 +113,7 @@
         };
         "org/gnome/desktop/peripherals/touchpad" = {
           tap-to-click = true;
+          two-finger-scrolling-enabled = true;
         };
         "org/gnome/desktop/interface" = {
           color-scheme = "prefer-dark";
@@ -119,11 +122,8 @@
           monospace-font-name = "SF Mono Medium 12";
           show-battery-percentage = true;
         };
-        "org/gnome/desktop/peripherals/touchpad" = {
-          two-finger-scrolling-enabled = true;
-        };
         "org/gnome/desktop/session" = {
-          idle-delay = 900;
+          idle-delay = mkUint32 900;
         };
         "org/gnome/desktop/sound" = {
           event-sounds = false;
@@ -183,8 +183,8 @@
         };
         "org/gnome/settings-daemon/plugins/power" = {
           sleep-inactive-ac-type = "nothing";
-          sleep-inactive-battery-timeout = 180;
-          sleep-inactive-battery-type = "nothing";
+          sleep-inactive-battery-timeout = 1800;
+          sleep-inactive-battery-type = "suspend";
         };
         "org/gnome/mutter" = {
           center-new-windows = true;
