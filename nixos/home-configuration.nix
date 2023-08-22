@@ -38,6 +38,7 @@
           justusadam.language-haskell
           sumneko.lua
           # carlos-algms.make-task-provider
+          # bierner.markdown-preview-github-styles
           pkief.material-icon-theme
           pkief.material-product-icons
           jnoortheen.nix-ide
