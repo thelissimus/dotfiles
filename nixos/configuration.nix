@@ -98,9 +98,7 @@
   ]);
 
   fonts.fonts = with pkgs; [
-    iosevka
     noto-fonts-cjk
-    noto-fonts-cjk-sans
   ];
 
   programs.zsh.enable = true;
