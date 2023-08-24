@@ -1,10 +1,31 @@
 { config
+, pkgs
 , ...
 }: {
   imports =
     [
       <home-manager/nixos>
     ];
+
+  services.postgresql = {
+    enable = true;
+    package = pkgs.postgresql_15;
+    ensureDatabases = [ "helix" ];
+    ensureUsers = [
+      {
+        name = "helix";
+        ensurePermissions = {
+          "ALL TABLES IN SCHEMA public" = "ALL PRIVILEGES";
+        };
+      }
+    ];
+    enableTCPIP = true;
+    authentication = pkgs.lib.mkOverride 10 ''
+      local all all              trust
+      host  all all 127.0.0.1/32 trust
+      host  all all ::1/128      trust
+    '';
+  };
 
   home-manager.useGlobalPkgs = true;
   home-manager.users.helix = { pkgs, lib, ... }:
@@ -231,6 +252,7 @@
         gnomeExtensions.appindicator
         # Editor
         jetbrains.idea-community
+        jetbrains.datagrip
         # Documents
         doxygen
         obsidian
