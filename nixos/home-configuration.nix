@@ -13,8 +13,6 @@
     in
     {
       home.stateVersion = config.system.stateVersion;
-      home.file."jdks/jdk8".source = pkgs.jdk8;
-      home.file."jdks/scala".source = pkgs.scala;
 
       programs.bash.enable = true;
       programs.zsh.enable = true;
@@ -25,7 +23,6 @@
         package = pkgs.vscode-fhs;
         extensions = with pkgs.vscode-extensions; [
           llvm-vs-code-extensions.vscode-clangd
-          dhall.vscode-dhall-lsp-server
           editorconfig.editorconfig
           usernamehw.errorlens
           dbaeumer.vscode-eslint
@@ -42,12 +39,8 @@
           pkief.material-icon-theme
           pkief.material-product-icons
           jnoortheen.nix-ide
-          ocamllabs.ocaml-platform
           christian-kohler.path-intellisense
           esbenp.prettier-vscode
-          alefragnani.project-manager
-          # nwolverson.ide-purescript
-          # nwolverson.language-purescript
           chenglou92.rescript-vscode
           scalameta.metals
           scala-lang.scala
@@ -208,9 +201,7 @@
       home.packages = with pkgs; [
         anki
         firefox
-        librewolf
         telegram-desktop
-        discord
         keepassxc
         qbittorrent
         baobab
@@ -231,7 +222,6 @@
         nvtop
         onefetch
         pfetch
-        sakura
         insomnia
         pinentry
         difftastic
@@ -261,8 +251,6 @@
         # Database
         postgresql_15
         sqlite
-        # Message Queue
-        rabbitmq-server
         # Tools
         android-tools
         # C
@@ -280,16 +268,11 @@
         go-tools
         # Haskell
         ghc
-        ghcid
-        haskell-language-server
         cabal-install
-        stack
+        haskell-language-server
         haskellPackages.cabal-fmt
         haskellPackages.fourmolu
-        haskellPackages.hpack
         haskellPackages.hlint
-        haskellPackages.implicit-hie
-        haskellPackages.stylish-haskell
         # Java
         maven
         jdk17
@@ -297,26 +280,8 @@
         nil
         nixpkgs-fmt
         # JS
-        deno
         nodejs_20
         nodePackages.pnpm
-        # OCaml
-        ocaml
-        opam
-        dune_3
-        dune-release
-        ocamlformat
-        ocamlPackages.merlin
-        ocamlPackages.ocaml-lsp
-        ocamlPackages.odoc
-        ocamlPackages.utop
-        # Purescript
-        purescript
-        spago
-        nodePackages.purescript-language-server
-        dhall-lsp-server
-        # Rust
-        rustup
         # Scala
         metals
         dotty
@@ -324,9 +289,6 @@
         scalafmt
         scalafix
         scala-cli
-        # VHDL
-        ghdl
-        vhdl-ls
       ];
     };
 }
