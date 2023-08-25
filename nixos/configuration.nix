@@ -102,9 +102,15 @@
     atomix
   ]);
 
-  fonts.fonts = with pkgs; [
-    noto-fonts-cjk
-  ];
+  fonts = {
+    fonts = with pkgs; [
+      noto-fonts-cjk
+    ];
+    fontconfig = {
+      enable = true;
+      localConf = builtins.readFile ../.config/fontconfig/fonts.conf;
+    };
+  };
 
   programs.zsh.enable = true;
   programs.autojump.enable = true;
