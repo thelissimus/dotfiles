@@ -35,6 +35,9 @@
     {
       home.stateVersion = config.system.stateVersion;
 
+      home.file.".local/share/fonts/SFMono".source = ../.fonts/SFMono;
+      home.file.".local/share/fonts/SFProDisplay".source = ../.fonts/SFProDisplay;
+
       programs.bash.enable = true;
       programs.zsh.enable = true;
       programs.firefox = {
