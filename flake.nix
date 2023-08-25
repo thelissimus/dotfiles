@@ -1,5 +1,5 @@
 {
-  description = "flowers for m[A]chines";
+  description = "flakes for m[A]chines";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/release-23.05";
