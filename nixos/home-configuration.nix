@@ -37,6 +37,42 @@
 
       programs.bash.enable = true;
       programs.zsh.enable = true;
+      programs.firefox = {
+        enable = true;
+        profiles.default = {
+          isDefault = true;
+          extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+            clearurls
+            darkreader
+            i-dont-care-about-cookies
+            simple-tab-groups
+            single-file
+            ublock-origin
+            unpaywall
+            vimium
+            youtube-shorts-block
+          ];
+          settings = {
+            "browser.newtabpage.activity-stream.feeds.topsites" = false;
+            "browser.newtabpage.activity-stream.section.highlights.includeBookmarks" = false;
+            "browser.newtabpage.activity-stream.section.highlights.includeDownloads" = false;
+            "browser.newtabpage.activity-stream.section.highlights.includePocket" = false;
+            "browser.newtabpage.activity-stream.section.highlights.includeVisited" = false;
+            "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+            "browser.search.region" = "DE";
+            "browser.search.suggest.enabled" = false;
+            "browser.toolbars.bookmarks.visibility" = "never";
+            "browser.urlbar.showSearchSuggestionsFirst" = false;
+            "browser.urlbar.suggest.searches" = false;
+            "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
+            "signon.autofillForms" = false;
+            "signon.firefoxRelay.feature" = "disabled";
+            "signon.generation.enabled" = false;
+            "signon.management.page.breach-alerts.enabled" = false;
+            "signon.rememberSignons" = false;
+          };
+        };
+      };
       programs.vscode = {
         enable = true;
         enableExtensionUpdateCheck = false;
@@ -157,6 +193,12 @@
           button-layout = "appmenu:minimize,maximize,close";
           titlebar-font = "SF Pro Display Bold 11";
         };
+        "org/gnome/shell" = {
+          enabled-extensions = [
+            "appindicatorsupport@rgcjonas.gmail.com"
+          ];
+          favorite-apps = [ ];
+        };
         "org/gnome/shell/keybindings" = {
           show-screenshot-ui = [ ];
         };
@@ -176,6 +218,14 @@
         "org/gnome/settings-daemon/plugins/color" = {
           night-light-enabled = true;
           night-light-temperature = mkUint32 3700;
+        };
+        "org/gnome/settings-daemon/plugins/media-keys" = {
+          custom-keybindings = [
+            "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+            "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
+            "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/"
+            "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/"
+          ];
         };
         "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
           name = "Browser";
@@ -221,7 +271,6 @@
 
       home.packages = with pkgs; [
         anki
-        firefox
         telegram-desktop
         keepassxc
         qbittorrent
@@ -248,7 +297,6 @@
         difftastic
         git
         gnome.gnome-tweaks
-        gnomeExtensions.dash-to-dock
         gnomeExtensions.appindicator
         # Editor
         jetbrains.idea-community
