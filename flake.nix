@@ -8,18 +8,26 @@
     nur.url = "github:nix-community/NUR";
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nur, ... }:
+  outputs = inputs:
     let
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+      system = "x86_64-linux";
+      pkgs = import inputs.nixpkgs {
+        localSystem = { inherit system; };
+        config = {
+          allowUnfree = true;
+        };
+      };
     in
     {
       formatter.x86_64-linux = pkgs.nixpkgs-fmt;
-      nixosConfigurations.vega = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+      nixosConfigurations.vega = inputs.nixpkgs.lib.nixosSystem {
+        inherit system;
+        inherit pkgs;
+
         specialArgs = inputs;
         modules = [
           ./nixos/configuration.nix
-          nur.nixosModules.nur
+          inputs.nur.nixosModules.nur
         ];
       };
     };
