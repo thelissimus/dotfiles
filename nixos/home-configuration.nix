@@ -2,11 +2,6 @@
 , pkgs
 , ...
 }: {
-  imports =
-    [
-      <home-manager/nixos>
-    ];
-
   services.postgresql = {
     enable = true;
     package = pkgs.postgresql_15;
@@ -44,7 +39,7 @@
         enable = true;
         profiles.default = {
           isDefault = true;
-          extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+          extensions = with config.nur.repos.rycee.firefox-addons; [
             clearurls
             darkreader
             i-dont-care-about-cookies
