@@ -3,31 +3,38 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/release-23.05";
+    nur.url = "github:nix-community/NUR";
     home-manager.url = "github:nix-community/home-manager/release-23.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nur.url = "github:nix-community/NUR";
   };
 
-  outputs = inputs:
+  outputs = inputs @ { self, nixpkgs, nur, home-manager }:
     let
       system = "x86_64-linux";
-      pkgs = import inputs.nixpkgs {
+      pkgs = import nixpkgs {
         localSystem = { inherit system; };
         config = {
           allowUnfree = true;
         };
+        overlays = [
+          nur.overlay
+        ];
       };
     in
     {
       formatter.x86_64-linux = pkgs.nixpkgs-fmt;
-      nixosConfigurations.vega = inputs.nixpkgs.lib.nixosSystem {
-        inherit system;
-        inherit pkgs;
+      nixosConfigurations.vega = nixpkgs.lib.nixosSystem {
+        inherit system pkgs;
 
-        specialArgs = inputs;
+        specialArgs = { inherit inputs; };
         modules = [
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.helix = import ./nixos/home-configuration.nix;
+          }
           ./nixos/configuration.nix
-          inputs.nur.nixosModules.nur
         ];
       };
     };
