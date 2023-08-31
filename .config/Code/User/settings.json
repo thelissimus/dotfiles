@@ -1,5 +1,5 @@
 {
-	"[jsonc]": {
+	"[json][jsonc]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[typescript][typescriptreact]": {
@@ -61,6 +61,8 @@
 	"prettier.tabWidth": 4,
 	"prettier.trailingComma": "all",
 	"prettier.useTabs": true,
+	"rescript.settings.askToStartBuild": false,
+	"rescript.settings.inlayHints.enable": true,
 	"terminal.integrated.fontSize": 15,
 	"terminal.integrated.fontWeight": "600",
 	"terminal.integrated.gpuAcceleration": "on",
