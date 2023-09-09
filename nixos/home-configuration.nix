@@ -17,6 +17,8 @@ in
       extensions = with pkgs.nur.repos.rycee.firefox-addons; [
         clearurls
         darkreader
+        # dont-accept-image-webp
+        # imagus
         i-dont-care-about-cookies
         simple-tab-groups
         single-file
@@ -24,6 +26,7 @@ in
         unpaywall
         vimium
         youtube-shorts-block
+        # user-agent-switcher-manager
       ];
       settings = {
         "browser.newtabpage.activity-stream.feeds.topsites" = false;
@@ -239,6 +242,9 @@ in
     };
     "org/gnome/nautilus/preferences" = {
       default-folder-viewer = "icon-view";
+    };
+    "org/gtk/gtk4/settings/file-chooser" = {
+      sort-directories-first = true;
     };
   };
 
