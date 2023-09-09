@@ -1,5 +1,11 @@
 {
+	"[html][css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
 	"[json][jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript][javascriptreact]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[typescript][typescriptreact]": {
@@ -74,6 +80,12 @@
 	"vim.handleKeys": {
 		"<C-c>": false
 	},
+	"vim.insertModeKeyBindings": [
+		{
+			"before": ["j", "k"],
+			"after": ["<esc>"]
+		}
+	],
 	"window.dialogStyle": "custom",
 	"window.menuBarVisibility": "hidden",
 	"window.newWindowDimensions": "maximized",

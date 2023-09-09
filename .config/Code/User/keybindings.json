@@ -13,5 +13,14 @@
 		"command": "-editor.action.selectAllMatches",
 		"key": "alt+enter",
 		"when": "editorFocus && findWidgetVisible"
+	},
+	{
+		"key": "escape",
+		"command": "-calva.clearInlineResults"
+	},
+	{
+		"key": "shift+escape",
+		"command": "calva.clearInlineResults",
+		"when": "editorTextFocus && !editorHasMultipleSelections && !editorReadOnly && !hasOtherSuggestions && !suggestWidgetVisible && editorLangId == 'clojure'"
 	}
 ]
