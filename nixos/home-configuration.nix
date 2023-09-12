@@ -253,6 +253,7 @@ in
     telegram-desktop
     keepassxc
     qbittorrent
+    openvpn
     baobab
     smartmontools
     gcolor3
