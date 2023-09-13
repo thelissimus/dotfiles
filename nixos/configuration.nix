@@ -18,6 +18,7 @@
     "nvidia.NVreg_RegistryDwords=EnableBrightnessControl=1"
   ];
   boot.supportedFilesystems = [ "ntfs" ];
+  boot.swraid.enable = false;
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
