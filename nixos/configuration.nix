@@ -120,7 +120,7 @@
   ]);
 
   fonts = {
-    fonts = with pkgs; [
+    packages = with pkgs; [
       noto-fonts-cjk
     ];
     fontconfig = {
