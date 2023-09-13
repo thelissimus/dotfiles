@@ -41,6 +41,8 @@ in
         "browser.urlbar.showSearchSuggestionsFirst" = false;
         "browser.urlbar.suggest.searches" = false;
         "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
+        "font.name.monospace.x-western" = "SF Mono";
+        "font.name.sans-serif.x-western" = "SF Pro Display";
         "signon.autofillForms" = false;
         "signon.firefoxRelay.feature" = "disabled";
         "signon.generation.enabled" = false;
@@ -55,6 +57,7 @@ in
     enableUpdateCheck = false;
     package = pkgs.vscode-fhs;
     extensions = with pkgs.vscode-extensions; [
+      betterthantomorrow.calva
       llvm-vs-code-extensions.vscode-clangd
       editorconfig.editorconfig
       usernamehw.errorlens
