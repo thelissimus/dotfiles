@@ -1,20 +1,5 @@
 [
 	{
-		"command": "editor.action.quickFix",
-		"key": "alt+enter",
-		"when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
-	},
-	{
-		"command": "-editor.action.quickFix",
-		"key": "ctrl+.",
-		"when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
-	},
-	{
-		"command": "-editor.action.selectAllMatches",
-		"key": "alt+enter",
-		"when": "editorFocus && findWidgetVisible"
-	},
-	{
 		"key": "escape",
 		"command": "-calva.clearInlineResults"
 	},
