@@ -8,8 +8,24 @@ in
   home.file.".local/share/fonts/SFMono".source = ../.fonts/SFMono;
   home.file.".local/share/fonts/SFProDisplay".source = ../.fonts/SFProDisplay;
 
+  programs.autojump.enable = true;
   programs.bash.enable = true;
-  programs.zsh.enable = true;
+  programs.command-not-found.enable = true;
+  programs.git.difftastic.enable = true;
+  programs.zsh = {
+    enable = true;
+    enableAutosuggestions = true;
+    syntaxHighlighting.enable = true;
+
+    history = {
+      extended = true;
+    };
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" ];
+      theme = "robbyrussell";
+    };
+  };
   programs.firefox = {
     enable = true;
     profiles.default = {
@@ -277,7 +293,6 @@ in
     pfetch
     insomnia
     pinentry
-    difftastic
     git
     gnome.gnome-tweaks
     gnomeExtensions.appindicator
