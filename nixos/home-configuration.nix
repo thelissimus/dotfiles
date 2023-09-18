@@ -273,6 +273,8 @@ in
     keepassxc
     qbittorrent
     openvpn
+    difftastic
+    jq
     baobab
     smartmontools
     gcolor3
@@ -346,6 +348,7 @@ in
     # Nix
     nil
     # JS
+    bun
     nodejs_20
     nodePackages.pnpm
     # Scala
