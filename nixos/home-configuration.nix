@@ -271,10 +271,12 @@ in
     anki
     telegram-desktop
     keepassxc
+    stacer
     qbittorrent
     openvpn
     difftastic
     jq
+    yazi
     baobab
     smartmontools
     gcolor3
