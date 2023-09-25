@@ -8,7 +8,7 @@ in
   home.file.".local/share/fonts/SFMono".source = ../.fonts/SFMono;
   home.file.".local/share/fonts/SFProDisplay".source = ../.fonts/SFProDisplay;
 
-  programs.autojump.enable = true;
+  programs.zoxide.enable = true;
   programs.bash.enable = true;
   programs.command-not-found.enable = true;
   programs.git.difftastic.enable = true;
