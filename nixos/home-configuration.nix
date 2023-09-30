@@ -85,12 +85,14 @@ in
       jdinhlife.gruvbox
       haskell.haskell
       justusadam.language-haskell
+      # leanprover.lean4
       sumneko.lua
       # carlos-algms.make-task-provider
       # bierner.markdown-preview-github-styles
       pkief.material-icon-theme
       pkief.material-product-icons
       jnoortheen.nix-ide
+      ocamllabs.ocaml-platform
       christian-kohler.path-intellisense
       esbenp.prettier-vscode
       chenglou92.rescript-vscode
@@ -347,12 +349,22 @@ in
     # Java
     maven
     jdk17
-    # Nix
-    nil
     # JS
     bun
     nodejs_20
     nodePackages.pnpm
+    # Nix
+    nil
+    # Lean
+    lean4
+    # OCaml
+    ocaml
+    opam
+    dune_3
+    ocamlPackages.merlin
+    ocamlPackages.ocaml-lsp
+    ocamlPackages.odoc
+    ocamlPackages.ocamlformat
     # Scala
     metals
     dotty
