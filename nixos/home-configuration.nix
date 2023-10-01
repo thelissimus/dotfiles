@@ -80,6 +80,7 @@ in
       betterthantomorrow.calva
       llvm-vs-code-extensions.vscode-clangd
       editorconfig.editorconfig
+      # erlang-ls.erlang-ls
       usernamehw.errorlens
       dbaeumer.vscode-eslint
       tamasfe.even-better-toml
@@ -349,6 +350,10 @@ in
     # Clojure
     clojure
     leiningen
+    # Erlang
+    erlang
+    erlang-ls
+    rebar3
     # Go
     go
     gopls
