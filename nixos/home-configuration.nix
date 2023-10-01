@@ -151,6 +151,14 @@ in
     enable = true;
     extraConfig = builtins.readFile ../.config/wezterm/wezterm.lua;
   };
+  programs.zathura = {
+    enable = true;
+    options = {
+      font = "SF Mono 10";
+      selection-clipboard = "clipboard";
+      window-title-basename = true;
+    };
+  };
 
   gtk = {
     enable = true;
@@ -312,7 +320,6 @@ in
     # Documents
     doxygen
     obsidian
-    zathura
     poppler_utils
     newsboat
     # Media
