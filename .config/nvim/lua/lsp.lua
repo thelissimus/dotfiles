@@ -31,7 +31,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end,
 })
 
-local servers = { 'nil_ls', 'rust_analyzer', 'vhdl_ls' }
+local servers = { 'clangd', 'erlangls', 'gopls', 'leanls', 'nil_ls', 'ocamllsp', 'metals' }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup {
 		capabilities = capabilities,
@@ -39,6 +39,7 @@ for _, lsp in ipairs(servers) do
 end
 
 lspconfig['hls'].setup {
+	capabilities = capabilities,
 	filetypes = { 'haskell', 'lhaskell', 'cabal' },
 	settings = {
 		haskell = {
