@@ -25,6 +25,10 @@ in
       plugins = [ "git" ];
       theme = "robbyrussell";
     };
+
+    shellAliases = {
+      ydl = "yt-dlp -o '%(title)s.%(ext)s' -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'";
+    };
   };
   programs.firefox = {
     enable = true;
