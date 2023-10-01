@@ -288,40 +288,44 @@ in
     stacer
     qbittorrent
     openvpn
-    difftastic
-    jq
-    yazi
     baobab
     smartmontools
     gcolor3
     flameshot
     libqalculate
     qalculate-gtk
-    rename
-    rlwrap
-    ripgrep
+    nicotine-plus
+    pinentry
+    gnome.gnome-tweaks
+    gnomeExtensions.appindicator
+    # CLI
+    difftastic
     fzf
+    htop
+    jq
+    nvtop
+    pfetch
+    rename
+    ripgrep
+    rlwrap
     tmux
     tokei
     tree
-    nicotine-plus
-    htop
-    nvtop
-    onefetch
-    pfetch
-    insomnia
-    pinentry
+    yazi
+    # Dev
     git
-    gnome.gnome-tweaks
-    gnomeExtensions.appindicator
-    # Editor
-    jetbrains.idea-community
-    jetbrains.datagrip
+    insomnia
+    # Design
+    figma-agent
+    figma-linux
     # Documents
     doxygen
     obsidian
     poppler_utils
     newsboat
+    # Editor
+    jetbrains.idea-community
+    jetbrains.datagrip
     # Media
     ffmpeg
     mpv
@@ -380,8 +384,6 @@ in
     metals
     dotty
     sbt
-    scalafmt
-    scalafix
     scala-cli
   ];
 }
