@@ -73,6 +73,8 @@ inoremap <Esc> <nop>
 inoremap jk <Esc>
 inoremap kj <Esc>
 
+let g:vimtex_view_method = 'zathura'
+
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 let g:gruvbox_material_background = 'medium'
