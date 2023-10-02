@@ -75,25 +75,21 @@ in
     enable = true;
     enableExtensionUpdateCheck = false;
     enableUpdateCheck = false;
-    package = pkgs.vscode-fhs;
+    package = pkgs.vscode;
     extensions = with pkgs.vscode-extensions; [
       betterthantomorrow.calva
       llvm-vs-code-extensions.vscode-clangd
       editorconfig.editorconfig
-      # erlang-ls.erlang-ls
       usernamehw.errorlens
       dbaeumer.vscode-eslint
       tamasfe.even-better-toml
-      # flix.flix
       donjayamanne.githistory
       golang.go
       jdinhlife.gruvbox
       haskell.haskell
       justusadam.language-haskell
-      # leanprover.lean4
+      james-yu.latex-workshop
       sumneko.lua
-      # carlos-algms.make-task-provider
-      # bierner.markdown-preview-github-styles
       pkief.material-icon-theme
       pkief.material-product-icons
       jnoortheen.nix-ide
@@ -106,6 +102,37 @@ in
       timonwong.shellcheck
       vscodevim.vim
       zxh404.vscode-proto3
+    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+      {
+        name = "erlang-ls";
+        publisher = "erlang-ls";
+        version = "0.0.40";
+        sha256 = "HFlOig5UUsT+XX0h1dcRQ3mWRsASqvKTMpqqRhVpTAY=";
+      }
+      {
+        name = "lean4";
+        publisher = "leanprover";
+        version = "0.0.111";
+        sha256 = "c6d+rNE1j0NLx+ntGU6E9G1d9S0pxKYBzfnb8Je/mkE=";
+      }
+      {
+        name = "markdown-checkbox";
+        publisher = "bierner";
+        version = "0.4.0";
+        sha256 = "AoPcdN/67WOzarnF+GIx/nans38Jan8Z5D0StBWIbkk=";
+      }
+      {
+        name = "markdown-preview-github-styles";
+        publisher = "bierner";
+        version = "2.0.3";
+        sha256 = "yuF6TJSv0V2OvkBwqwAQKRcHCAXNL+NW8Q3s+dMFnLY=";
+      }
+      {
+        name = "typescript-explorer";
+        publisher = "mxsdev";
+        version = "0.4.2";
+        sha256 = "IHz7fpE+RiLP6tEkWwShsfDPM3rTbq5tE9/BHt1QkIQ=";
+      }
     ];
     keybindings = builtins.fromJSON (builtins.readFile ../.config/Code/User/keybindings.json);
     userSettings = builtins.fromJSON (builtins.readFile ../.config/Code/User/settings.json);
