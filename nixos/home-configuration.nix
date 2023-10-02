@@ -125,16 +125,15 @@ in
       vim-vsnip
       # Modification
       editorconfig-vim
-      nvim-treesitter
-      nvim-treesitter-parsers.haskell
-      nvim-treesitter-parsers.nix
-      nvim-treesitter-parsers.rust
+      (nvim-treesitter.withPlugins
+        (p: with p; [ c erlang go haskell haskell_persistent latex nix ocaml ocaml_interface scala ]))
       # Components
       diffview-nvim
       nvim-tree-lua
       fzf-vim
       tagbar
       undotree
+      vimtex
       # Appearance
       gruvbox-material
       nvim-web-devicons
@@ -304,7 +303,6 @@ in
     fzf
     htop
     jq
-    nvtop
     pfetch
     rename
     ripgrep
@@ -323,10 +321,10 @@ in
     doxygen
     obsidian
     poppler_utils
+    pandoc
     newsboat
-    # Editor
-    jetbrains.idea-community
-    jetbrains.datagrip
+    nb
+    texlive.combined.scheme-medium
     # Media
     ffmpeg
     mpv
