@@ -57,7 +57,13 @@
 	"mergeEditor.diffAlgorithm": "advanced",
 	"nix.enableLanguageServer": true,
 	"nix.serverPath": "nil",
-	"nix.formatterPath": "nixpkgs-fmt",
+	"nix.serverSettings": {
+		"nil": {
+			"formatting": {
+				"command": ["nixpkgs-fmt"]
+			}
+		}
+	},
 	"prettier.arrowParens": "always",
 	"prettier.enable": true,
 	"prettier.endOfLine": "lf",
