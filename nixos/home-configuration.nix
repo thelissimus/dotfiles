@@ -345,6 +345,8 @@ in
     figma-agent
     figma-linux
     # Documents
+    hledger
+    hledger-ui
     doxygen
     obsidian
     poppler_utils
@@ -388,6 +390,8 @@ in
     ghc
     cabal-install
     haskell-language-server
+    haskellPackages.hls-cabal-plugin
+    haskellPackages.hls-cabal-fmt-plugin
     haskellPackages.cabal-fmt
     haskellPackages.fourmolu
     haskellPackages.hlint
@@ -400,6 +404,7 @@ in
     nodePackages.pnpm
     # Nix
     nil
+    nixpkgs-fmt
     # Lean
     lean4
     # OCaml
