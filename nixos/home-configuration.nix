@@ -392,6 +392,7 @@ in
     haskell-language-server
     haskellPackages.hls-cabal-plugin
     haskellPackages.hls-cabal-fmt-plugin
+    haskellPackages.hls-eval-plugin
     haskellPackages.cabal-fmt
     haskellPackages.fourmolu
     haskellPackages.hlint
