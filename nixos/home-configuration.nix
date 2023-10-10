@@ -7,6 +7,9 @@ in
 
   home.file.".local/share/fonts/SFMono".source = ../.fonts/SFMono;
   home.file.".local/share/fonts/SFProDisplay".source = ../.fonts/SFProDisplay;
+  home.file.".ghci".source = ../.config/.ghci;
+  home.file.".npmrc".source = ../.config/.npmrc;
+  home.file.".sqliterc".source = ../.config/.sqliterc;
 
   programs.zoxide.enable = true;
   programs.bash.enable = true;
