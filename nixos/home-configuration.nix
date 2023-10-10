@@ -341,9 +341,6 @@ in
     # Dev
     git
     insomnia
-    # Design
-    figma-agent
-    figma-linux
     # Documents
     hledger
     hledger-ui
@@ -369,6 +366,7 @@ in
     sqlite
     # Tools
     android-tools
+    libz
     # C
     gcc
     gdb
