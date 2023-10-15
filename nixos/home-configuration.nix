@@ -43,6 +43,7 @@ in
         # dont-accept-image-webp
         # imagus
         i-dont-care-about-cookies
+        privacy-badger
         simple-tab-groups
         single-file
         ublock-origin
@@ -397,6 +398,7 @@ in
     haskellPackages.cabal-fmt
     haskellPackages.fourmolu
     haskellPackages.hlint
+    haskellPackages.hoogle
     # Java
     maven
     jdk17
