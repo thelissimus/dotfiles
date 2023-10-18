@@ -312,117 +312,121 @@ in
     };
   };
 
-  home.packages = with pkgs; [
-    anki
-    telegram-desktop
-    keepassxc
-    stacer
-    qbittorrent
-    openvpn
-    baobab
-    smartmontools
-    gcolor3
-    flameshot
-    libqalculate
-    qalculate-gtk
-    nicotine-plus
-    pinentry
-    gnome.gnome-tweaks
-    gnomeExtensions.appindicator
-    # CLI
-    difftastic
-    fzf
-    htop
-    jq
-    pfetch
-    rename
-    ripgrep
-    rlwrap
-    tmux
-    tokei
-    tree
-    yazi
-    # Dev
-    git
-    insomnia
-    # Documents
-    hledger
-    hledger-ui
-    doxygen
-    obsidian
-    poppler_utils
-    pandoc
-    newsboat
-    nb
-    texlive.combined.scheme-medium
-    # Media
-    ffmpeg
-    mpv
-    vlc
-    yt-dlp
-    obs-studio
-    cmus
-    feh
-    imagemagick
-    optipng
-    peek
-    # Database
-    sqlite
-    # Tools
-    android-tools
-    libz
-    # C
-    gcc
-    gdb
-    tinycc
-    llvmPackages_16.clang-unwrapped
-    # Clojure
-    clojure
-    leiningen
-    # Erlang
-    erlang
-    erlang-ls
-    rebar3
-    # Go
-    go
-    gopls
-    delve
-    go-tools
-    # Haskell
-    ghc
-    cabal-install
-    haskell-language-server
-    haskellPackages.hls-cabal-plugin
-    haskellPackages.hls-cabal-fmt-plugin
-    haskellPackages.hls-eval-plugin
-    haskellPackages.cabal-fmt
-    haskellPackages.fourmolu
-    haskellPackages.hlint
-    haskellPackages.hoogle
-    # Java
-    maven
-    jdk17
-    # JS
-    bun
-    nodejs_20
-    nodePackages.pnpm
-    # Nix
-    nil
-    nixpkgs-fmt
-    # Lean
-    lean4
-    # OCaml
-    ocaml
-    opam
-    dune_3
-    ocamlPackages.merlin
-    ocamlPackages.ocaml-lsp
-    ocamlPackages.odoc
-    ocamlPackages.ocamlformat
-    # Scala
-    metals
-    dotty
-    sbt
-    scala-cli
-  ];
+  home.packages =
+    let
+      hls = pkgs.haskell-language-server.override { supportedGhcVersions = [ "92" ]; };
+    in
+    with pkgs; [
+      anki
+      telegram-desktop
+      keepassxc
+      stacer
+      qbittorrent
+      openvpn
+      baobab
+      smartmontools
+      gcolor3
+      flameshot
+      libqalculate
+      qalculate-gtk
+      nicotine-plus
+      pinentry
+      gnome.gnome-tweaks
+      gnomeExtensions.appindicator
+      # CLI
+      difftastic
+      fzf
+      htop
+      jq
+      pfetch
+      rename
+      ripgrep
+      rlwrap
+      tmux
+      tokei
+      tree
+      yazi
+      # Dev
+      git
+      insomnia
+      # Documents
+      hledger
+      hledger-ui
+      doxygen
+      obsidian
+      poppler_utils
+      pandoc
+      newsboat
+      nb
+      texlive.combined.scheme-medium
+      # Media
+      ffmpeg
+      mpv
+      vlc
+      yt-dlp
+      obs-studio
+      cmus
+      feh
+      imagemagick
+      optipng
+      peek
+      # Database
+      sqlite
+      # Tools
+      android-tools
+      libz
+      # C
+      gcc
+      gdb
+      tinycc
+      llvmPackages_16.clang-unwrapped
+      # Clojure
+      clojure
+      leiningen
+      # Erlang
+      erlang
+      erlang-ls
+      rebar3
+      # Go
+      go
+      gopls
+      delve
+      go-tools
+      # Haskell
+      haskell.compiler.ghc92
+      cabal-install
+      hls
+      haskellPackages.hls-cabal-plugin
+      haskellPackages.hls-cabal-fmt-plugin
+      haskellPackages.hls-eval-plugin
+      haskellPackages.cabal-fmt
+      haskellPackages.fourmolu
+      haskellPackages.hlint
+      haskellPackages.hoogle
+      # Java
+      maven
+      jdk17
+      # JS
+      bun
+      nodejs_20
+      nodePackages.pnpm
+      # Nix
+      nil
+      nixpkgs-fmt
+      # Lean
+      lean4
+      # OCaml
+      ocaml
+      opam
+      dune_3
+      ocamlPackages.merlin
+      ocamlPackages.ocaml-lsp
+      ocamlPackages.odoc
+      ocamlPackages.ocamlformat
+      # Scala
+      metals
+      dotty
+      sbt
+      scala-cli
+    ];
 }
