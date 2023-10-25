@@ -127,7 +127,7 @@
     ];
     fontconfig = {
       enable = true;
-      localConf = builtins.readFile ../.config/fontconfig/fonts.conf;
+      localConf = builtins.readFile ../../.config/fontconfig/fonts.conf;
     };
   };
 
