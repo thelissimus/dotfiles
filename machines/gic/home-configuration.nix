@@ -5,11 +5,11 @@ in
 {
   home.stateVersion = "23.05";
 
-  home.file.".local/share/fonts/SFMono".source = ../.fonts/SFMono;
-  home.file.".local/share/fonts/SFProDisplay".source = ../.fonts/SFProDisplay;
-  home.file.".ghci".source = ../.config/.ghci;
-  home.file.".npmrc".source = ../.config/.npmrc;
-  home.file.".sqliterc".source = ../.config/.sqliterc;
+  home.file.".local/share/fonts/SFMono".source = ../../.fonts/SFMono;
+  home.file.".local/share/fonts/SFProDisplay".source = ../../.fonts/SFProDisplay;
+  home.file.".ghci".source = ../../.config/.ghci;
+  home.file.".npmrc".source = ../../.config/.npmrc;
+  home.file.".sqliterc".source = ../../.config/.sqliterc;
 
   programs.zoxide.enable = true;
   programs.bash.enable = true;
@@ -138,8 +138,8 @@ in
         sha256 = "IHz7fpE+RiLP6tEkWwShsfDPM3rTbq5tE9/BHt1QkIQ=";
       }
     ];
-    keybindings = builtins.fromJSON (builtins.readFile ../.config/Code/User/keybindings.json);
-    userSettings = builtins.fromJSON (builtins.readFile ../.config/Code/User/settings.json);
+    keybindings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/keybindings.json);
+    userSettings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/settings.json);
   };
   programs.neovim = {
     enable = true;
@@ -172,15 +172,15 @@ in
       nvim-lightline-lsp
     ];
     extraConfig = ''
-      ${builtins.readFile ../.config/nvim/init.vim}
+      ${builtins.readFile ../../.config/nvim/init.vim}
       lua << EOF
-      ${builtins.readFile ../.config/nvim/lua/lsp.lua}
+      ${builtins.readFile ../../.config/nvim/lua/lsp.lua}
       EOF
     '';
   };
   programs.wezterm = {
     enable = true;
-    extraConfig = builtins.readFile ../.config/wezterm/wezterm.lua;
+    extraConfig = builtins.readFile ../../.config/wezterm/wezterm.lua;
   };
   programs.zathura = {
     enable = true;

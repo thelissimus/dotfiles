@@ -8,7 +8,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs @ { self, nixpkgs, nur, home-manager }:
+  outputs = inputs @ { self, nixpkgs, nur, home-manager, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -32,9 +32,23 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.helix = import ./nixos/home-configuration.nix;
+            home-manager.users.helix = import ./machines/vega/home-configuration.nix;
           }
-          ./nixos/configuration.nix
+          ./machines/vega/configuration.nix
+        ];
+      };
+      nixosConfigurations.gic = nixpkgs.lib.nixosSystem {
+        inherit system pkgs;
+
+        specialArgs = { inherit inputs; };
+        modules = [
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.gicw = import ./machines/gic/home-configuration.nix;
+          }
+          ./machines/gic/configuration.nix
         ];
       };
     };
