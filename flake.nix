@@ -20,36 +20,27 @@
           nur.overlay
         ];
       };
+      mkSystem = { hostname, username }: nixpkgs.lib.nixosSystem {
+        inherit system pkgs;
+
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./modules
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.${username} = import ./machines/${hostname}/home-configuration.nix;
+          }
+          ./machines/${hostname}/configuration.nix
+        ];
+      };
     in
     {
       formatter.x86_64-linux = pkgs.nixpkgs-fmt;
-      nixosConfigurations.vega = nixpkgs.lib.nixosSystem {
-        inherit system pkgs;
-
-        specialArgs = { inherit inputs; };
-        modules = [
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.helix = import ./machines/vega/home-configuration.nix;
-          }
-          ./machines/vega/configuration.nix
-        ];
-      };
-      nixosConfigurations.gic = nixpkgs.lib.nixosSystem {
-        inherit system pkgs;
-
-        specialArgs = { inherit inputs; };
-        modules = [
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.gicw = import ./machines/gic/home-configuration.nix;
-          }
-          ./machines/gic/configuration.nix
-        ];
+      nixosConfigurations = {
+        vega = mkSystem { hostname = "vega"; username = "helix"; };
+        gic = mkSystem { hostname = "gic"; username = "gicw"; };
       };
     };
 }

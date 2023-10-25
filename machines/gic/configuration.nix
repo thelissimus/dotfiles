@@ -1,17 +1,8 @@
-{ pkgs, inputs, config, ... }: {
+{ pkgs, ... }: {
   imports =
     [
       ./hardware-configuration.nix
     ];
-
-  nix.registry.nixpkgs.flake = inputs.nixpkgs;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  nix.settings.auto-optimise-store = true;
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 30d";
-  };
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -131,7 +122,6 @@
     enableSSHSupport = true;
     pinentryFlavor = "tty";
   };
-  programs.hyprland.enable = true;
 
   hardware.opengl = {
     enable = true;
@@ -139,7 +129,7 @@
   };
   hardware.nvidia = {
     modesetting.enable = true;
-    nvidiaSettings = true;
+    nvidiaSettings = false;
     powerManagement.enable = false;
     powerManagement.finegrained = false;
   };
