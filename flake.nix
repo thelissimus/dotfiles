@@ -23,9 +23,8 @@
       mkSystem = { hostname, username }: nixpkgs.lib.nixosSystem {
         inherit system pkgs;
 
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs username; };
         modules = [
-          ./modules
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
@@ -33,6 +32,7 @@
             home-manager.users.${username} = import ./machines/${hostname}/home-configuration.nix;
           }
           ./machines/${hostname}/configuration.nix
+          ./modules
         ];
       };
     in

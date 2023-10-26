@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, username, ... }: {
   imports =
     [
       ./hardware-configuration.nix
@@ -30,26 +30,6 @@
     videoDrivers = [ "nouveau" ];
   };
 
-  services.postgresql = {
-    enable = true;
-    package = pkgs.postgresql_15;
-    ensureDatabases = [ "gicw" ];
-    ensureUsers = [
-      {
-        name = "gicw";
-        ensurePermissions = {
-          "ALL TABLES IN SCHEMA public" = "ALL PRIVILEGES";
-        };
-      }
-    ];
-    enableTCPIP = true;
-    authentication = pkgs.lib.mkOverride 10 ''
-      local all all              trust
-      host  all all 127.0.0.1/32 trust
-      host  all all ::1/128      trust
-    '';
-  };
-
   services.openssh.enable = true;
   services.pcscd.enable = true;
   services.printing.enable = true;
@@ -65,7 +45,7 @@
   };
 
   users.defaultUserShell = pkgs.zsh;
-  users.users.gicw = {
+  users.users.${username} = {
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
