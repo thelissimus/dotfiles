@@ -22,6 +22,7 @@
     LC_ALL = "de_DE.UTF-8";
   };
 
+  programs.steam.enable = true;
   services.xserver = {
     enable = true;
     layout = "us,ru,de";
@@ -115,6 +116,7 @@
     driSupport = true;
   };
   hardware.nvidia = {
+    modesetting.enable = true;
     nvidiaSettings = true;
     powerManagement.enable = true;
   };
