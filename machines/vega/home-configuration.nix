@@ -97,7 +97,6 @@ in
       pkief.material-icon-theme
       pkief.material-product-icons
       jnoortheen.nix-ide
-      ocamllabs.ocaml-platform
       christian-kohler.path-intellisense
       esbenp.prettier-vscode
       chenglou92.rescript-vscode
@@ -317,7 +316,7 @@ in
       hls = pkgs.haskell-language-server.override { supportedGhcVersions = [ "92" ]; };
     in
     with pkgs; [
-      anki
+      lutris-unwrapped
       telegram-desktop
       keepassxc
       stacer
@@ -350,10 +349,7 @@ in
       git
       insomnia
       # Documents
-      hledger
-      hledger-ui
       doxygen
-      obsidian
       poppler_utils
       pandoc
       newsboat
@@ -365,7 +361,6 @@ in
       vlc
       yt-dlp
       obs-studio
-      cmus
       feh
       imagemagick
       optipng
@@ -378,7 +373,6 @@ in
       # C
       gcc
       gdb
-      tinycc
       llvmPackages_16.clang-unwrapped
       # Clojure
       clojure
@@ -407,7 +401,6 @@ in
       maven
       jdk17
       # JS
-      bun
       nodejs_20
       nodePackages.pnpm
       # Nix
@@ -415,14 +408,6 @@ in
       nixpkgs-fmt
       # Lean
       lean4
-      # OCaml
-      ocaml
-      opam
-      dune_3
-      ocamlPackages.merlin
-      ocamlPackages.ocaml-lsp
-      ocamlPackages.odoc
-      ocamlPackages.ocamlformat
       # Scala
       metals
       dotty
