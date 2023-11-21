@@ -233,6 +233,7 @@ in
       titlebar-font = "SF Pro Display Bold 11";
     };
     "org/gnome/shell" = {
+      disable-user-extensions = false;
       enabled-extensions = [
         "appindicatorsupport@rgcjonas.gmail.com"
       ];
@@ -316,6 +317,7 @@ in
       hls = pkgs.haskell-language-server.override { supportedGhcVersions = [ "92" ]; };
     in
     with pkgs; [
+      anki
       lutris-unwrapped
       telegram-desktop
       keepassxc
