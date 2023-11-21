@@ -41,6 +41,8 @@
   services.openssh.enable = true;
   services.pcscd.enable = true;
   services.printing.enable = true;
+  services.earlyoom.enable = true;
+  services.earlyoom.freeMemThreshold = 5;
 
   sound.enable = true;
   hardware.pulseaudio.enable = false;
