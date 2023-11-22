@@ -317,6 +317,7 @@ in
       hls = pkgs.haskell-language-server.override { supportedGhcVersions = [ "92" ]; };
     in
     with pkgs; [
+      spotify
       anki
       lutris-unwrapped
       telegram-desktop
