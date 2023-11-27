@@ -400,6 +400,8 @@ in
       haskellPackages.fourmolu
       haskellPackages.hlint
       haskellPackages.hoogle
+      # Idris 2
+      idris2
       # Java
       maven
       jdk17
