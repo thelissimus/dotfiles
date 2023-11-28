@@ -119,8 +119,13 @@
   };
   hardware.nvidia = {
     modesetting.enable = true;
-    nvidiaSettings = true;
+    nvidiaSettings = false;
     powerManagement.enable = true;
+  };
+  hardware.bluetooth.settings = {
+    General = {
+      Experimental = true;
+    };
   };
 
   system.stateVersion = "23.05";
