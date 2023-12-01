@@ -380,6 +380,7 @@ in
       # Clojure
       clojure
       leiningen
+      babashka
       # Erlang
       erlang
       erlang-ls
