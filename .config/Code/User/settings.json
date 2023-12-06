@@ -41,6 +41,7 @@
 	"explorer.autoReveal": false,
 	"explorer.sortOrder": "type",
 	"extensions.autoCheckUpdates": false,
+	"extensions.ignoreRecommendations": true,
 	"files.autoSave": "off",
 	"files.autoSaveDelay": 1000,
 	"files.encoding": "utf8",
