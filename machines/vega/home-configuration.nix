@@ -82,6 +82,7 @@ in
     package = pkgs.vscode;
     extensions = with pkgs.vscode-extensions; [
       betterthantomorrow.calva
+      github.copilot
       llvm-vs-code-extensions.vscode-clangd
       editorconfig.editorconfig
       usernamehw.errorlens
@@ -136,6 +137,12 @@ in
         version = "0.4.2";
         sha256 = "IHz7fpE+RiLP6tEkWwShsfDPM3rTbq5tE9/BHt1QkIQ=";
       }
+      {
+        name = "ide-purescript";
+        publisher = "nwolverson";
+        version = "0.26.3";
+        sha256 = "oNtgZWbYFyjrHJ7ARpNW+LIY/zH/pbjBjqLlCKkkI/c=";
+      }
     ];
     keybindings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/keybindings.json);
     userSettings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/settings.json);
@@ -156,7 +163,7 @@ in
       # Modification
       editorconfig-vim
       (nvim-treesitter.withPlugins
-        (p: with p; [ c erlang go haskell haskell_persistent latex nix ocaml ocaml_interface scala ]))
+        (p: with p; [ c erlang go haskell haskell_persistent latex nix scala ]))
       # Components
       diffview-nvim
       nvim-tree-lua
@@ -384,7 +391,7 @@ in
       # Erlang
       erlang
       erlang-ls
-      rebar3
+      # rebar3
       # Go
       go
       gopls
@@ -414,6 +421,10 @@ in
       nixpkgs-fmt
       # Lean
       lean4
+      # PureScript
+      pkgs.purs
+      pkgs.purs-tidy
+      pkgs.spago-unstable
       # Scala
       metals
       dotty
