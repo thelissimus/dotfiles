@@ -6,9 +6,7 @@
     ensureUsers = [
       {
         name = username;
-        ensurePermissions = {
-          "ALL TABLES IN SCHEMA public" = "ALL PRIVILEGES";
-        };
+        ensureDBOwnership = true;
       }
     ];
     enableTCPIP = true;
