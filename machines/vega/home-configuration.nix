@@ -138,6 +138,12 @@ in
         sha256 = "IHz7fpE+RiLP6tEkWwShsfDPM3rTbq5tE9/BHt1QkIQ=";
       }
       {
+        name = "language-purescript";
+        publisher = "nwolverson";
+        version = "0.2.8";
+        sha256 = "2uOwCHvnlQQM8s8n7dtvIaMgpW8ROeoUraM02rncH9o=";
+      }
+      {
         name = "ide-purescript";
         publisher = "nwolverson";
         version = "0.26.3";
