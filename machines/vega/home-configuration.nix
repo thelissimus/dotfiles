@@ -141,6 +141,15 @@ in
     keybindings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/keybindings.json);
     userSettings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/settings.json);
   };
+  programs.emacs = {
+    enable = true;
+    extraConfig = builtins.readFile ../../.config/emacs/init.el;
+    extraPackages = epkgs: with epkgs; [
+      gruvbox-theme
+      idris2-mode
+      prop-menu
+    ];
+  };
   programs.neovim = {
     enable = true;
     defaultEditor = true;
