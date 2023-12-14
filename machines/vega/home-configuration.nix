@@ -324,7 +324,7 @@ in
 
   home.packages =
     let
-      hls = pkgs.haskell-language-server.override { supportedGhcVersions = [ "92" ]; };
+      hls = pkgs.haskell-language-server.override { supportedGhcVersions = [ "94" ]; };
     in
     with pkgs; [
       spotify
@@ -401,7 +401,7 @@ in
       delve
       go-tools
       # Haskell
-      haskell.compiler.ghc92
+      haskell.compiler.ghc94
       cabal-install
       hls
       haskellPackages.hls-cabal-plugin
