@@ -20,6 +20,7 @@
 	"editor.fontFamily": "'SF Mono'",
 	"editor.fontSize": 17,
 	"editor.fontWeight": "600",
+	"editor.hover.enabled": false,
 	"editor.indentSize": "tabSize",
 	"editor.inlayHints.enabled": "off",
 	"editor.inlayHints.fontFamily": "SF Pro Display",

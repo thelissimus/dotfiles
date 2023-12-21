@@ -93,6 +93,7 @@
     iagno
     hitori
     atomix
+    seahorse
   ]);
 
   fonts = {
