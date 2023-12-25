@@ -11,6 +11,9 @@
 	"[typescript][typescriptreact]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
+	"[yaml]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	},
 	"breadcrumbs.enabled": false,
 	"diffEditor.diffAlgorithm": "advanced",
 	"editor.bracketPairColorization.enabled": true,
@@ -75,6 +78,7 @@
 	"prettier.tabWidth": 4,
 	"prettier.trailingComma": "all",
 	"prettier.useTabs": true,
+	"redhat.telemetry.enabled": false,
 	"rescript.settings.askToStartBuild": false,
 	"rescript.settings.inlayHints.enable": true,
 	"terminal.integrated.fontSize": 15,

@@ -60,10 +60,7 @@
     extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
 
-  virtualisation.docker.rootless = {
-    enable = true;
-    setSocketVariable = true;
-  };
+  virtualisation.docker.enable = true;
   environment.shells = with pkgs; [ zsh ];
   environment.systemPackages = with pkgs; [
     file
@@ -76,6 +73,8 @@
     zip
     unzip
     fdupes
+    minikube
+    kubernetes
   ];
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
