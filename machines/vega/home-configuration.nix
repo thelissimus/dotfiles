@@ -329,9 +329,7 @@ in
       hls = pkgs.haskell-language-server.override { supportedGhcVersions = [ "94" ]; };
     in
     with pkgs; [
-      spotify
       anki
-      lutris-unwrapped
       telegram-desktop
       keepassxc
       stacer
@@ -396,7 +394,7 @@ in
       # Erlang
       erlang
       erlang-ls
-      # rebar3
+      rebar3
       # Go
       go
       gopls
@@ -413,8 +411,6 @@ in
       haskellPackages.fourmolu
       haskellPackages.hlint
       haskellPackages.hoogle
-      # Idris 2
-      idris2
       # Java
       maven
       jdk17
