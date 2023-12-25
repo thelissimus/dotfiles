@@ -81,6 +81,8 @@ in
     enableUpdateCheck = false;
     package = pkgs.vscode;
     extensions = with pkgs.vscode-extensions; [
+      ms-kubernetes-tools.vscode-kubernetes-tools
+      ms-azuretools.vscode-docker
       betterthantomorrow.calva
       github.copilot
       llvm-vs-code-extensions.vscode-clangd
