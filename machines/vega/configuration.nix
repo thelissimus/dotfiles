@@ -98,6 +98,7 @@
   fonts = {
     packages = with pkgs; [
       noto-fonts-cjk
+      iosevka-bin
     ];
     fontconfig = {
       enable = true;
