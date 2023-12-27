@@ -81,6 +81,7 @@ in
     enableUpdateCheck = false;
     package = pkgs.vscode;
     extensions = with pkgs.vscode-extensions; [
+      eugleo.magic-racket
       ms-kubernetes-tools.vscode-kubernetes-tools
       ms-azuretools.vscode-docker
       betterthantomorrow.calva
@@ -422,6 +423,8 @@ in
       nixpkgs-fmt
       # Lean
       lean4
+      # Racket
+      racket
       # Scala
       metals
       dotty
