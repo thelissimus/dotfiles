@@ -88,8 +88,8 @@ in
       usernamehw.errorlens
       dbaeumer.vscode-eslint
       tamasfe.even-better-toml
-      # donjayamanne.githistory
       github.copilot
+      github.copilot-chat
       eamodio.gitlens
       golang.go
       jdinhlife.gruvbox
