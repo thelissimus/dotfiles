@@ -81,29 +81,29 @@ in
     enableUpdateCheck = false;
     package = pkgs.vscode;
     extensions = with pkgs.vscode-extensions; [
-      eugleo.magic-racket
-      ms-kubernetes-tools.vscode-kubernetes-tools
-      ms-azuretools.vscode-docker
       betterthantomorrow.calva
-      github.copilot
       llvm-vs-code-extensions.vscode-clangd
+      ms-azuretools.vscode-docker
       editorconfig.editorconfig
       usernamehw.errorlens
       dbaeumer.vscode-eslint
       tamasfe.even-better-toml
-      donjayamanne.githistory
+      # donjayamanne.githistory
+      github.copilot
+      eamodio.gitlens
       golang.go
       jdinhlife.gruvbox
       haskell.haskell
       justusadam.language-haskell
+      ms-kubernetes-tools.vscode-kubernetes-tools
       james-yu.latex-workshop
       sumneko.lua
+      eugleo.magic-racket
       pkief.material-icon-theme
       pkief.material-product-icons
       jnoortheen.nix-ide
       christian-kohler.path-intellisense
       esbenp.prettier-vscode
-      chenglou92.rescript-vscode
       scalameta.metals
       scala-lang.scala
       timonwong.shellcheck
@@ -132,6 +132,12 @@ in
         name = "markdown-preview-github-styles";
         publisher = "bierner";
         version = "2.0.3";
+        sha256 = "yuF6TJSv0V2OvkBwqwAQKRcHCAXNL+NW8Q3s+dMFnLY=";
+      }
+      {
+        name = "markdowntable";
+        publisher = "takumii";
+        version = "0.11.0";
         sha256 = "yuF6TJSv0V2OvkBwqwAQKRcHCAXNL+NW8Q3s+dMFnLY=";
       }
       {

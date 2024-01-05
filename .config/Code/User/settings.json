@@ -2,10 +2,10 @@
 	"[html][css]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-	"[json][jsonc]": {
+	"[javascript][javascriptreact]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-	"[javascript][javascriptreact]": {
+	"[json][jsonc]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[typescript][typescriptreact]": {
@@ -51,6 +51,22 @@
 	"files.autoSaveDelay": 1000,
 	"files.encoding": "utf8",
 	"files.eol": "\n",
+	"files.exclude": {
+		"**/.DS_Store": true,
+		"**/.calva": true,
+		"**/.clj-kondo": true,
+		"**/.git": true,
+		"**/.hg": true,
+		"**/.lsp": true,
+		"**/.shadow-cljs": true,
+		"**/.svn": true,
+		"**/.vscode": true,
+		"**/.idea": true,
+		"**/CVS": true,
+		"**/Thumbs.db": true,
+		"**/node_modules": true,
+		"**/target": true
+	},
 	"files.insertFinalNewline": true,
 	"files.trimTrailingWhitespace": true,
 	"files.watcherExclude": {
@@ -89,14 +105,14 @@
 	"update.mode": "none",
 	"update.showReleaseNotes": false,
 	"vim.enableNeovim": true,
-	"vim.history": 500,
 	"vim.handleKeys": {
 		"<C-c>": false
 	},
+	"vim.history": 500,
 	"vim.insertModeKeyBindings": [
 		{
-			"before": ["j", "k"],
-			"after": ["<esc>"]
+			"after": ["<esc>"],
+			"before": ["j", "k"]
 		}
 	],
 	"window.dialogStyle": "custom",
@@ -104,7 +120,7 @@
 	"window.newWindowDimensions": "maximized",
 	"window.restoreFullscreen": true,
 	"window.title": "${dirty}${separator}${rootName}${separator}${profileName}${separator}",
-	"window.titleBarStyle": "native",
+	"window.titleBarStyle": "custom",
 	"window.zoomLevel": 0.5,
 	"workbench.colorTheme": "Gruvbox Dark Medium",
 	"workbench.iconTheme": "material-icon-theme",
