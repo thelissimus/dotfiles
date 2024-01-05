@@ -138,7 +138,7 @@ in
         name = "markdowntable";
         publisher = "takumii";
         version = "0.11.0";
-        sha256 = "yuF6TJSv0V2OvkBwqwAQKRcHCAXNL+NW8Q3s+dMFnLY=";
+        sha256 = "kn5aLRaxxacQMvtTp20IdTuiuc6xNU3QO2XbXnzSf7o=";
       }
       {
         name = "typescript-explorer";
@@ -331,110 +331,101 @@ in
     };
   };
 
-  home.packages =
-    let
-      hls = pkgs.haskell-language-server.override { supportedGhcVersions = [ "94" ]; };
-    in
-    with pkgs; [
-      anki
-      telegram-desktop
-      keepassxc
-      stacer
-      qbittorrent
-      openvpn
-      baobab
-      smartmontools
-      gcolor3
-      flameshot
-      libqalculate
-      qalculate-gtk
-      nicotine-plus
-      pinentry
-      gnome.gnome-tweaks
-      gnomeExtensions.appindicator
-      # CLI
-      difftastic
-      fzf
-      htop
-      jq
-      pfetch
-      rename
-      ripgrep
-      rlwrap
-      tmux
-      tokei
-      tree
-      yazi
-      # Dev
-      git
-      insomnia
-      # Documents
-      doxygen
-      poppler_utils
-      pandoc
-      newsboat
-      nb
-      texlive.combined.scheme-medium
-      # Media
-      ffmpeg
-      mpv
-      vlc
-      yt-dlp
-      obs-studio
-      feh
-      imagemagick
-      optipng
-      peek
-      # Database
-      sqlite
-      # Tools
-      android-tools
-      libz
-      # C
-      gcc
-      gdb
-      llvmPackages_16.clang-unwrapped
-      # Clojure
-      clojure
-      leiningen
-      babashka
-      # Erlang
-      erlang
-      erlang-ls
-      rebar3
-      # Go
-      go
-      gopls
-      delve
-      go-tools
-      # Haskell
-      haskell.compiler.ghc94
-      cabal-install
-      hls
-      haskellPackages.hls-cabal-plugin
-      haskellPackages.hls-cabal-fmt-plugin
-      haskellPackages.hls-eval-plugin
-      haskellPackages.cabal-fmt
-      haskellPackages.fourmolu
-      haskellPackages.hlint
-      haskellPackages.hoogle
-      # Java
-      maven
-      jdk17
-      # JS
-      nodejs_20
-      nodePackages.pnpm
-      # Nix
-      nil
-      nixpkgs-fmt
-      # Lean
-      lean4
-      # Racket
-      racket
-      # Scala
-      metals
-      dotty
-      sbt
-      scala-cli
-    ];
+  home.packages = with pkgs; [
+    anki
+    telegram-desktop
+    keepassxc
+    stacer
+    qbittorrent
+    openvpn
+    baobab
+    smartmontools
+    gcolor3
+    flameshot
+    libqalculate
+    pinentry
+    gnome.gnome-tweaks
+    gnomeExtensions.appindicator
+    zoom-us
+    # CLI
+    difftastic
+    fzf
+    htop
+    jq
+    pfetch
+    rename
+    ripgrep
+    rlwrap
+    tmux
+    tokei
+    tree
+    yazi
+    # Dev
+    git
+    insomnia
+    # Documents
+    poppler_utils
+    newsboat
+    nb
+    texlive.combined.scheme-medium
+    # Media
+    ffmpeg
+    mpv
+    yt-dlp
+    obs-studio
+    feh
+    imagemagick
+    optipng
+    peek
+    # Database
+    sqlite
+    # Tools
+    kubernetes-helm
+    kustomize
+    # C
+    gcc
+    gdb
+    llvmPackages_16.clang-unwrapped
+    # Clojure
+    clojure
+    leiningen
+    babashka
+    # Erlang
+    erlang
+    erlang-ls
+    rebar3
+    # Go
+    go
+    gopls
+    delve
+    go-tools
+    # Haskell
+    haskell.compiler.ghc94
+    cabal-install
+    (haskell-language-server.override { supportedGhcVersions = [ "94" ]; })
+    haskellPackages.hls-cabal-plugin
+    haskellPackages.hls-cabal-fmt-plugin
+    haskellPackages.hls-eval-plugin
+    haskellPackages.cabal-fmt
+    haskellPackages.fourmolu
+    haskellPackages.hlint
+    haskellPackages.hoogle
+    # Java
+    maven
+    jdk17
+    # JS
+    nodejs_20
+    nodePackages.pnpm
+    # Nix
+    nil
+    nixpkgs-fmt
+    # Lean
+    lean4
+    # Racket
+    racket
+    # Scala
+    metals
+    dotty
+    sbt
+  ];
 }
