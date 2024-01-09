@@ -377,6 +377,8 @@ in
     imagemagick
     optipng
     peek
+    figma-linux
+    figma-agent
     # Database
     sqlite
     # Tools
