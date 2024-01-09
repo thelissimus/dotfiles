@@ -75,6 +75,7 @@
     fdupes
     minikube
     kubernetes
+    libGL
   ];
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
@@ -94,11 +95,15 @@
     atomix
     seahorse
   ]);
+  environment.variables = {
+    LD_LIBRARY_PATH = "$LD_LIBRARY_PATH:${pkgs.libGL}/lib";
+  };
 
   fonts = {
     packages = with pkgs; [
       noto-fonts-cjk
       iosevka-bin
+      inter
     ];
     fontconfig = {
       enable = true;
