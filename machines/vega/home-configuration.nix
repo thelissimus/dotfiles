@@ -31,6 +31,7 @@ in
 
     shellAliases = {
       ydl = "yt-dlp -o '%(title)s.%(ext)s' -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'";
+      adl = "yt-dlp -o '%(title)s.%(ext)s' -f 'bestaudio[ext=m4a]/best' --extract-audio";
     };
   };
   programs.firefox = {
@@ -111,6 +112,18 @@ in
       zxh404.vscode-proto3
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
+        name = "bqn-language";
+        publisher = "razetime";
+        version = "0.1.5";
+        sha256 = "50DLHgRE0rozH2XEpyxeHGjtvrSWul5iqUfZfWCTpPw=";
+      }
+      {
+        name = "vscode-ebnf";
+        publisher = "igochkov";
+        version = "1.3.1";
+        sha256 = "b90rvx59s0hGJyTArTQA954dFtLzAB4jfCQhJ6RiPJE=";
+      }
+      {
         name = "erlang-ls";
         publisher = "erlang-ls";
         version = "0.0.40";
@@ -145,12 +158,6 @@ in
         publisher = "mxsdev";
         version = "0.4.2";
         sha256 = "IHz7fpE+RiLP6tEkWwShsfDPM3rTbq5tE9/BHt1QkIQ=";
-      }
-      {
-        name = "vscode-ebnf";
-        publisher = "igochkov";
-        version = "1.3.1";
-        sha256 = "b90rvx59s0hGJyTArTQA954dFtLzAB4jfCQhJ6RiPJE=";
       }
     ];
     keybindings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/keybindings.json);
@@ -390,6 +397,8 @@ in
     # Tools
     kubernetes-helm
     kustomize
+    # BQN
+    cbqn
     # C
     gcc
     gdb
