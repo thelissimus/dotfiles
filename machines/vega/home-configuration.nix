@@ -146,6 +146,12 @@ in
         version = "0.4.2";
         sha256 = "IHz7fpE+RiLP6tEkWwShsfDPM3rTbq5tE9/BHt1QkIQ=";
       }
+      {
+        name = "vscode-ebnf";
+        publisher = "igochkov";
+        version = "1.3.1";
+        sha256 = "b90rvx59s0hGJyTArTQA954dFtLzAB4jfCQhJ6RiPJE=";
+      }
     ];
     keybindings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/keybindings.json);
     userSettings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/settings.json);
