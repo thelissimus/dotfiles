@@ -381,6 +381,7 @@ in
     newsboat
     nb
     texlive.combined.scheme-medium
+    hugo
     # Media
     ffmpeg
     mpv
