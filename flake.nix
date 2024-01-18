@@ -25,6 +25,7 @@
 
         specialArgs = { inherit inputs username; };
         modules = [
+          { nix.registry.n.flake = inputs.nixpkgs; }
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
