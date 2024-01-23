@@ -82,6 +82,7 @@ in
     enableUpdateCheck = false;
     package = pkgs.vscode;
     extensions = with pkgs.vscode-extensions; [
+      rust-lang.rust-analyzer
       betterthantomorrow.calva
       llvm-vs-code-extensions.vscode-clangd
       ms-azuretools.vscode-docker
@@ -441,6 +442,8 @@ in
     lean4
     # Racket
     racket
+    # Rust
+    rustup
     # Scala
     metals
     dotty
