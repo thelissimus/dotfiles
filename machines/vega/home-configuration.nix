@@ -219,7 +219,19 @@ in
     options = {
       font = "SF Mono 10";
       selection-clipboard = "clipboard";
+      recolor = true;
       window-title-basename = true;
+      statusbar-page-percent = true;
+      recolor-darkcolor = "#f3efe6";
+      recolor-lightcolor = "#1d2021";
+      default-bg = "#212428";
+      highlight-color = "#888885";
+      statusbar-fg = "#ebdbb2";
+      statusbar-bg = "#282828";
+      inputbar-fg = "#f3efe6";
+      inputbar-bg = "#212428";
+      error-color = "#f85f5f";
+      warning-color = "#ffb05c";
     };
   };
 
