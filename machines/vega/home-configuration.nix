@@ -82,6 +82,7 @@ in
     enableUpdateCheck = false;
     package = pkgs.vscode;
     extensions = with pkgs.vscode-extensions; [
+      wakatime.vscode-wakatime
       rust-lang.rust-analyzer
       betterthantomorrow.calva
       llvm-vs-code-extensions.vscode-clangd
@@ -112,6 +113,12 @@ in
       vscodevim.vim
       zxh404.vscode-proto3
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+      {
+        name = "language-x86-64-assembly";
+        publisher = "13xforever";
+        version = "3.1.4";
+        sha256 = "FJRDm1H3GLBfSKBSFgVspCjByy9m+j9OStlU+/pMfs8=";
+      }
       {
         name = "bqn-language";
         publisher = "razetime";
@@ -153,6 +160,12 @@ in
         publisher = "takumii";
         version = "0.11.0";
         sha256 = "kn5aLRaxxacQMvtTp20IdTuiuc6xNU3QO2XbXnzSf7o=";
+      }
+      {
+        name = "paperproof";
+        publisher = "paperproof";
+        version = "1.1.2";
+        sha256 = "NCaQzFa3WQ2kURf4tvrxLykbpPde74cAfhK9olA9m6o=";
       }
       {
         name = "typescript-explorer";
