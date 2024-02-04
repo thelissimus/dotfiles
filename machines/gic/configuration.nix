@@ -17,9 +17,11 @@
 
   services.xserver = {
     enable = true;
-    layout = "us,ru,de";
-    xkbOptions = "caps:escape,grp:alt_shift_toggle";
-    xkbVariant = "altgr-intl";
+    xkb = {
+      layout = "us,ru,de";
+      options = "caps:escape,grp:alt_shift_toggle";
+      variant = "altgr-intl";
+    };
     displayManager = {
       gdm.enable = true;
       gdm.wayland = true;
