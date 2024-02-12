@@ -1,5 +1,7 @@
 (require 'prop-menu)
 (require 'idris2-mode)
+(require 'evil)
+(evil-mode 1)
 
 (load-theme 'gruvbox-dark-medium t)
 (set-face-attribute 'default nil :font "SF Mono Medium")
