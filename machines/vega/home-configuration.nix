@@ -113,6 +113,12 @@ in
       zxh404.vscode-proto3
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
+        name = "agda-mode";
+        publisher = "banacorn";
+        version = "0.4.7";
+        sha256 = "gNa3n16lP3ooBRvGaugTua4IXcIzpMk7jBYMJDQsY00=";
+      }
+      {
         name = "language-x86-64-assembly";
         publisher = "13xforever";
         version = "3.1.4";
@@ -418,6 +424,10 @@ in
     # Tools
     kubernetes-helm
     kustomize
+    # Agda
+    (agda.withPackages (ps: with ps; [
+      standard-library
+    ]))
     # BQN
     cbqn
     # C
