@@ -184,6 +184,7 @@ in
       gruvbox-theme
       idris2-mode
       prop-menu
+      evil
     ];
   };
   programs.neovim = {
