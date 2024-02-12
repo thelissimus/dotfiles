@@ -84,7 +84,6 @@ in
     extensions = with pkgs.vscode-extensions; [
       bierner.markdown-mermaid
       wakatime.vscode-wakatime
-      rust-lang.rust-analyzer
       llvm-vs-code-extensions.vscode-clangd
       ms-azuretools.vscode-docker
       editorconfig.editorconfig
@@ -454,8 +453,6 @@ in
     elan
     # Racket
     racket
-    # Rust
-    rustup
     # Scala
     metals
     dotty
