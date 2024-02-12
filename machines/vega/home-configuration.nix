@@ -466,7 +466,7 @@ in
     nil
     nixpkgs-fmt
     # Lean
-    lean4
+    elan
     # Racket
     racket
     # Rust
