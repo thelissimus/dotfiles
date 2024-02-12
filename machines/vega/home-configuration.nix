@@ -133,12 +133,6 @@ in
         sha256 = "b90rvx59s0hGJyTArTQA954dFtLzAB4jfCQhJ6RiPJE=";
       }
       {
-        name = "erlang-ls";
-        publisher = "erlang-ls";
-        version = "0.0.40";
-        sha256 = "HFlOig5UUsT+XX0h1dcRQ3mWRsASqvKTMpqqRhVpTAY=";
-      }
-      {
         name = "lean4";
         publisher = "leanprover";
         version = "0.0.111";
@@ -204,7 +198,7 @@ in
       # Modification
       editorconfig-vim
       (nvim-treesitter.withPlugins
-        (p: with p; [ c erlang go haskell haskell_persistent latex nix scala ]))
+        (p: with p; [ c go haskell haskell_persistent latex nix scala ]))
       # Components
       diffview-nvim
       nvim-tree-lua
@@ -436,10 +430,6 @@ in
     clojure
     leiningen
     babashka
-    # Erlang
-    erlang
-    erlang-ls
-    rebar3
     # Go
     go
     gopls
