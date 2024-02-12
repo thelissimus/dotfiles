@@ -82,6 +82,7 @@ in
     enableUpdateCheck = false;
     package = pkgs.vscode;
     extensions = with pkgs.vscode-extensions; [
+      bierner.markdown-mermaid
       wakatime.vscode-wakatime
       rust-lang.rust-analyzer
       betterthantomorrow.calva
