@@ -85,7 +85,6 @@ in
       bierner.markdown-mermaid
       wakatime.vscode-wakatime
       rust-lang.rust-analyzer
-      betterthantomorrow.calva
       llvm-vs-code-extensions.vscode-clangd
       ms-azuretools.vscode-docker
       editorconfig.editorconfig
@@ -426,10 +425,6 @@ in
     gcc
     gdb
     llvmPackages_16.clang-unwrapped
-    # Clojure
-    clojure
-    leiningen
-    babashka
     # Go
     go
     gopls
