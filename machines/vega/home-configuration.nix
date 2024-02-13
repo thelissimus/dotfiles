@@ -82,8 +82,6 @@ in
     enableUpdateCheck = false;
     package = pkgs.vscode;
     extensions = with pkgs.vscode-extensions; [
-      bierner.markdown-mermaid
-      wakatime.vscode-wakatime
       llvm-vs-code-extensions.vscode-clangd
       ms-azuretools.vscode-docker
       editorconfig.editorconfig
@@ -101,6 +99,7 @@ in
       james-yu.latex-workshop
       sumneko.lua
       eugleo.magic-racket
+      bierner.markdown-mermaid
       pkief.material-icon-theme
       pkief.material-product-icons
       jnoortheen.nix-ide
@@ -110,19 +109,13 @@ in
       scala-lang.scala
       timonwong.shellcheck
       vscodevim.vim
-      zxh404.vscode-proto3
+      wakatime.vscode-wakatime
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
         name = "agda-mode";
         publisher = "banacorn";
         version = "0.4.7";
         sha256 = "gNa3n16lP3ooBRvGaugTua4IXcIzpMk7jBYMJDQsY00=";
-      }
-      {
-        name = "language-x86-64-assembly";
-        publisher = "13xforever";
-        version = "3.1.4";
-        sha256 = "FJRDm1H3GLBfSKBSFgVspCjByy9m+j9OStlU+/pMfs8=";
       }
       {
         name = "bqn-language";
@@ -171,6 +164,12 @@ in
         publisher = "mxsdev";
         version = "0.4.2";
         sha256 = "IHz7fpE+RiLP6tEkWwShsfDPM3rTbq5tE9/BHt1QkIQ=";
+      }
+      {
+        name = "language-x86-64-assembly";
+        publisher = "13xforever";
+        version = "3.1.4";
+        sha256 = "FJRDm1H3GLBfSKBSFgVspCjByy9m+j9OStlU+/pMfs8=";
       }
     ];
     keybindings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/keybindings.json);
