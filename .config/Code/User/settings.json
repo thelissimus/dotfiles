@@ -75,6 +75,7 @@
 		"**/.bloop": true,
 		"**/.metals": true
 	},
+	"gitlens.codeLens.enabled": false,
 	"haskell.formattingProvider": "fourmolu",
 	"haskell.manageHLS": "PATH",
 	"mergeEditor.diffAlgorithm": "advanced",
