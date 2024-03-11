@@ -31,7 +31,16 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end,
 })
 
-local servers = { 'clangd', 'erlangls', 'gopls', 'leanls', 'nil_ls', 'ocamllsp', 'metals' }
+local servers =
+  { 'asm_lsp'
+  , 'clangd'
+  , 'gopls'
+  , 'leanls'
+  , 'nil_ls'
+  , 'metals'
+  , 'racket_langserver'
+  ,
+  }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup {
 		capabilities = capabilities,
@@ -45,6 +54,16 @@ lspconfig['hls'].setup {
 		haskell = {
 			cabalFormattingProvider = "cabalfmt",
 			formattingProvider = "fourmolu",
+		}
+	}
+}
+
+lspconfig['rust_analyzer'].setup {
+	settings = {
+		['rust-analyzer'] = {
+			diagnostics = {
+				enable = false;
+			}
 		}
 	}
 }
