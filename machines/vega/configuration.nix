@@ -108,6 +108,7 @@
       kode-mono
       fantasque-sans-mono
       inter
+      stix-two
     ];
     fontconfig = {
       enable = true;
