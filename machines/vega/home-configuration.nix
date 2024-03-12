@@ -88,8 +88,6 @@ in
       usernamehw.errorlens
       dbaeumer.vscode-eslint
       tamasfe.even-better-toml
-      github.copilot
-      github.copilot-chat
       eamodio.gitlens
       golang.go
       jdinhlife.gruvbox
@@ -105,6 +103,7 @@ in
       jnoortheen.nix-ide
       christian-kohler.path-intellisense
       esbenp.prettier-vscode
+      rust-lang.rust-analyzer
       scalameta.metals
       scala-lang.scala
       timonwong.shellcheck
@@ -128,6 +127,12 @@ in
         publisher = "igochkov";
         version = "1.3.1";
         sha256 = "b90rvx59s0hGJyTArTQA954dFtLzAB4jfCQhJ6RiPJE=";
+      }
+      {
+        name = "haskell-gtd-nl";
+        publisher = "dbaynak";
+        version = "0.3.3";
+        sha256 = "Hd7E4NW/zj45xTB/iYvwnPTaFevGAF3EoAnZnEUa6LI=";
       }
       {
         name = "lean4";
@@ -201,7 +206,7 @@ in
       # Modification
       editorconfig-vim
       (nvim-treesitter.withPlugins
-        (p: with p; [ c go haskell haskell_persistent latex nix scala ]))
+        (p: with p; [ c go haskell haskell_persistent latex nix rust scala ]))
       # Components
       diffview-nvim
       nvim-tree-lua
@@ -371,6 +376,8 @@ in
 
   home.packages = with pkgs; [
     anki
+    wpsoffice
+    ticktick
     telegram-desktop
     keepassxc
     stacer
@@ -382,6 +389,7 @@ in
     flameshot
     libqalculate
     pinentry
+    nfs-utils
     gnome.gnome-tweaks
     gnomeExtensions.appindicator
     zoom-us
@@ -408,7 +416,7 @@ in
     texlive.combined.scheme-medium
     hugo
     # Media
-    ffmpeg
+    ffmpeg-full
     mpv
     yt-dlp
     obs-studio
@@ -420,6 +428,7 @@ in
     figma-agent
     # Database
     sqlite
+    mongodb-compass
     # Tools
     kubernetes-helm
     kustomize
@@ -427,11 +436,15 @@ in
     (agda.withPackages (ps: with ps; [
       standard-library
     ]))
+    # ASM
+    asm-lsp
+    rappel
     # BQN
     cbqn
     # C
     gcc
     gdb
+    llvm_14
     llvmPackages_16.clang-unwrapped
     # Go
     go
@@ -462,6 +475,8 @@ in
     elan
     # Racket
     racket
+    # Rust
+    rustup
     # Scala
     metals
     dotty
