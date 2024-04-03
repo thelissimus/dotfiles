@@ -462,6 +462,7 @@ in
     haskellPackages.fourmolu
     haskellPackages.hlint
     haskellPackages.hoogle
+    haskellPackages.ghcprofview
     # Java
     maven
     jdk17
