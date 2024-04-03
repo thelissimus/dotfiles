@@ -105,8 +105,6 @@
     packages = with pkgs; [
       noto-fonts-cjk
       iosevka-bin
-      kode-mono
-      fantasque-sans-mono
       inter
       stix-two
     ];
