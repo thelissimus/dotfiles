@@ -17,8 +17,13 @@ in
   programs.git.difftastic.enable = true;
   programs.zsh = {
     enable = true;
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+    plugins = [{
+      name = "vi-mode";
+      src = pkgs.zsh-vi-mode;
+      file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
+    }];
 
     history = {
       extended = true;
@@ -236,7 +241,7 @@ in
     options = {
       font = "SF Mono 10";
       selection-clipboard = "clipboard";
-      recolor = true;
+      recolor = false;
       window-title-basename = true;
       statusbar-page-percent = true;
       recolor-darkcolor = "#f3efe6";
@@ -406,6 +411,7 @@ in
     tokei
     tree
     yazi
+    wayback
     # Dev
     git
     insomnia
