@@ -407,6 +407,7 @@ in
     rename
     ripgrep
     rlwrap
+    spek
     tmux
     tokei
     tree
