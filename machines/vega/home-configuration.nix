@@ -11,6 +11,11 @@ in
   home.file.".npmrc".source = ../../.config/.npmrc;
   home.file.".sqliterc".source = ../../.config/.sqliterc;
 
+  home.sessionPath = [
+    "$HOME/.npm-global/bin"
+    "$HOME/.local/bin"
+  ];
+
   programs.zoxide.enable = true;
   programs.bash.enable = true;
   programs.command-not-found.enable = true;
