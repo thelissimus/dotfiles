@@ -408,6 +408,8 @@ in
     gnome.gnome-tweaks
     gnomeExtensions.appindicator
     zoom-us
+    ollama
+    kicad
     # CLI
     difftastic
     fzf
@@ -433,6 +435,7 @@ in
     texlive.combined.scheme-medium
     hugo
     # Media
+    moc
     ffmpeg-full
     mpv
     yt-dlp
