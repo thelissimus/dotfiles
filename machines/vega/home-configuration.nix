@@ -15,6 +15,11 @@ in
   programs.bash.enable = true;
   programs.command-not-found.enable = true;
   programs.git.difftastic.enable = true;
+  programs.java = {
+    enable = true;
+    package = pkgs.jdk17;
+  };
+  programs.sbt.enable = true;
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
@@ -472,7 +477,6 @@ in
     haskellPackages.ghcprofview
     # Java
     maven
-    jdk17
     # JS
     nodejs_20
     nodePackages.pnpm
@@ -488,6 +492,5 @@ in
     # Scala
     metals
     dotty
-    sbt
   ];
 }
