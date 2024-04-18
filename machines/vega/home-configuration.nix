@@ -126,6 +126,12 @@ in
       wakatime.vscode-wakatime
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
+        name = "vsc-prolog";
+        publisher = "arthurwang";
+        version = "0.8.23";
+        sha256 = "Da2dCpruVqzP3g1hH0+TyvvEa1wEwGXgvcmIq9B/2cQ=";
+      }
+      {
         name = "agda-mode";
         publisher = "banacorn";
         version = "0.4.7";
@@ -493,6 +499,8 @@ in
     nixpkgs-fmt
     # Lean
     elan
+    # Prolog
+    swiProlog
     # Racket
     racket
     # Rust
