@@ -18,7 +18,6 @@ in
 
   programs.zoxide.enable = true;
   programs.bash.enable = true;
-  programs.command-not-found.enable = true;
   programs.git.difftastic.enable = true;
   programs.java = {
     enable = true;
@@ -98,7 +97,6 @@ in
     package = pkgs.vscode;
     extensions = with pkgs.vscode-extensions; [
       llvm-vs-code-extensions.vscode-clangd
-      ms-azuretools.vscode-docker
       editorconfig.editorconfig
       usernamehw.errorlens
       dbaeumer.vscode-eslint
@@ -108,10 +106,8 @@ in
       jdinhlife.gruvbox
       haskell.haskell
       justusadam.language-haskell
-      ms-kubernetes-tools.vscode-kubernetes-tools
       james-yu.latex-workshop
       sumneko.lua
-      eugleo.magic-racket
       bierner.markdown-mermaid
       pkief.material-icon-theme
       pkief.material-product-icons
@@ -142,12 +138,6 @@ in
         publisher = "razetime";
         version = "0.1.5";
         sha256 = "50DLHgRE0rozH2XEpyxeHGjtvrSWul5iqUfZfWCTpPw=";
-      }
-      {
-        name = "vscode-ebnf";
-        publisher = "igochkov";
-        version = "1.3.1";
-        sha256 = "b90rvx59s0hGJyTArTQA954dFtLzAB4jfCQhJ6RiPJE=";
       }
       {
         name = "haskell-gtd-nl";
@@ -186,12 +176,6 @@ in
         sha256 = "NCaQzFa3WQ2kURf4tvrxLykbpPde74cAfhK9olA9m6o=";
       }
       {
-        name = "typescript-explorer";
-        publisher = "mxsdev";
-        version = "0.4.2";
-        sha256 = "IHz7fpE+RiLP6tEkWwShsfDPM3rTbq5tE9/BHt1QkIQ=";
-      }
-      {
         name = "language-x86-64-assembly";
         publisher = "13xforever";
         version = "3.1.4";
@@ -200,16 +184,6 @@ in
     ];
     keybindings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/keybindings.json);
     userSettings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/settings.json);
-  };
-  programs.emacs = {
-    enable = true;
-    extraConfig = builtins.readFile ../../.config/emacs/init.el;
-    extraPackages = epkgs: with epkgs; [
-      gruvbox-theme
-      idris2-mode
-      prop-menu
-      evil
-    ];
   };
   programs.neovim = {
     enable = true;
@@ -409,9 +383,7 @@ in
     gcolor3
     flameshot
     libqalculate
-    pinentry
     nfs-utils
-    gnome.gnome-tweaks
     gnomeExtensions.appindicator
     zoom-us
     ollama
@@ -429,8 +401,6 @@ in
     tmux
     tokei
     tree
-    yazi
-    wayback
     # Dev
     git
     insomnia
@@ -455,16 +425,10 @@ in
     # Database
     sqlite
     mongodb-compass
-    # Tools
-    kubernetes-helm
-    kustomize
     # Agda
     (agda.withPackages (ps: with ps; [
       standard-library
     ]))
-    # ASM
-    asm-lsp
-    rappel
     # BQN
     cbqn
     # C
@@ -483,11 +447,9 @@ in
     (haskell-language-server.override { supportedGhcVersions = [ "94" ]; })
     haskellPackages.hls-cabal-plugin
     haskellPackages.hls-cabal-fmt-plugin
-    haskellPackages.hls-eval-plugin
     haskellPackages.cabal-fmt
     haskellPackages.fourmolu
     haskellPackages.hlint
-    haskellPackages.hoogle
     haskellPackages.ghcprofview
     # Java
     maven
@@ -501,12 +463,9 @@ in
     elan
     # Prolog
     swiProlog
-    # Racket
-    racket
     # Rust
     rustup
     # Scala
     metals
-    dotty
   ];
 }

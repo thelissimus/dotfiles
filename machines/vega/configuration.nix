@@ -79,8 +79,6 @@
     zip
     unzip
     fdupes
-    minikube
-    kubernetes
     libGL
   ];
   environment.gnome.excludePackages = (with pkgs; [
@@ -109,8 +107,6 @@
     packages = with pkgs; [
       noto-fonts-cjk
       iosevka-bin
-      inter
-      stix-two
     ];
     fontconfig = {
       enable = true;
@@ -119,7 +115,6 @@
   };
 
   programs.zsh.enable = true;
-  programs.dconf.enable = true;
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
