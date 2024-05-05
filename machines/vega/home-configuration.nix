@@ -112,6 +112,7 @@ in
       pkief.material-icon-theme
       pkief.material-product-icons
       jnoortheen.nix-ide
+      ocamllabs.ocaml-platform
       christian-kohler.path-intellisense
       esbenp.prettier-vscode
       rust-lang.rust-analyzer
@@ -461,6 +462,14 @@ in
     nixpkgs-fmt
     # Lean
     elan
+    # OCaml
+    ocaml
+    opam
+    dune_3
+    ocamlPackages.merlin
+    ocamlPackages.ocaml-lsp
+    ocamlPackages.odoc
+    ocamlPackages.ocamlformat
     # Prolog
     swiProlog
     # Rust
