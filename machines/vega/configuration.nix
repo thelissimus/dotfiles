@@ -45,6 +45,7 @@
   services.printing.enable = true;
   services.earlyoom.enable = true;
   services.earlyoom.freeMemThreshold = 5;
+  services.thermald.enable = true;
 
   services.redis.servers."global".enable = true;
   services.redis.servers."global".port = 6379;
