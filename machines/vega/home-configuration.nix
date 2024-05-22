@@ -18,7 +18,11 @@ in
 
   programs.zoxide.enable = true;
   programs.bash.enable = true;
-  programs.git.difftastic.enable = true;
+  programs.git = {
+    enable = true;
+    lfs.enable = true;
+    difftastic.enable = true;
+  };
   programs.java = {
     enable = true;
     package = pkgs.jdk17;
@@ -127,12 +131,6 @@ in
         publisher = "arthurwang";
         version = "0.8.23";
         sha256 = "Da2dCpruVqzP3g1hH0+TyvvEa1wEwGXgvcmIq9B/2cQ=";
-      }
-      {
-        name = "agda-mode";
-        publisher = "banacorn";
-        version = "0.4.7";
-        sha256 = "gNa3n16lP3ooBRvGaugTua4IXcIzpMk7jBYMJDQsY00=";
       }
       {
         name = "bqn-language";
@@ -388,7 +386,6 @@ in
     gnomeExtensions.appindicator
     zoom-us
     ollama
-    kicad
     # CLI
     difftastic
     fzf
@@ -403,7 +400,6 @@ in
     tokei
     tree
     # Dev
-    git
     insomnia
     # Documents
     poppler_utils
@@ -416,20 +412,15 @@ in
     ffmpeg-full
     mpv
     yt-dlp
-    obs-studio
     feh
     imagemagick
     optipng
     peek
-    figma-linux
-    figma-agent
     # Database
     sqlite
     mongodb-compass
-    # Agda
-    (agda.withPackages (ps: with ps; [
-      standard-library
-    ]))
+    # Arduino
+    arduino-cli
     # BQN
     cbqn
     # C
@@ -446,8 +437,8 @@ in
     haskell.compiler.ghc94
     cabal-install
     (haskell-language-server.override { supportedGhcVersions = [ "94" ]; })
-    haskellPackages.hls-cabal-plugin
-    haskellPackages.hls-cabal-fmt-plugin
+    # haskellPackages.hls-cabal-plugin
+    # haskellPackages.hls-cabal-fmt-plugin
     haskellPackages.cabal-fmt
     haskellPackages.fourmolu
     haskellPackages.hlint
@@ -462,14 +453,6 @@ in
     nixpkgs-fmt
     # Lean
     elan
-    # OCaml
-    ocaml
-    opam
-    dune_3
-    ocamlPackages.merlin
-    ocamlPackages.ocaml-lsp
-    ocamlPackages.odoc
-    ocamlPackages.ocamlformat
     # Prolog
     swiProlog
     # Rust

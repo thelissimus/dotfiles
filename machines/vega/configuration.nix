@@ -22,7 +22,6 @@
     LC_ALL = "de_DE.UTF-8";
   };
 
-  programs.steam.enable = true;
   services.xserver = {
     enable = true;
     xkb = {
