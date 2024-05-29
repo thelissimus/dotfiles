@@ -13,6 +13,11 @@
   boot.swraid.enable = false;
 
   networking.hostName = "nixos";
+  networking.extraHosts =
+    ''
+      127.0.0.1 chatgpt.com
+      127.0.0.1 api.openai.com
+    '';
   networking.networkmanager.enable = true;
 
   time.timeZone = "Etc/GMT-5";
