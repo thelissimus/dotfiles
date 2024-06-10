@@ -373,6 +373,8 @@ in
     wpsoffice
     ticktick
     telegram-desktop
+    zulip
+    zulip-term
     keepassxc
     stacer
     qbittorrent
@@ -459,5 +461,7 @@ in
     rustup
     # Scala
     metals
+    obs-studio
+    logseq
   ];
 }

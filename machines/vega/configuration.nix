@@ -17,6 +17,8 @@
     ''
       127.0.0.1 chatgpt.com
       127.0.0.1 api.openai.com
+      127.0.0.1 claude.ai
+      127.0.0.1 gemini.google.com
     '';
   networking.networkmanager.enable = true;
 
@@ -119,6 +121,7 @@
     };
   };
 
+  programs.steam.enable = true;
   programs.zsh.enable = true;
   programs.gnupg.agent = {
     enable = true;

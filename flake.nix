@@ -41,7 +41,6 @@
       formatter.x86_64-linux = pkgs.nixpkgs-fmt;
       nixosConfigurations = {
         vega = mkSystem { hostname = "vega"; username = "helix"; };
-        gic = mkSystem { hostname = "gic"; username = "gicw"; };
       };
     };
 }
