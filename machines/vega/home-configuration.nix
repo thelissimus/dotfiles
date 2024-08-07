@@ -116,7 +116,6 @@ in
       pkief.material-icon-theme
       pkief.material-product-icons
       jnoortheen.nix-ide
-      ocamllabs.ocaml-platform
       christian-kohler.path-intellisense
       esbenp.prettier-vscode
       rust-lang.rust-analyzer
