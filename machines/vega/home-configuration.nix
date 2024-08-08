@@ -368,8 +368,6 @@ in
   };
 
   home.packages = with pkgs; [
-    anki
-    wpsoffice
     ticktick
     telegram-desktop
     zulip
@@ -387,8 +385,19 @@ in
     gnomeExtensions.appindicator
     zoom-us
     ollama
+    # Docs
+    anki
+    wpsoffice
+    logseq
+    notes
+    hledger
+    hledger-web
+    mdbook
+    mdbook-toc
+    mdbook-linkcheck
     # CLI
     difftastic
+    dig
     fzf
     htop
     jq
@@ -396,6 +405,7 @@ in
     rename
     ripgrep
     rlwrap
+    solaar
     spek
     tmux
     tokei
@@ -415,6 +425,7 @@ in
     yt-dlp
     feh
     imagemagick
+    obs-studio
     optipng
     peek
     # Database
@@ -460,7 +471,5 @@ in
     rustup
     # Scala
     metals
-    obs-studio
-    logseq
   ];
 }
