@@ -372,6 +372,7 @@ in
     telegram-desktop
     zulip
     zulip-term
+    discord
     keepassxc
     stacer
     qbittorrent
