@@ -75,6 +75,7 @@
   virtualisation.docker.enable = true;
   environment.shells = with pkgs; [ zsh ];
   environment.systemPackages = with pkgs; [
+    docker-compose
     file
     vim
     wget
@@ -86,6 +87,7 @@
     unzip
     fdupes
     libGL
+    pulseaudio
   ];
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
