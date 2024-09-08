@@ -17,6 +17,12 @@
 	"[yaml]": {
 		"editor.defaultFormatter": "redhat.vscode-yaml"
 	},
+	"[markdown]": {
+		"editor.wordWrap": "wordWrapColumn",
+		"editor.wrappingIndent": "same",
+		"editor.wordWrapColumn": 120,
+		"vim.textwidth": 120
+	},
 	"breadcrumbs.enabled": false,
 	"calva.highlight.highlightActiveIndent": false,
 	"diffEditor.diffAlgorithm": "advanced",
