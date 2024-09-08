@@ -56,7 +56,6 @@
   services.redis.servers."global".port = 6379;
   services.redis.vmOverCommit = true;
 
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -93,7 +92,6 @@
     gnome-photos
     gnome-tour
     gedit
-  ]) ++ (with pkgs.gnome; [
     cheese
     gnome-music
     gnome-terminal
@@ -130,11 +128,11 @@
     pinentryPackage = pkgs.pinentry-curses;
   };
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
   };
   hardware.nvidia = {
+    open = false;
     modesetting.enable = true;
     nvidiaSettings = false;
     powerManagement.enable = true;
