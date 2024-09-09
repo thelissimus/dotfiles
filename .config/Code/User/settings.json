@@ -24,7 +24,6 @@
 		"vim.textwidth": 120
 	},
 	"breadcrumbs.enabled": false,
-	"calva.highlight.highlightActiveIndent": false,
 	"diffEditor.diffAlgorithm": "advanced",
 	"editor.bracketPairColorization.enabled": true,
 	"editor.copyWithSyntaxHighlighting": false,
@@ -68,12 +67,9 @@
 	"files.eol": "\n",
 	"files.exclude": {
 		"**/.DS_Store": true,
-		"**/.calva": true,
-		"**/.clj-kondo": true,
 		"**/.git": true,
 		"**/.hg": true,
 		"**/.lsp": true,
-		"**/.shadow-cljs": true,
 		"**/.svn": true,
 		"**/.vscode": true,
 		"**/.idea": true,
