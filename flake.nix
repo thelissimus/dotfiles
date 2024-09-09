@@ -28,10 +28,8 @@
       };
       mkSystem = { hostname, username, modules ? [] }: nixpkgs.lib.nixosSystem {
         inherit system pkgs;
-
         specialArgs = { inherit inputs username; };
         modules = [
-          { nix.registry.n.flake = inputs.nixpkgs; }
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
