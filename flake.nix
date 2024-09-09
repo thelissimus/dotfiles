@@ -6,17 +6,23 @@
     nur.url = "github:nix-community/NUR";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    apple-fonts.url = "path:pkgs/apple-fonts";
+    apple-fonts.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs @ { self, nixpkgs, nur, home-manager, ... }:
+  outputs = inputs @ { self, nixpkgs, nur, home-manager, apple-fonts, ... }:
     let
       system = "x86_64-linux";
+      overlay = final: prev: {
+        apple-fonts = apple-fonts.packages.${system};
+      };
       pkgs = import nixpkgs {
         localSystem = { inherit system; };
         config = {
           allowUnfree = true;
         };
         overlays = [
+          overlay
           nur.overlay
         ];
       };
