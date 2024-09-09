@@ -218,9 +218,35 @@ in
       EOF
     '';
   };
-  programs.wezterm = {
+  programs.urxvt = {
     enable = true;
-    extraConfig = builtins.readFile ../../.config/wezterm/wezterm.lua;
+    package = pkgs.rxvt-unicode-unwrapped-emoji;
+    extraConfig = {
+      background = "#282828";
+      foreground = "#ebdbb2";
+      color0 = "#282828";
+      color8 = "#928374";
+      color1 = "#cc241d";
+      color9 = "#fb4934";
+      color2 = "#98971a";
+      color10 = "#b8bb26";
+      color3 = "#d79921";
+      color11 = "#fabd2f";
+      color4 = "#458588";
+      color12 = "#83a598";
+      color5 = "#b16286";
+      color13 = "#d3869b";
+      color6 = "#689d6a";
+      color14 = "#8ec07c";
+      color7 = "#a89984";
+      color15 = "#ebdbb2";
+    };
+    fonts = [ "xft:SF Mono:size=12:style=Medium" ];
+    keybindings = {
+      "Shift-Control-C" = "eval:selection_to_clipboard";
+      "Shift-Control-V" = "eval:paste_clipboard";
+    };
+    scroll.bar.enable = false;
   };
   programs.zathura = {
     enable = true;
@@ -337,7 +363,7 @@ in
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4" = {
       name = "Terminal";
-      command = "wezterm";
+      command = "urxvt";
       binding = "<Super>Return";
     };
     "org/gnome/settings-daemon/plugins/power" = {
