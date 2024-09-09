@@ -26,7 +26,7 @@
           nur.overlay
         ];
       };
-      mkSystem = { hostname, username }: nixpkgs.lib.nixosSystem {
+      mkSystem = { hostname, username, modules ? [] }: nixpkgs.lib.nixosSystem {
         inherit system pkgs;
 
         specialArgs = { inherit inputs username; };
@@ -39,8 +39,8 @@
             home-manager.users.${username} = import ./machines/${hostname}/home-configuration.nix;
           }
           ./machines/${hostname}/configuration.nix
-          ./modules
-        ];
+          ./modules/core/nix.nix
+        ] ++ modules;
       };
     in
     {
