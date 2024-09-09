@@ -383,13 +383,6 @@ in
     nfs-utils
     gnomeExtensions.appindicator
     zoom-us
-    # Docs
-    anki
-    notes
-    hledger
-    hledger-web
-    mdbook
-    mdbook-toc
     # CLI
     difftastic
     dig
@@ -408,11 +401,18 @@ in
     # Dev
     insomnia
     # Documents
+    anki
+    notes
+    hledger
+    hledger-web
+    mdbook
+    mdbook-toc
     poppler_utils
     newsboat
     nb
     texlive.combined.scheme-medium
     hugo
+    zed-editor
     # Media
     moc
     ffmpeg-full
@@ -423,6 +423,7 @@ in
     obs-studio
     optipng
     peek
+    pulseeffects-legacy
     # Database
     sqlite
     # BQN
@@ -453,6 +454,7 @@ in
     nodePackages.pnpm
     # Nix
     nil
+    nixd
     nixpkgs-fmt
     # Lean
     elan
