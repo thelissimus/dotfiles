@@ -383,17 +383,13 @@ in
     nfs-utils
     gnomeExtensions.appindicator
     zoom-us
-    ollama
     # Docs
     anki
-    wpsoffice
-    logseq
     notes
     hledger
     hledger-web
     mdbook
     mdbook-toc
-    mdbook-linkcheck
     # CLI
     difftastic
     dig
@@ -429,15 +425,11 @@ in
     peek
     # Database
     sqlite
-    mongodb-compass
-    # Arduino
-    arduino-cli
     # BQN
     cbqn
     # C
     gcc
     gdb
-    llvm_14
     llvmPackages_16.clang-unwrapped
     # Go
     go
