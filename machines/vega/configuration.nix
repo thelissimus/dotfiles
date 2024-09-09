@@ -113,6 +113,9 @@
     packages = with pkgs; [
       noto-fonts-cjk
       iosevka-bin
+      apple-fonts.sf-pro
+      apple-fonts.sf-mono
+      apple-fonts.ny
     ];
     fontconfig = {
       enable = true;
