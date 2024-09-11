@@ -450,6 +450,7 @@ in
     optipng
     peek
     pulseeffects-legacy
+    krita
     # Database
     sqlite
     # BQN
