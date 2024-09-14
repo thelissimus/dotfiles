@@ -1,4 +1,4 @@
-{ pkgs, username, ... }: {
+{ pkgs, hostname, username, ... }: {
   imports =
     [
       ./hardware-configuration.nix
@@ -12,7 +12,7 @@
   boot.supportedFilesystems = [ "ntfs" ];
   boot.swraid.enable = false;
 
-  networking.hostName = "nixos";
+  networking.hostName = hostname;
   networking.extraHosts =
     ''
       127.0.0.1 chatgpt.com
