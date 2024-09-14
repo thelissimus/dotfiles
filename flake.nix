@@ -26,16 +26,10 @@
           nur.overlay
         ];
       };
-      mkSystem = { hostname, username, modules ? [] }: nixpkgs.lib.nixosSystem {
+      mkSystem = { hostname, username, modules ? [ ] }: nixpkgs.lib.nixosSystem {
         inherit system pkgs;
-        specialArgs = { inherit inputs username; };
+        specialArgs = { inherit inputs hostname username; };
         modules = [
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.${username} = import ./machines/${hostname}/home-configuration.nix;
-          }
           ./machines/${hostname}/configuration.nix
           ./modules/core/nix.nix
         ] ++ modules;
@@ -44,7 +38,19 @@
     {
       formatter.x86_64-linux = pkgs.nixpkgs-fmt;
       nixosConfigurations = {
-        vega = mkSystem { hostname = "vega"; username = "helix"; };
+        vega = let username = "helix"; in mkSystem {
+          inherit username;
+          hostname = "vega";
+          modules = [
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.${username} = import ./machines/vega/home-configuration.nix;
+            }
+          ];
+        };
+        fklr = mkSystem { hostname = "fklr"; username = "alice"; };
       };
     };
 }
