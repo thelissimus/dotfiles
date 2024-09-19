@@ -21,17 +21,17 @@
       layout = "us,ru";
       options = "caps:escape";
     };
-    desktopManager.xfce.enable = true;
     displayManager = {
       lightdm.enable = true;
-      defaultSession = "xfce";
     };
-    libinput.enable = true;
+    desktopManager.xfce.enable = true;
   };
+  services.displayManager.defaultSession = "xfce";
+  services.libinput.enable = true;
 
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.enable = false;
 
+  users.defaultUserShell = pkgs.zsh;
   users.users.${username} = {
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
@@ -43,13 +43,16 @@
   environment.systemPackages = with pkgs; [
     file
     vim
+    neovim
     wget
     gnumake
     xclip
     zip
     unzip
+    git
   ];
 
+  programs.zsh.enable = true;
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
