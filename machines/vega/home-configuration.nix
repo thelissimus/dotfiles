@@ -165,6 +165,12 @@ in
         sha256 = "NCaQzFa3WQ2kURf4tvrxLykbpPde74cAfhK9olA9m6o=";
       }
       {
+        name = "vscode-ide";
+        publisher = "tlaplus";
+        version = "2024.9.132106";
+        sha256 = "DLivREQA+vNFZneQ1RjS3mqhG+B/YaDyqm6cbJ37Doc=";
+      }
+      {
         name = "vsc-prolog";
         publisher = "arthurwang";
         version = "0.8.23";
@@ -487,5 +493,8 @@ in
     rustup
     # Scala
     metals
+    # TLA+
+    tlaps
+    tlaplus
   ];
 }
