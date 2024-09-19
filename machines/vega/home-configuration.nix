@@ -109,7 +109,6 @@ in
       haskell.haskell
       justusadam.language-haskell
       james-yu.latex-workshop
-      sumneko.lua
       bierner.markdown-mermaid
       pkief.material-icon-theme
       pkief.material-product-icons
@@ -123,12 +122,6 @@ in
       vscodevim.vim
       wakatime.vscode-wakatime
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-      {
-        name = "vsc-prolog";
-        publisher = "arthurwang";
-        version = "0.8.23";
-        sha256 = "Da2dCpruVqzP3g1hH0+TyvvEa1wEwGXgvcmIq9B/2cQ=";
-      }
       {
         name = "bqn-language";
         publisher = "razetime";
@@ -170,6 +163,12 @@ in
         publisher = "paperproof";
         version = "1.1.2";
         sha256 = "NCaQzFa3WQ2kURf4tvrxLykbpPde74cAfhK9olA9m6o=";
+      }
+      {
+        name = "vsc-prolog";
+        publisher = "arthurwang";
+        version = "0.8.23";
+        sha256 = "Da2dCpruVqzP3g1hH0+TyvvEa1wEwGXgvcmIq9B/2cQ=";
       }
       {
         name = "language-x86-64-assembly";
