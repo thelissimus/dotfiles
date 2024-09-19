@@ -449,7 +449,6 @@ in
     obs-studio
     optipng
     peek
-    pulseeffects-legacy
     krita
     # Database
     sqlite
