@@ -137,8 +137,8 @@ in
       {
         name = "lean4";
         publisher = "leanprover";
-        version = "0.0.111";
-        sha256 = "c6d+rNE1j0NLx+ntGU6E9G1d9S0pxKYBzfnb8Je/mkE=";
+        version = "0.0.178";
+        sha256 = "ByhiTGwlQgNkFf0BirO+QSDiXbQfR6RLQA8jM4B1+O4=";
       }
       {
         name = "markdown-checkbox";
