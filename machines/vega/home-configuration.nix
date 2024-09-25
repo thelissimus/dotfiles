@@ -123,6 +123,18 @@ in
       wakatime.vscode-wakatime
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
+        name = "alloy";
+        publisher = "ArashSahebolamri";
+        version = "0.7.1";
+        sha256 = "svHFOCEDZHSLKzLUU2ojDVkbLTJ7hJ75znWuBV5GFQM=";
+      }
+      {
+        name = "alloy-vscode";
+        publisher = "DongyuZhao";
+        version = "0.1.6";
+        sha256 = "wYMxjMY7colRKWb0qDpMC07+hYhIxh5KcibO43yczPs=";
+      }
+      {
         name = "bqn-language";
         publisher = "razetime";
         version = "0.1.5";
@@ -427,6 +439,8 @@ in
     krita
     # Database
     sqlite
+    # Alloy
+    alloy6
     # BQN
     cbqn
     # C
