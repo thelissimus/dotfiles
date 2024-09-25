@@ -177,6 +177,12 @@ in
         sha256 = "NCaQzFa3WQ2kURf4tvrxLykbpPde74cAfhK9olA9m6o=";
       }
       {
+        name = "quint-vscode";
+        publisher = "informal";
+        version = "0.14.5";
+        sha256 = "4pWVtLSpb8BpukpvFoBYkGQxQ8hZcmCPQxJGOAGPA2c=";
+      }
+      {
         name = "vscode-ide";
         publisher = "tlaplus";
         version = "2024.9.132106";
