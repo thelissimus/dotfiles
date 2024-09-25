@@ -124,6 +124,10 @@
   };
 
   programs.zsh.enable = true;
+  programs.ssh.extraConfig = ''
+    Host *
+    ServerAliveInterval 120
+  '';
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
