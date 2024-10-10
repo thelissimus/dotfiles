@@ -1,5 +1,6 @@
 {
 	"[agda]": {
+		"editor.fontFamily": "JuliaMono",
 		"editor.unicodeHighlight.ambiguousCharacters": false
 	},
 	"[html][css]": {
@@ -13,9 +14,6 @@
 	},
 	"[typescript][typescriptreact]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[yaml]": {
-		"editor.defaultFormatter": "redhat.vscode-yaml"
 	},
 	"[markdown]": {
 		"editor.wordWrap": "wordWrapColumn",
