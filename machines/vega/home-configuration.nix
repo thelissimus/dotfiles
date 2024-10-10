@@ -98,6 +98,7 @@ in
     enableUpdateCheck = false;
     package = pkgs.vscode;
     extensions = with pkgs.vscode-extensions; [
+      banacorn.agda-mode
       llvm-vs-code-extensions.vscode-clangd
       editorconfig.editorconfig
       usernamehw.errorlens
@@ -445,6 +446,10 @@ in
     krita
     # Database
     sqlite
+    # Agda
+    (agda.withPackages (ps: with ps; [
+      standard-library
+    ]))
     # Alloy
     alloy6
     # BQN
