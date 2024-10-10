@@ -222,6 +222,7 @@ in
       editorconfig-vim
       (nvim-treesitter.withPlugins
         (p: with p; [ c go haskell haskell_persistent latex nix rust scala ]))
+      vim-wakatime
       # Components
       diffview-nvim
       nvim-tree-lua
