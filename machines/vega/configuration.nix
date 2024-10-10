@@ -15,8 +15,6 @@
   networking.hostName = hostname;
   networking.extraHosts =
     ''
-      127.0.0.1 chatgpt.com
-      127.0.0.1 api.openai.com
       127.0.0.1 gemini.google.com
     '';
   networking.networkmanager.enable = true;
