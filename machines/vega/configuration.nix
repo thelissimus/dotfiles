@@ -92,6 +92,7 @@
     gedit
     cheese
     gnome-music
+    gnome-console
     gnome-terminal
     epiphany
     geary
