@@ -345,6 +345,10 @@ in
       EOF
     '';
   };
+  programs.wezterm = {
+    enable = true;
+    extraConfig = builtins.readFile ../../.config/wezterm/wezterm.lua;
+  };
   programs.zathura = {
     enable = true;
     options = {
@@ -460,7 +464,7 @@ in
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4" = {
       name = "Terminal";
-      command = "kgx";
+      command = "wezterm";
       binding = "<Super>Return";
     };
     "org/gnome/settings-daemon/plugins/power" = {
