@@ -145,6 +145,11 @@ in
           version = "1.9.3";
           sha256 = "0ajgl28fh6m5p4jl1v60rglxksbi547xv1awh3kp42x510yk4w58";
         }
+        {
+          id = "jnbbnacmeggbgdjgaoojpmhdlkkpblgi";
+          version = "4.0.7";
+          sha256 = "1g10zsm2d30937kl994jbxidnnsrpzhmi6if69mxmwcp4rnm1z09";
+        }
       ];
   };
   programs.firefox = {
