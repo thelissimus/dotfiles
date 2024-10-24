@@ -14,6 +14,8 @@
     ../../modules/home/zathura.nix
   ];
 
+  home.stateVersion = "24.05";
+
   home.packages = with pkgs; [
     ticktick
     telegram-desktop
