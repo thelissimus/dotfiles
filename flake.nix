@@ -14,22 +14,21 @@
 
   outputs = inputs @ { self, nixpkgs, nix-darwin, home-manager, apple-fonts, nur, ... }:
     let
-      system = "x86_64-linux";
-      overlay = final: prev: {
-        apple-fonts = apple-fonts.packages.${system};
-      };
-      pkgs = import nixpkgs {
+      mkPkgs = system: import nixpkgs {
         localSystem = { inherit system; };
         config = {
           allowUnfree = true;
         };
         overlays = [
-          overlay
+          (final: prev: {
+            apple-fonts = apple-fonts.packages.${system};
+          })
           nur.overlay
         ];
       };
-      mkSystem = { hostname, username, modules ? [ ] }: nixpkgs.lib.nixosSystem {
-        inherit system pkgs;
+      mkSystem = { system, hostname, username, modules ? [ ] }: nixpkgs.lib.nixosSystem {
+        inherit system;
+        pkgs = mkPkgs system;
         specialArgs = { inherit inputs hostname username; };
         modules = [
           ./machines/${hostname}/configuration.nix
@@ -38,9 +37,12 @@
       };
     in
     {
-      formatter.x86_64-linux = pkgs.nixpkgs-fmt;
+      formatter.x86_64-linux = (mkPkgs "x86_64-linux").nixpkgs-fmt;
+      formatter.aarch64-darwin = (mkPkgs "aarch64-darwin").nixpkgs-fmt;
+
       nixosConfigurations = {
         vega = let username = "helix"; in mkSystem {
+          system = "x86_64-linux";
           inherit username;
           hostname = "vega";
           modules = [
@@ -52,10 +54,11 @@
             }
           ];
         };
-        fklr = mkSystem { hostname = "fklr"; username = "alice"; };
+        fklr = mkSystem { system = "x86_64-linux"; hostname = "fklr"; username = "alice"; };
       };
 
       darwinConfigurations."Keis-MacBook-Pro" = nix-darwin.lib.darwinSystem {
+        pkgs = mkPkgs "aarch64-darwin";
         modules =
           let
             configuration = { pkgs, ... }: {
