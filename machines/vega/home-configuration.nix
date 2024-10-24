@@ -501,6 +501,7 @@ in
     keepassxc
     stacer
     qbittorrent
+    transmission-gtk
     openvpn
     baobab
     smartmontools
@@ -530,6 +531,7 @@ in
     # Documents
     anki
     notes
+    obsidian
     hledger
     hledger-web
     mdbook
@@ -540,6 +542,7 @@ in
     texlive.combined.scheme-medium
     hugo
     zed-editor
+    wpsoffice
     # Media
     moc
     ffmpeg-full

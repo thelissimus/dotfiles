@@ -123,6 +123,7 @@
     };
   };
 
+  programs.steam.enable = true;
   programs.zsh.enable = true;
   programs.ssh.extraConfig = ''
     Host *
