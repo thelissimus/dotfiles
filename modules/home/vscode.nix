@@ -30,8 +30,8 @@
       timonwong.shellcheck
       vscodevim.vim
       wakatime.vscode-wakatime
-	  github.copilot
-	  github.copilot-chat
+      github.copilot
+      github.copilot-chat
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
         name = "alloy";

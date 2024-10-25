@@ -1,21 +1,22 @@
 { pkgs, lib, ... }:
 let
   inherit (lib.hm.gvariant) mkTuple mkUint32;
+  hp = import ../../modules/home { inherit pkgs lib; };
 in
 {
-  imports = [
-    ../../modules/home/zoxide.nix
-    ../../modules/home/bash.nix
-    ../../modules/home/git.nix
-    ../../modules/home/java.nix
-    ../../modules/home/scala.nix
-    ../../modules/home/zsh.nix
-    ../../modules/home/chromium.nix
-    ../../modules/home/firefox.nix
-    ../../modules/home/vscode.nix
-    ../../modules/home/neovim.nix
-    ../../modules/home/wezterm.nix
-    ../../modules/home/zathura.nix
+  imports = with hp; [
+    zoxide
+    bash
+    git
+    java
+    scala
+    zsh
+    chromium
+    firefox
+    vscode
+    neovim
+    wezterm
+    zathura
   ];
 
   home.stateVersion = "23.05";
