@@ -1,13 +1,16 @@
 { pkgs, ... }:
+let
+  hp = import ../../modules/home { inherit pkgs; };
+in
 {
-  imports = [
-    ../../modules/home/zoxide.nix
-    ../../modules/home/bash.nix
-    ../../modules/home/git.nix
-    ../../modules/home/java.nix
-    ../../modules/home/scala.nix
-    ../../modules/home/zsh.nix
-    ../../modules/home/neovim.nix
+  imports = with hp; [
+    zoxide
+    bash
+    git
+    java
+    scala
+    zsh
+    neovim
   ];
 
   home.stateVersion = "24.05";
