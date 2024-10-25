@@ -8,14 +8,14 @@
     ../../modules/home/scala.nix
     ../../modules/home/zsh.nix
     ../../modules/home/neovim.nix
-    ../../modules/home/wezterm.nix
-    ../../modules/home/zathura.nix
   ];
 
   home.stateVersion = "24.05";
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
+    gnupg
+    pinentry_mac
     libqalculate
     # CLI
     difftastic
