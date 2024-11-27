@@ -33,7 +33,7 @@
           # imagus
           id = "immpkjjlgappgfkkfieppnmlhakdmaab";
           version = "0.9.8.74";
-          sha256 = "19mirfy8ggq2zaxp8clv28aq1lmv5xdlvf9j62ig9p75pr4v3qa1";
+          sha256 = "1xqm3h2l18cmkd74yzxran68vrwrsnf3kkxb78jf8vs6cmdi5vpy";
         }
         {
           # i-still-dont-care-about-cookies
@@ -51,7 +51,7 @@
           # singlefile
           id = "mpiodijhokgodhhofbcjdecpffjipkle";
           version = "1.22.71";
-          sha256 = "12c9j6bfbdnqdb2ncnqwh9rywk351japbrxrfaijx8d1kjcs222m";
+          sha256 = "0qzacb8jxlpqrlmr3ibamaz2clk6ilawg5r2pa872m99ksgl68pf";
         }
         {
           # ublock-origin
@@ -75,7 +75,7 @@
           # return-youtube-dislike
           id = "gebbhagfogifgggkldgodflihgfeippi";
           version = "3.0.0.17";
-          sha256 = "0zn8m6r0pwyw6v2kj4ar21q4kzim14m6la7zmx5qz4ikmkmjw7sd";
+          sha256 = "0riya5wwrfx50rwca3c4q83l4blkbzfrnrf8s1g23nyrq8fxkasp";
         }
         {
           # youtube-shorts-block
@@ -87,7 +87,7 @@
           # sponsorblock
           id = "mnjggcdmjocbbbhaepdhchncahnbgone";
           version = "5.9.4";
-          sha256 = "0ppi2yg478g15sc0w6ixxbhlvrg6pki93k5vf33dl4cigmw9xhbg";
+          sha256 = "0945d9bapx3gyi3ldj075vi17kjdmqjy431filhflvgnvhq09752";
         }
         {
           # keepassxc
@@ -98,7 +98,7 @@
         {
           id = "jnbbnacmeggbgdjgaoojpmhdlkkpblgi";
           version = "4.0.7";
-          sha256 = "1g10zsm2d30937kl994jbxidnnsrpzhmi6if69mxmwcp4rnm1z09";
+          sha256 = "0c8rh42l9yyzlcb64l6sy0qf5mldy30wdh12vbj2ig7vywf5qc3c";
         }
       ];
   };
