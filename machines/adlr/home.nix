@@ -11,6 +11,7 @@ in
     scala
     zsh
     neovim
+    zathura
   ];
 
   home.stateVersion = "24.05";
