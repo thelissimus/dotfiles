@@ -49,7 +49,11 @@ in
     # Agda
     (agda.withPackages (ps: with ps; [
       standard-library
+      cubical
     ]))
+    # Idris 2
+    idris2
+    idris2Packages.idris2Lsp
     # Alloy
     alloy6
     # BQN
