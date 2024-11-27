@@ -1,6 +1,6 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 let
-  hp = import ../../modules/home { inherit pkgs; };
+  hp = import ../../modules/home { inherit pkgs lib; };
 in
 {
   imports = with hp; [
