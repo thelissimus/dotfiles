@@ -51,6 +51,7 @@ in
       standard-library
       cubical
     ]))
+    cornelis
     # Idris 2
     idris2
     idris2Packages.idris2Lsp
