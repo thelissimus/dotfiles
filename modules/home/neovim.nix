@@ -18,6 +18,8 @@
       (nvim-treesitter.withPlugins
         (p: with p; [ c go haskell haskell_persistent latex nix rust scala ]))
       vim-wakatime
+      cornelis
+      vim-which-key
       # Components
       diffview-nvim
       nvim-tree-lua

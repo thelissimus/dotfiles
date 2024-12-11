@@ -2,7 +2,7 @@ lua vim.loader.enable()
 
 filetype plugin indent on
 syntax on
-language en_US.utf8
+language en_US.UTF-8
 
 set nocompatible
 set encoding=utf-8
@@ -85,6 +85,9 @@ let g:gruvbox_material_enable_italic = 0
 let g:gruvbox_material_spell_foreground = 'colored'
 let g:gruvbox_material_lightline_disable_bold = 1
 colorscheme gruvbox-material
+
+let g:cornelis_use_global_binary = 1
+let g:cornelis_agda_prefix = "\\"
 
 let g:lightline = {
   \ 'enable': { 'statusline': 1, 'tabline': 0 },
