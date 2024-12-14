@@ -24,7 +24,7 @@
           (final: prev: {
             apple-fonts = apple-fonts.packages.${system};
           })
-          nur.overlay
+          nur.overlays.default
         ];
       };
       mkSystem = { system, hostname, username, modules ? [ ] }: nixpkgs.lib.nixosSystem {
