@@ -5,6 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nur.url = "github:nix-community/NUR";
@@ -12,7 +13,7 @@
     apple-fonts.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs @ { self, nixpkgs, nix-darwin, home-manager, apple-fonts, nur, ... }:
+  outputs = inputs @ { self, nixpkgs, nix-darwin, nix-homebrew, home-manager, apple-fonts, nur, ... }:
     let
       mkPkgs = system: import nixpkgs {
         localSystem = { inherit system; };
@@ -66,6 +67,51 @@
                 [
                   pkgs.vim
                 ];
+              homebrew = {
+                enable = true;
+
+                taps = [ ];
+                brews = [ ];
+                casks = [
+                  "alloy"
+                  "anki"
+                  # "betterdisplay"
+                  "chatgpt"
+                  "datagrip"
+                  "deepl"
+                  "discord"
+                  "docker"
+                  "elmedia-player"
+                  "figma"
+                  "firefox"
+                  "font-iosevka"
+                  "font-sf-mono"
+                  "gitbutler"
+                  "iterm2"
+                  "jetbrains-toolbox"
+                  "keepassxc"
+                  "keka"
+                  "macfuse"
+                  "obs"
+                  "obsidian"
+                  "orbstack"
+                  # "osu"
+                  "prismlauncher"
+                  "qbittorrent"
+                  # "sketch"
+                  "steam"
+                  "telegram"
+                  "termius"
+                  "ticktick"
+                  "unnaturalscrollwheels"
+                  "visual-studio-code"
+                  "vlc"
+                  "wezterm"
+                  "zed"
+                  "zoom"
+                  "zulip"
+                ];
+              };
 
               services.nix-daemon.enable = true;
               nix.settings.experimental-features = "nix-command flakes";
@@ -87,6 +133,15 @@
               home-manager.useUserPackages = true;
               home-manager.users."kei" = import ./machines/adlr/home.nix;
             }
+            #   nix-homebrew.darwinModules.nix-homebrew
+            #   {
+            #     nix-homebrew = {
+            #       enable = true;
+            #       enableRosetta = true;
+            #       user = "kei";
+            #       autoMigrate = true;
+            #     };
+            #   }
           ];
       };
       darwinPackages = self.darwinConfigurations."Keis-MacBook-Pro".pkgs;
