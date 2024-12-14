@@ -67,6 +67,7 @@ in
     # Haskell
     haskell.compiler.ghc910
     cabal-install
+    stack
     (haskell-language-server.override { supportedGhcVersions = [ "910" ]; supportedFormatters = [ "fourmolu" ]; })
     haskellPackages.cabal-fmt
     haskellPackages.fourmolu
@@ -87,5 +88,6 @@ in
     rustup
     # Scala
     metals
+    z3
   ];
 }
