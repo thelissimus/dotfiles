@@ -73,6 +73,22 @@ in
     haskellPackages.fourmolu
     haskellPackages.hlint
     haskellPackages.ghcprofview
+    # Coq
+    coq
+    coqPackages.coqide
+    coqPackages.stdpp
+    coqPackages.iris
+    coqPackages.HoTT
+    coqPackages.mathcomp
+    coqPackages.coq-lsp
+    # OCaml
+    ocaml
+    opam
+    dune_3
+    ocamlPackages.merlin
+    ocamlPackages.ocaml-lsp
+    ocamlPackages.odoc
+    ocamlPackages.ocamlformat
     # JS
     nodejs_20
     nodePackages.pnpm
