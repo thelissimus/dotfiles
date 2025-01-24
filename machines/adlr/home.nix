@@ -53,7 +53,9 @@ in
       _1lab
       generics
       cubical-mini
+      pkgs.agda2hs-lib
     ]))
+    agda2hs-unwrapped
     cornelis
     # Idris 2
     idris2
