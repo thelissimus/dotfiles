@@ -133,15 +133,15 @@
               home-manager.useUserPackages = true;
               home-manager.users."kei" = import ./machines/adlr/home.nix;
             }
-            #   nix-homebrew.darwinModules.nix-homebrew
-            #   {
-            #     nix-homebrew = {
-            #       enable = true;
-            #       enableRosetta = true;
-            #       user = "kei";
-            #       autoMigrate = true;
-            #     };
-            #   }
+            nix-homebrew.darwinModules.nix-homebrew
+            {
+              nix-homebrew = {
+                enable = true;
+                enableRosetta = true;
+                user = "kei";
+                autoMigrate = true;
+              };
+            }
           ];
       };
       darwinPackages = self.darwinConfigurations."Keis-MacBook-Pro".pkgs;
