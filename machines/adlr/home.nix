@@ -78,6 +78,8 @@ in
     haskellPackages.fourmolu
     haskellPackages.hlint
     haskellPackages.ghcprofview
+    # K Framework
+    k
     # Coq
     coq
     coqPackages.coqide
