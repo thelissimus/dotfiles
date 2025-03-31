@@ -82,7 +82,6 @@ in
     k
     # Coq
     coq
-    coqPackages.coqide
     coqPackages.stdpp
     coqPackages.iris
     coqPackages.HoTT
