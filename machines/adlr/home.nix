@@ -111,6 +111,8 @@ in
     # Scala
     metals
     z3
+    llvmPackages_15.clang-unwrapped
+    llvmPackages_15.libllvm
   ];
 }
 
