@@ -1,7 +1,7 @@
 { inputs, ... }: {
-  nix.sandbox = true;
   nix.registry.nixpkgs.flake = inputs.nixpkgs;
   nix.settings = {
+    sandbox = true;
     experimental-features = [ "nix-command" "flakes" ];
     trusted-public-keys = [
       "hackage-server.cachix.org-1:iw0iRh6+gsFIrxROFaAt5gKNgIHejKjIfyRdbpPYevY="
