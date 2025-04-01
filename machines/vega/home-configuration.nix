@@ -161,7 +161,7 @@ in
     keepassxc
     stacer
     qbittorrent
-    transmission-gtk
+    transmission_4-gtk
     openvpn
     baobab
     smartmontools
