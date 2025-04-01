@@ -201,8 +201,6 @@ in
     nb
     texlive.combined.scheme-medium
     hugo
-    zed-editor
-    wpsoffice
     # Media
     moc
     ffmpeg-full
@@ -213,7 +211,6 @@ in
     obs-studio
     optipng
     peek
-    krita
     # Database
     sqlite
     # Agda
