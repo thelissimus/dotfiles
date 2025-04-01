@@ -110,7 +110,7 @@
 
   fonts = {
     packages = with pkgs; [
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
       iosevka-bin
       julia-mono
       apple-fonts.sf-pro
