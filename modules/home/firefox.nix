@@ -4,7 +4,7 @@
     enable = true;
     profiles.default = {
       isDefault = true;
-      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+      extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
         clearurls
         darkreader
         # dont-accept-image-webp
