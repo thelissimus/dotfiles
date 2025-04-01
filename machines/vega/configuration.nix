@@ -54,7 +54,7 @@
   services.redis.servers."global".port = 6379;
   services.redis.vmOverCommit = true;
 
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
