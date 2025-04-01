@@ -253,7 +253,7 @@ in
     # Lean
     elan
     # Prolog
-    swiProlog
+    swi-prolog
     # Rust
     rustup
     # Scala
