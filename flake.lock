@@ -30,7 +30,7 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-NY4WjtcTcYWA3qvT/Ajwh466PdJbV8YLEbDnukubm1I=",
+        "narHash": "sha256-x4Kbl0JQERtPuHFKmA8O2DYy9QyPZ/ySiGBxosffJ7E=",
         "path": "./pkgs/apple-fonts",
         "type": "path"
       },
