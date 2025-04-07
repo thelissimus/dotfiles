@@ -117,72 +117,72 @@ in
 }
 
 /*
-ca-certificates
-gettext
-gmp
-gnu-time
-icu4c@76
-krb5
-libunistring
-lz4
-ntfs-3g-mac
-ollama
-openssl@3
-postgresql@15
-readline
-redis
-xz
-zlib
-zstd
-alloy
-alt-tab
-anki
-betterdisplay
-chatgpt
-claude
-datagrip
-deepl
-discord
-docker
-elmedia-player
-eloston-chromium
-figma
-firefox
-floorp
-font-iosevka
-font-martian-mono
-font-mononoki
-font-sf-mono
-ghostty
-gitbutler
-iterm2
-jetbrains-toolbox
-keepassxc
-keka
-librewolf
-lm-studio
-logi-options+
-macfuse
-mumble
-obs
-obsidian
-orbstack
-osu
-prismlauncher
-qbittorrent
-sioyek
-sketch
-steam
-syncplay
-telegram
-termius
-ticktick
-unnaturalscrollwheels
-visual-studio-code
-vlc
-wezterm
-zed
-zen-browser
-zoom
-zulip
+  ca-certificates
+  gettext
+  gmp
+  gnu-time
+  icu4c@76
+  krb5
+  libunistring
+  lz4
+  ntfs-3g-mac
+  ollama
+  openssl@3
+  postgresql@15
+  readline
+  redis
+  xz
+  zlib
+  zstd
+  alloy
+  alt-tab
+  anki
+  betterdisplay
+  chatgpt
+  claude
+  datagrip
+  deepl
+  discord
+  docker
+  elmedia-player
+  eloston-chromium
+  figma
+  firefox
+  floorp
+  font-iosevka
+  font-martian-mono
+  font-mononoki
+  font-sf-mono
+  ghostty
+  gitbutler
+  iterm2
+  jetbrains-toolbox
+  keepassxc
+  keka
+  librewolf
+  lm-studio
+  logi-options+
+  macfuse
+  mumble
+  obs
+  obsidian
+  orbstack
+  osu
+  prismlauncher
+  qbittorrent
+  sioyek
+  sketch
+  steam
+  syncplay
+  telegram
+  termius
+  ticktick
+  unnaturalscrollwheels
+  visual-studio-code
+  vlc
+  wezterm
+  zed
+  zen-browser
+  zoom
+  zulip
 */
