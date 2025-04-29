@@ -27,7 +27,7 @@
 	"editor.copyWithSyntaxHighlighting": false,
 	"editor.cursorBlinking": "phase",
 	"editor.cursorSurroundingLines": 8,
-	"editor.fontFamily": "Iosevka, 'SF Mono', monospace",
+	"editor.fontFamily": "'Mononoki', Iosevka, 'SF Mono', monospace",
 	"editor.fontLigatures": false,
 	"editor.fontSize": 17,
 	"editor.fontWeight": "600",
