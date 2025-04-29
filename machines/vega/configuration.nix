@@ -116,6 +116,7 @@
       apple-fonts.sf-pro
       apple-fonts.sf-mono
       apple-fonts.ny
+      mononoki
     ];
     fontconfig = {
       enable = true;
