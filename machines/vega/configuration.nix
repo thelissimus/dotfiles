@@ -15,7 +15,9 @@
   networking.hostName = hostname;
   networking.extraHosts =
     ''
-      127.0.0.1 gemini.google.com
+      127.0.0.1 youtube.com
+      127.0.0.1 twitch.tv
+      127.0.0.1 x.com
     '';
   networking.networkmanager.enable = true;
 
