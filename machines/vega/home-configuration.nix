@@ -155,6 +155,7 @@ in
 
   home.packages = with pkgs; [
     ticktick
+    slack
     telegram-desktop
     zulip
     zulip-term
