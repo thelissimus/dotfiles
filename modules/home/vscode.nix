@@ -7,6 +7,7 @@
       enableUpdateCheck = false;
       enableExtensionUpdateCheck = false;
       extensions = (with pkgs.vscode-extensions; [
+        svelte.svelte-vscode
         banacorn.agda-mode
         llvm-vs-code-extensions.vscode-clangd
         editorconfig.editorconfig
@@ -81,18 +82,6 @@
           publisher = "takumii";
           version = "0.11.0";
           sha256 = "kn5aLRaxxacQMvtTp20IdTuiuc6xNU3QO2XbXnzSf7o=";
-        }
-        {
-          name = "paperproof";
-          publisher = "paperproof";
-          version = "1.1.2";
-          sha256 = "NCaQzFa3WQ2kURf4tvrxLykbpPde74cAfhK9olA9m6o=";
-        }
-        {
-          name = "quint-vscode";
-          publisher = "informal";
-          version = "0.14.5";
-          sha256 = "4pWVtLSpb8BpukpvFoBYkGQxQ8hZcmCPQxJGOAGPA2c=";
         }
         {
           name = "vscode-ide";
