@@ -2,6 +2,7 @@
 {
   bash = import ./bash.nix { inherit pkgs; };
   chromium = import ./chromium.nix { inherit pkgs lib; };
+  direnv = import ./direnv.nix { inherit pkgs; };
   firefox = import ./firefox.nix { inherit pkgs; };
   git = import ./git.nix { inherit pkgs; };
   java = import ./java.nix { inherit pkgs; };
