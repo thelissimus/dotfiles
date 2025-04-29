@@ -13,7 +13,7 @@
     agda2hs.inputs.nixpkgs.follows = "nixpkgs";
     k.url = "github:runtimeverification/k";
     k.inputs.nixpkgs.follows = "nixpkgs";
-    apple-fonts.url = "path:pkgs/apple-fonts";
+    apple-fonts.url = "path:./pkgs/apple-fonts";
     apple-fonts.inputs.nixpkgs.follows = "nixpkgs";
   };
 
