@@ -27,7 +27,7 @@
           # dark-reader
           id = "eimadpbcbfnmbkopoojfekhnkhdbieeh";
           version = "4.9.95";
-          sha256 = "0169harv9niwsjhi8pn3p063k1yhnlgjspih6gcfa6wxil50djzp";
+          sha256 = "1lc5ny57rdpqzx07gwj44pl3m9mg9nq6p5kjchrmjjh4hkk5wsny";
         }
         {
           # imagus
@@ -45,19 +45,19 @@
           # privacy-badger
           id = "pkehgijcmpdhfbdbbnkijodmdjhbjlgp";
           version = "2024.7.17";
-          sha256 = "0jsqa7v2zdjwwp4gfl98yda6vsii374fl1bwqjynnilj7ah8610z";
+          sha256 = "0kx6pgk3m9mdqwnh2lxw1cid9csv6xvchdw55svimrl5ky2dqlzx";
         }
         {
           # singlefile
           id = "mpiodijhokgodhhofbcjdecpffjipkle";
           version = "1.22.71";
-          sha256 = "0qzacb8jxlpqrlmr3ibamaz2clk6ilawg5r2pa872m99ksgl68pf";
+          sha256 = "0fy8wcw83g3qps9ghqrnxcfyjqmsz4wi3xn2n9ymfvn9yx4l7ffg";
         }
         {
           # ublock-origin
           id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";
           version = "1.60.0";
-          sha256 = "1h7hkch680kp40mrc1121l8rl1qxwplqwbl53ysy5kbp9jn77v1r";
+          sha256 = "0pdh1v0vx1d5vnl1zh7nbk6j1fh4k4hhwp1ljs203icn306lahsn";
         }
         {
           # unhook
@@ -69,7 +69,7 @@
           # vimium
           id = "dbepggeogbaibhgnhhndojpepiihcmeb";
           version = "2.1.2";
-          sha256 = "0m8xski05w2r8igj675sxrlkzxlrl59j3a7m0r6c8pwcvka0r88d";
+          sha256 = "0n1ja4l8pvcsm1xdvq5gqw9f320yaidb6piifbqp3nhgfklif85l";
         }
         {
           # return-youtube-dislike
@@ -87,18 +87,18 @@
           # sponsorblock
           id = "mnjggcdmjocbbbhaepdhchncahnbgone";
           version = "5.9.4";
-          sha256 = "0945d9bapx3gyi3ldj075vi17kjdmqjy431filhflvgnvhq09752";
+          sha256 = "0vwzda6dsy9cm8ml9ahxbs3j6zqjjkjfz55zmfixr0xm0aab1c9j";
         }
         {
           # keepassxc
           id = "oboonakemofpalcgghocfoadofidjkkk";
           version = "1.9.3";
-          sha256 = "0ajgl28fh6m5p4jl1v60rglxksbi547xv1awh3kp42x510yk4w58";
+          sha256 = "0zlmwiyzn4cznzrvavp2nsj07v4lrdyi7nw5aarqnj7nj12gixh7";
         }
         {
           id = "jnbbnacmeggbgdjgaoojpmhdlkkpblgi";
           version = "4.0.7";
-          sha256 = "0c8rh42l9yyzlcb64l6sy0qf5mldy30wdh12vbj2ig7vywf5qc3c";
+          sha256 = "1x57znbrh70d9dab3p476y11v0dzsp184bp247qijdsg0hkfv92h";
         }
       ];
   };
