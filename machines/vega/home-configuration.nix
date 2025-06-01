@@ -154,6 +154,7 @@ in
   };
 
   home.packages = with pkgs; [
+    floorp
     ticktick
     slack
     telegram-desktop
