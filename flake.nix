@@ -63,6 +63,10 @@
               home-manager.useUserPackages = true;
               home-manager.users.${username} = import ./machines/vega/home-configuration.nix;
             }
+            (import ./modules/services/postgres.nix {
+              inherit (mkPkgs "x86_64-linux") pkgs;
+              inherit username;
+            })
           ];
         };
         fklr = mkSystem { system = "x86_64-linux"; hostname = "fklr"; username = "alice"; };
