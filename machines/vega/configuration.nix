@@ -62,10 +62,6 @@
   services.earlyoom.freeMemThreshold = 5;
   services.thermald.enable = true;
 
-  services.redis.servers."global".enable = true;
-  services.redis.servers."global".port = 6379;
-  services.redis.vmOverCommit = true;
-
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
