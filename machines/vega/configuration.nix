@@ -21,10 +21,21 @@
   networking.networkmanager.enable = true;
 
   time.timeZone = "Etc/GMT-5";
-  i18n.defaultLocale = "de_DE.UTF-8";
-  i18n.extraLocaleSettings = {
-    LANGUAGE = "de_DE";
-    LC_ALL = "de_DE.UTF-8";
+  i18n = {
+    defaultLocale = "ja_JP.UTF-8";
+
+    inputMethod = {
+      enable = true;
+      type = "ibus";
+      ibus.engines = with pkgs.ibus-engines; [
+        mozc
+      ];
+    };
+
+    extraLocaleSettings = {
+      LANGUAGE = "ja_JP";
+      LC_ALL = "ja_JP.UTF-8";
+    };
   };
 
   services.xserver = {
@@ -32,7 +43,7 @@
     xkb = {
       layout = "us,ru,de";
       options = "caps:escape,grp:alt_shift_toggle";
-      variant = "altgr-intl";
+      variant = "altgr-intl,,";
     };
     displayManager = {
       gdm.enable = true;

@@ -41,6 +41,7 @@ in
         (mkTuple [ "xkb" "us" ])
         (mkTuple [ "xkb" "ru" ])
         (mkTuple [ "xkb" "de" ])
+        (mkTuple [ "ibus" "mozc-on" ])
       ];
     };
     "org/gnome/desktop/peripherals/touchpad" = {
