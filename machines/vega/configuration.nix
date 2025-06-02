@@ -17,6 +17,7 @@
     ''
       127.0.0.1 www.twitch.tv
       127.0.0.1 x.com
+      127.0.0.1 firefly.local
     '';
   networking.networkmanager.enable = true;
 
@@ -69,6 +70,17 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+  };
+
+  services.firefly-iii = {
+    enable = true;
+    enableNginx = true;
+    virtualHost = "firefly.local";
+    settings = {
+      APP_ENV = "production";
+      APP_KEY_FILE = "/var/lib/firefly-iii/app.key";
+      DB_CONNECTION = "sqlite";
+    };
   };
 
   users.defaultUserShell = pkgs.zsh;
