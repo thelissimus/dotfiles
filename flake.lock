@@ -29,13 +29,13 @@
         ]
       },
       "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-x4Kbl0JQERtPuHFKmA8O2DYy9QyPZ/ySiGBxosffJ7E=",
-        "path": "./pkgs/apple-fonts",
+        "lastModified": 0,
+        "narHash": "sha256-+hJSVpHwwbthRi5g4HEbglGqvVuKjugITU9W1tEE5+g=",
+        "path": "pkgs/apple-fonts",
         "type": "path"
       },
       "original": {
-        "path": "./pkgs/apple-fonts",
+        "path": "pkgs/apple-fonts",
         "type": "path"
       }
     },

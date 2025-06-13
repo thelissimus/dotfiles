@@ -134,8 +134,6 @@
       iosevka-bin
       julia-mono
       apple-fonts.sf-pro
-      apple-fonts.sf-mono
-      apple-fonts.ny
       mononoki
     ];
     fontconfig = {
