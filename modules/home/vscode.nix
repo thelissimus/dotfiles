@@ -32,8 +32,6 @@
         timonwong.shellcheck
         vscodevim.vim
         wakatime.vscode-wakatime
-        github.copilot
-        github.copilot-chat
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
           name = "alloy";
@@ -52,12 +50,6 @@
           publisher = "razetime";
           version = "0.1.5";
           sha256 = "50DLHgRE0rozH2XEpyxeHGjtvrSWul5iqUfZfWCTpPw=";
-        }
-        {
-          name = "haskell-gtd-nl";
-          publisher = "dbaynak";
-          version = "0.3.3";
-          sha256 = "Hd7E4NW/zj45xTB/iYvwnPTaFevGAF3EoAnZnEUa6LI=";
         }
         {
           name = "lean4";
