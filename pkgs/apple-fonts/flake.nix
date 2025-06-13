@@ -49,12 +49,15 @@
                   '';
                 };
 
-              sources = import ./sources.nix;
+              sources = {
+                sf-pro = {
+                  url = "./SF-Pro.dmg";
+                  hash = "sha256-IccB0uWWfPCidHYX6sAusuEZX906dVYo8IaqeX7/O88=";
+                };
+              };
             in
             {
               sf-pro = makeAppleFont "sf-pro" "SF Pro Fonts.pkg" (pkgs.fetchurl sources.sf-pro);
-              sf-mono = makeAppleFont "sf-mono" "SF Mono Fonts.pkg" (pkgs.fetchurl sources.sf-mono);
-              ny = makeAppleFont "ny" "NY Fonts.pkg" (pkgs.fetchurl sources.ny);
             };
         };
     };
