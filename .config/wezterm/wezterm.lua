@@ -3,8 +3,8 @@ local wezterm = require("wezterm")
 return {
 	check_for_updates = false,
 	color_scheme = "Gruvbox Material (Gogh)",
-	font = wezterm.font("SF Mono", { weight = "Medium" }),
-	font_size = 16,
+	font = wezterm.font("Mononoki", { weight = "Medium" }),
+	font_size = 14,
     front_end = "WebGpu",
 	enable_wayland = false,
 	enable_tab_bar = false,
