@@ -159,12 +159,10 @@ in
     ticktick
     slack
     zulip
-    discord
     keepassxc
     stacer
     qbittorrent
     transmission_4-gtk
-    openvpn
     baobab
     smartmontools
     gcolor3
@@ -172,45 +170,29 @@ in
     libqalculate
     nfs-utils
     gnomeExtensions.appindicator
-    zoom-us
     # CLI
     difftastic
-    dig
-    fzf
     htop
     jq
-    pfetch
     rename
     ripgrep
     rlwrap
-    solaar
     spek
     tmux
     tokei
     tree
-    # Dev
-    insomnia
     # Documents
     anki
-    notes
     obsidian
-    hledger
-    hledger-web
     mdbook
     mdbook-toc
     poppler_utils
     newsboat
-    nb
-    texlive.combined.scheme-medium
-    hugo
     # Media
-    moc
     ffmpeg-full
     mpv
     yt-dlp
     feh
-    imagemagick
-    obs-studio
     optipng
     peek
     # Database
