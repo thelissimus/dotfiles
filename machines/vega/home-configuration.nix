@@ -158,9 +158,7 @@ in
     floorp
     ticktick
     slack
-    telegram-desktop
     zulip
-    zulip-term
     discord
     keepassxc
     stacer
