@@ -255,10 +255,5 @@ in
     swi-prolog
     # Rust
     rustup
-    # Scala
-    metals
-    # TLA+
-    tlaps
-    tlaplus
   ];
 }
