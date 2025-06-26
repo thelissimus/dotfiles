@@ -17,6 +17,7 @@ in
     neovim
     wezterm
     zathura
+    zed
   ];
 
   home.stateVersion = "23.05";

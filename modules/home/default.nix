@@ -10,6 +10,7 @@
   vscode = import ./vscode.nix { inherit pkgs; };
   wezterm = import ./wezterm.nix { inherit pkgs; };
   zathura = import ./zathura.nix { inherit pkgs; };
+  zed = import ./zed.nix { inherit pkgs; };
   zoxide = import ./zoxide.nix { inherit pkgs; };
   zsh = import ./zsh.nix { inherit pkgs; };
 }
