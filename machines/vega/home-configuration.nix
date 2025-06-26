@@ -225,8 +225,6 @@ in
     nixpkgs-fmt
     # Lean
     elan
-    # Prolog
-    swi-prolog
     # Rust
     rustup
   ];
