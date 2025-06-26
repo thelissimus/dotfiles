@@ -67,12 +67,6 @@
           sha256 = "kn5aLRaxxacQMvtTp20IdTuiuc6xNU3QO2XbXnzSf7o=";
         }
         {
-          name = "vsc-prolog";
-          publisher = "arthurwang";
-          version = "0.8.23";
-          sha256 = "Da2dCpruVqzP3g1hH0+TyvvEa1wEwGXgvcmIq9B/2cQ=";
-        }
-        {
           name = "language-x86-64-assembly";
           publisher = "13xforever";
           version = "3.1.4";
