@@ -1,0 +1,37 @@
+{
+	"base_keymap": "VSCode",
+	"vim_mode": true,
+	"telemetry": {
+		"diagnostics": false,
+		"metrics": false
+	},
+	"ui_font_size": 16,
+	"theme": {
+		"mode": "system",
+		"light": "One Light",
+		"dark": "Gruvbox Dark"
+	},
+	"terminal": {
+		"env": {
+			"EDITOR": "zed --wait"
+		}
+	},
+	"buffer_font_family": "mononoki",
+	"buffer_font_size": 18,
+	"buffer_font_weight": 500,
+	"remove_trailing_whitespace_on_save": true,
+	"show_completions_on_input": true,
+	"show_edit_predictions": false,
+	"agent": {
+		"version": "2",
+		"enabled": true,
+		"button": true,
+		"dock": "right",
+		"default_width": 640,
+		"default_height": 320,
+		"default_model": {
+			"provider": "openai",
+			"model": "gpt-o4-mini-high"
+		}
+	}
+}
