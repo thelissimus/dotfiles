@@ -16,7 +16,7 @@
       # Modification
       editorconfig-vim
       (nvim-treesitter.withPlugins
-        (p: with p; [ c go haskell haskell_persistent latex nix rust scala ]))
+        (p: with p; [ c go haskell haskell_persistent latex nix rust ]))
       vim-wakatime
       cornelis
       vim-which-key

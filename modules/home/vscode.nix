@@ -26,8 +26,6 @@
         christian-kohler.path-intellisense
         esbenp.prettier-vscode
         rust-lang.rust-analyzer
-        scalameta.metals
-        scala-lang.scala
         timonwong.shellcheck
         vscodevim.vim
         wakatime.vscode-wakatime
@@ -67,12 +65,6 @@
           publisher = "takumii";
           version = "0.11.0";
           sha256 = "kn5aLRaxxacQMvtTp20IdTuiuc6xNU3QO2XbXnzSf7o=";
-        }
-        {
-          name = "vscode-ide";
-          publisher = "tlaplus";
-          version = "2024.9.132106";
-          sha256 = "DLivREQA+vNFZneQ1RjS3mqhG+B/YaDyqm6cbJ37Doc=";
         }
         {
           name = "vsc-prolog";

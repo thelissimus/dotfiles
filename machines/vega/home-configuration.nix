@@ -10,7 +10,6 @@ in
     direnv
     git
     java
-    scala
     zsh
     chromium
     firefox
