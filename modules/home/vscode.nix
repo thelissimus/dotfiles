@@ -45,12 +45,6 @@
           sha256 = "wYMxjMY7colRKWb0qDpMC07+hYhIxh5KcibO43yczPs=";
         }
         {
-          name = "bqn-language";
-          publisher = "razetime";
-          version = "0.1.5";
-          sha256 = "50DLHgRE0rozH2XEpyxeHGjtvrSWul5iqUfZfWCTpPw=";
-        }
-        {
           name = "lean4";
           publisher = "leanprover";
           version = "0.0.178";
