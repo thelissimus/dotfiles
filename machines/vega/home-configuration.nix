@@ -203,8 +203,6 @@ in
     ]))
     # Alloy
     alloy6
-    # BQN
-    cbqn
     # C
     gcc
     gdb
