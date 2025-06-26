@@ -15,7 +15,6 @@
         dbaeumer.vscode-eslint
         tamasfe.even-better-toml
         eamodio.gitlens
-        golang.go
         jdinhlife.gruvbox
         haskell.haskell
         justusadam.language-haskell
