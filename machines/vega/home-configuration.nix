@@ -209,11 +209,6 @@ in
     gcc
     gdb
     llvmPackages_16.clang-unwrapped
-    # Go
-    go
-    gopls
-    delve
-    go-tools
     # Haskell
     haskell.compiler.ghc910
     cabal-install
