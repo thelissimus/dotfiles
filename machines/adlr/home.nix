@@ -8,10 +8,10 @@ in
     bash
     git
     java
-    scala
     zsh
     neovim
     zathura
+    vscode
   ];
 
   home.stateVersion = "24.05";
@@ -23,26 +23,20 @@ in
     libqalculate
     # CLI
     difftastic
-    dig
-    fzf
     htop
     jq
-    pfetch
     ripgrep
     rlwrap
     spek
-    tmux
     tokei
     tree
     # Documents
     mdbook
     mdbook-toc
     texlive.combined.scheme-medium
-    hugo
     # Media
     ffmpeg-full
     yt-dlp
-    feh
     optipng
     # Database
     sqlite
@@ -53,22 +47,10 @@ in
       _1lab
       generics
       cubical-mini
-      pkgs.agda2hs-lib
     ]))
-    agda2hs-unwrapped
     cornelis
-    # Idris 2
-    idris2
-    idris2Packages.idris2Lsp
     # Alloy
     alloy6
-    # BQN
-    cbqn
-    # Go
-    go
-    gopls
-    delve
-    go-tools
     # Haskell
     haskell.compiler.ghc910
     cabal-install
@@ -79,7 +61,7 @@ in
     haskellPackages.hlint
     haskellPackages.ghcprofview
     # K Framework
-    k
+    # k
     # Coq
     coq
     coqPackages.stdpp
@@ -104,12 +86,7 @@ in
     nixpkgs-fmt
     # Lean
     elan
-    # Prolog
-    swi-prolog
-    # Rust
-    rustup
     # Scala
-    metals
     z3
     llvmPackages_15.clang-unwrapped
     llvmPackages_15.libllvm

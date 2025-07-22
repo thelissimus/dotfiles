@@ -9,15 +9,13 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nur.url = "github:nix-community/NUR";
-    agda2hs.url = "github:agda/agda2hs";
-    agda2hs.inputs.nixpkgs.follows = "nixpkgs";
     k.url = "github:runtimeverification/k";
     k.inputs.nixpkgs.follows = "nixpkgs";
     apple-fonts.url = "path:pkgs/apple-fonts";
     apple-fonts.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs @ { self, nixpkgs, nix-darwin, nix-homebrew, home-manager, apple-fonts, nur, agda2hs, k, ... }:
+  outputs = inputs @ { self, nixpkgs, nix-darwin, nix-homebrew, home-manager, apple-fonts, nur, k, ... }:
     let
       mkPkgs = system: import nixpkgs {
         localSystem = { inherit system; };
@@ -30,8 +28,6 @@
         overlays = [
           (final: prev: {
             apple-fonts = apple-fonts.packages.${system};
-            agda2hs-unwrapped = agda2hs.packages.${system}.default;
-            agda2hs-lib = agda2hs.packages.${system}.agda2hs-lib;
           })
           k.overlay
           nur.overlays.default
@@ -88,31 +84,25 @@
                 brews = [ ];
                 casks = [
                   "alloy"
+                  "alt-tab"
                   "anki"
-                  # "betterdisplay"
+                  "betterdisplay"
                   "chatgpt"
-                  "datagrip"
                   "deepl"
                   "discord"
-                  "docker"
                   "elmedia-player"
                   "figma"
                   "firefox"
                   "font-iosevka"
                   "font-sf-mono"
-                  "gitbutler"
                   "iterm2"
-                  "jetbrains-toolbox"
                   "keepassxc"
                   "keka"
                   "macfuse"
                   "obs"
                   "obsidian"
                   "orbstack"
-                  # "osu"
-                  "prismlauncher"
                   "qbittorrent"
-                  # "sketch"
                   "steam"
                   "telegram"
                   "termius"
@@ -127,11 +117,11 @@
                 ];
               };
 
-              nix.enable = true;
-              nix.settings.experimental-features = "nix-command flakes";
+              nix.enable = false;
               programs.zsh.enable = true;
               system.configurationRevision = self.rev or self.dirtyRev or null;
               system.stateVersion = 5;
+              system.primaryUser = "kei";
               nixpkgs.hostPlatform = "aarch64-darwin";
               users.users.kei = {
                 name = "kei";
@@ -153,7 +143,6 @@
                 enable = true;
                 enableRosetta = true;
                 user = "kei";
-                autoMigrate = true;
               };
             }
           ];
