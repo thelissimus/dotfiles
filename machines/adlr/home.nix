@@ -30,6 +30,7 @@ in
     spek
     tokei
     tree
+    just
     # Documents
     mdbook
     mdbook-toc
@@ -86,7 +87,6 @@ in
     nixpkgs-fmt
     # Lean
     elan
-    # Scala
     z3
     llvmPackages_15.clang-unwrapped
     llvmPackages_15.libllvm
