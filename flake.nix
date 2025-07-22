@@ -104,6 +104,7 @@
                   "orbstack"
                   "qbittorrent"
                   "steam"
+                  "slack"
                   "telegram"
                   "termius"
                   "ticktick"
