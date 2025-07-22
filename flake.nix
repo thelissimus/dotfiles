@@ -93,6 +93,7 @@
                   "figma"
                   "firefox"
                   "font-iosevka"
+                  "font-mononoki"
                   "font-sf-mono"
                   "iterm2"
                   "keepassxc"
