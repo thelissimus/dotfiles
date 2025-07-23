@@ -101,6 +101,7 @@
                   "iterm2"
                   "keepassxc"
                   "keka"
+                  "linear-linear"
                   "macfuse"
                   "obs"
                   "obsidian"
