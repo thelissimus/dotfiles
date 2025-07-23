@@ -68,76 +68,11 @@
         fklr = mkSystem { system = "x86_64-linux"; hostname = "fklr"; username = "alice"; };
       };
 
-      darwinConfigurations."Keis-MacBook-Pro" = nix-darwin.lib.darwinSystem {
-        pkgs = mkPkgs "aarch64-darwin";
+      darwinConfigurations."Keis-MacBook-Pro" = let pkgs = mkPkgs "aarch64-darwin"; in nix-darwin.lib.darwinSystem {
+        inherit pkgs;
         modules =
-          let
-            configuration = { pkgs, ... }: {
-              environment.systemPackages =
-                [
-                  pkgs.vim
-                ];
-              homebrew = {
-                enable = true;
-
-                taps = [ ];
-                brews = [ ];
-                casks = [
-                  "alloy"
-                  "alt-tab"
-                  "anki"
-                  "betterdisplay"
-                  "chatgpt"
-                  "deepl"
-                  "discord"
-                  "figma"
-                  "firefox"
-                  "flameshot"
-                  "font-iosevka"
-                  "font-mononoki"
-                  "font-sf-mono"
-                  "ghostty"
-                  "gitbutler"
-                  "iterm2"
-                  "keepassxc"
-                  "keka"
-                  "linear-linear"
-                  "macfuse"
-                  "obs"
-                  "obsidian"
-                  "orbstack"
-                  "qbittorrent"
-                  "sioyek"
-                  "steam"
-                  "slack"
-                  "telegram"
-                  "ticktick"
-                  "ungoogled-chromium"
-                  "unnaturalscrollwheels"
-                  "visual-studio-code"
-                  "vlc"
-                  "wezterm"
-                  "zed"
-                  "zen-browser"
-                  "zoom"
-                  "zulip"
-                ];
-              };
-
-              nix.enable = false;
-              programs.zsh.enable = true;
-              system.configurationRevision = self.rev or self.dirtyRev or null;
-              system.stateVersion = 5;
-              system.primaryUser = "kei";
-              nixpkgs.hostPlatform = "aarch64-darwin";
-              users.users.kei = {
-                name = "kei";
-                home = "/Users/kei";
-              };
-            };
-          in
           [
-            configuration
+            (import ./machines/adlr/conf.nix { inherit pkgs; configurationRevision = self.rev or self.dirtyRev or null; })
             home-manager.darwinModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
