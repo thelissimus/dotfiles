@@ -112,11 +112,13 @@
                   "slack"
                   "telegram"
                   "ticktick"
+                  "ungoogled-chromium"
                   "unnaturalscrollwheels"
                   "visual-studio-code"
                   "vlc"
                   "wezterm"
                   "zed"
+                  "zen-browser"
                   "zoom"
                   "zulip"
                 ];
