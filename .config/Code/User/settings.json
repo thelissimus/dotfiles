@@ -84,7 +84,7 @@
 		"**/.metals": true
 	},
 	"gitlens.codeLens.enabled": false,
-	"haskell.formattingProvider": "fourmolu",
+	"haskell.formattingProvider": "ormolu",
 	"haskell.manageHLS": "PATH",
 	"mergeEditor.diffAlgorithm": "advanced",
 	"nix.enableLanguageServer": true,
