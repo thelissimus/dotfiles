@@ -59,7 +59,7 @@
 		"*.dump-ds": "haskell",
 		"*.project.local": "haskell"
 	},
-	"files.autoSave": "off",
+	"files.autoSave": "afterDelay",
 	"files.autoSaveDelay": 1000,
 	"files.encoding": "utf8",
 	"files.eol": "\n",
