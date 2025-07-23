@@ -6,6 +6,7 @@ in
   imports = with hp; [
     zoxide
     bash
+    direnv
     git
     java
     zsh
