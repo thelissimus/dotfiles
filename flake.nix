@@ -72,6 +72,7 @@
         inherit pkgs;
         modules =
           [
+            ./modules/core/nix.nix
             (import ./machines/adlr/conf.nix { inherit pkgs; configurationRevision = self.rev or self.dirtyRev or null; })
             home-manager.darwinModules.home-manager
             {
