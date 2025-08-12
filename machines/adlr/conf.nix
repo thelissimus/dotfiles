@@ -24,6 +24,7 @@
       "font-sf-mono"
       "ghostty"
       "gitbutler"
+      "iina"
       "iterm2"
       "keepassxc"
       "keka"
