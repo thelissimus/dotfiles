@@ -1,8 +1,10 @@
 { pkgs, configurationRevision, ... }: {
-  environment.systemPackages =
-    [
-      pkgs.vim
-    ];
+  environment.systemPackages = with pkgs; [
+    vim
+    radicle-node
+    radicle-httpd
+  ];
+
   homebrew = {
     enable = true;
 
