@@ -1,6 +1,5 @@
 {
 	"[agda]": {
-		"editor.fontFamily": "JuliaMono",
 		"editor.unicodeHighlight.ambiguousCharacters": false
 	},
 	"[html][css]": {
@@ -71,12 +70,9 @@
 		"**/.hg": true,
 		"**/.lsp": true,
 		"**/.svn": true,
-		"**/.vscode": true,
 		"**/.idea": true,
 		"**/CVS": true,
-		"**/Thumbs.db": true,
-		"**/node_modules": true,
-		"**/target": true
+		"**/Thumbs.db": true
 	},
 	"files.insertFinalNewline": true,
 	"files.trimTrailingWhitespace": true,
