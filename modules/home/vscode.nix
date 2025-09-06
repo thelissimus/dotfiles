@@ -29,6 +29,7 @@
         timonwong.shellcheck
         vscodevim.vim
         wakatime.vscode-wakatime
+        ziglang.vscode-zig
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
           name = "alloy";

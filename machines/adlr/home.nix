@@ -91,5 +91,8 @@ in
     z3
     llvmPackages_15.clang-unwrapped
     llvmPackages_15.libllvm
+    # Zig
+    zig
+    zls
   ];
 }
