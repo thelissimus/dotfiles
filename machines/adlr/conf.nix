@@ -39,7 +39,7 @@
       "sioyek"
       "steam"
       "slack"
-      "telegram"
+      "telegram-desktop"
       "ticktick"
       "ungoogled-chromium"
       "unnaturalscrollwheels"
@@ -48,6 +48,7 @@
       "wezterm"
       "zed"
       "zen-browser"
+      "zotero"
       "zoom"
       "zulip"
     ];
