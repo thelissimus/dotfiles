@@ -9,6 +9,7 @@ in
     bash
     direnv
     git
+    haskell
     java
     zsh
     chromium
@@ -22,7 +23,6 @@ in
 
   home.stateVersion = "23.05";
 
-  home.file.".ghci".source = ../../.config/.ghci;
   home.file.".npmrc".source = ../../.config/.npmrc;
   home.file.".sqliterc".source = ../../.config/.sqliterc;
 
@@ -207,16 +207,6 @@ in
     gcc
     gdb
     llvmPackages_16.clang-unwrapped
-    # Haskell
-    haskell.compiler.ghc910
-    cabal-install
-    (haskell-language-server.override { supportedGhcVersions = [ "910" ]; supportedFormatters = [ "fourmolu" ]; })
-    haskellPackages.cabal-fmt
-    haskellPackages.fourmolu
-    haskellPackages.hlint
-    haskellPackages.ghcprofview
-    # Java
-    maven
     # JS
     nodejs_20
     nodePackages.pnpm

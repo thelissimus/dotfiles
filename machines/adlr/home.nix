@@ -8,6 +8,7 @@ in
     bash
     direnv
     git
+    haskell
     java
     zsh
     neovim
@@ -53,15 +54,6 @@ in
     cornelis
     # Alloy
     alloy6
-    # Haskell
-    haskell.compiler.ghc910
-    cabal-install
-    stack
-    (haskell-language-server.override { supportedGhcVersions = [ "910" ]; supportedFormatters = [ "fourmolu" ]; })
-    haskellPackages.cabal-fmt
-    haskellPackages.fourmolu
-    haskellPackages.hlint
-    haskellPackages.ghcprofview
     # K Framework
     # k
     # Coq
