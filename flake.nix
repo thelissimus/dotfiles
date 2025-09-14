@@ -8,6 +8,8 @@
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    devshell.url = "github:numtide/devshell";
+    devshell.inputs.nixpkgs.follows = "nixpkgs";
     nur.url = "github:nix-community/NUR";
     k.url = "github:runtimeverification/k";
     k.inputs.nixpkgs.follows = "nixpkgs";
@@ -15,7 +17,7 @@
     apple-fonts.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs @ { self, nixpkgs, nix-darwin, nix-homebrew, home-manager, apple-fonts, nur, k, ... }:
+  outputs = inputs @ { self, nixpkgs, nix-darwin, nix-homebrew, home-manager, devshell, apple-fonts, nur, k, ... }:
     let
       mkPkgs = system: import nixpkgs {
         localSystem = { inherit system; };
@@ -26,75 +28,131 @@
           allowUnfree = true;
         };
         overlays = [
-          (final: prev: {
+          (_: _: {
             apple-fonts = apple-fonts.packages.${system};
           })
+          devshell.overlays.default
           k.overlay
           nur.overlays.default
         ];
       };
-      mkSystem = { system, hostname, username, modules ? [ ] }: nixpkgs.lib.nixosSystem {
-        inherit system;
-        pkgs = mkPkgs system;
-        specialArgs = { inherit inputs hostname username; };
-        modules = [
-          ./modules/core/nix.nix
-        ] ++ modules;
-      };
-    in
-    {
-      formatter.x86_64-linux = (mkPkgs "x86_64-linux").nixpkgs-fmt;
-      formatter.aarch64-darwin = (mkPkgs "aarch64-darwin").nixpkgs-fmt;
-
-      nixosConfigurations = {
-        vega = let username = "helix"; hostname = "vega"; in mkSystem {
-          system = "x86_64-linux";
-          inherit username hostname;
+      mkNixos =
+        { system
+        , hostname
+        , username
+        , conf
+        , home ? null
+        , modules ? [ ]
+        }:
+        let pkgs = mkPkgs system; in
+        nixpkgs.lib.nixosSystem {
+          inherit system pkgs;
+          specialArgs = { inherit inputs hostname username; };
           modules = [
-            ./machines/${hostname}/conf.nix
+            ./modules/core/nix.nix
+            conf
+          ]
+          ++ (if home == null then [ ] else [
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.${username} = import ./machines/vega/home.nix;
+              home-manager.users.${username} = import home;
             }
-            (import ./modules/services/postgres.nix {
-              inherit (mkPkgs "x86_64-linux") pkgs;
-              inherit username;
-            })
-          ];
+          ])
+          ++ modules;
         };
-        fklr = let hostname = "fklr"; in mkSystem {
-          system = "x86_64-linux";
-          inherit hostname;
-          username = "alice";
+      mkDarwin =
+        { system
+        , hostname
+        , username
+        , conf
+        , home
+        , modules ? [ ]
+        }:
+        let pkgs = mkPkgs system; in nix-darwin.lib.darwinSystem {
+          inherit pkgs;
+          specialArgs = { inherit inputs hostname username; configurationRevision = self.rev or self.dirtyRev or null; };
           modules = [
-            ./machines/${hostname}/conf.nix
-          ];
-        };
-      };
-
-      darwinConfigurations."Keis-MacBook-Pro" = let pkgs = mkPkgs "aarch64-darwin"; in nix-darwin.lib.darwinSystem {
-        inherit pkgs;
-        modules =
-          [
             ./modules/core/nix.nix
-            (import ./machines/adlr/conf.nix { inherit pkgs; configurationRevision = self.rev or self.dirtyRev or null; })
+            conf
             home-manager.darwinModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users."kei" = import ./machines/adlr/home.nix;
+              home-manager.users.${username} = import home;
             }
             nix-homebrew.darwinModules.nix-homebrew
             {
               nix-homebrew = {
                 enable = true;
                 enableRosetta = true;
-                user = "kei";
+                user = username;
               };
             }
+          ] ++ modules;
+        };
+      systems = [ "x86_64-linux" "aarch64-darwin" ];
+      mkDevShell = system:
+        let pkgs = mkPkgs system; in pkgs.devshell.mkShell {
+          packages = with pkgs; [
+            nixpkgs-fmt
+            deadnix
+            statix
           ];
+          commands = [
+            {
+              name = "fmt";
+              command = "nix fmt .";
+            }
+            {
+              name = "check";
+              command = "nix flake check";
+            }
+            {
+              name = "deadnix-check";
+              command = "deadnix .";
+            }
+            {
+              name = "statix-check";
+              command = "statix check .";
+            }
+          ];
+        };
+    in
+    {
+      legacyPackages = nixpkgs.lib.genAttrs systems (system: mkPkgs system);
+      formatter = nixpkgs.lib.genAttrs systems (system: (mkPkgs system).nixpkgs-fmt);
+      devShells = nixpkgs.lib.genAttrs systems (system: { default = mkDevShell system; });
+
+      nixosConfigurations = {
+        vega = mkNixos {
+          system = "x86_64-linux";
+          hostname = "vega";
+          username = "helix";
+          conf = ./machines/vega/conf.nix;
+          home = ./machines/vega/home.nix;
+          modules = [
+            ./modules/services/postgres.nix
+          ];
+        };
+
+        fklr = mkNixos {
+          system = "x86_64-linux";
+          hostname = "fklr";
+          username = "alice";
+          conf = ./machines/fklr/conf.nix;
+        };
+      };
+
+      darwinConfigurations = {
+        "Keis-MacBook-Pro" = mkDarwin {
+          system = "aarch64-darwin";
+          hostname = "adlr";
+          username = "kei";
+          conf = ./machines/adlr/conf.nix;
+          home = ./machines/adlr/home.nix;
+        };
       };
       darwinPackages = self.darwinConfigurations."Keis-MacBook-Pro".pkgs;
     };
