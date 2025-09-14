@@ -1,7 +1,7 @@
 { pkgs, hostname, username, ... }: {
   imports =
     [
-      ./hardware-configuration.nix
+      ./hardware.nix
     ];
 
   boot.loader.systemd-boot.enable = true;

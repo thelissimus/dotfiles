@@ -38,7 +38,6 @@
         pkgs = mkPkgs system;
         specialArgs = { inherit inputs hostname username; };
         modules = [
-          ./machines/${hostname}/configuration.nix
           ./modules/core/nix.nix
         ] ++ modules;
       };
@@ -48,16 +47,16 @@
       formatter.aarch64-darwin = (mkPkgs "aarch64-darwin").nixpkgs-fmt;
 
       nixosConfigurations = {
-        vega = let username = "helix"; in mkSystem {
+        vega = let username = "helix"; hostname = "vega"; in mkSystem {
           system = "x86_64-linux";
-          inherit username;
-          hostname = "vega";
+          inherit username hostname;
           modules = [
+            ./machines/${hostname}/conf.nix
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.${username} = import ./machines/vega/home-configuration.nix;
+              home-manager.users.${username} = import ./machines/vega/home.nix;
             }
             (import ./modules/services/postgres.nix {
               inherit (mkPkgs "x86_64-linux") pkgs;
@@ -65,7 +64,14 @@
             })
           ];
         };
-        fklr = mkSystem { system = "x86_64-linux"; hostname = "fklr"; username = "alice"; };
+        fklr = let hostname = "fklr"; in mkSystem {
+          system = "x86_64-linux";
+          inherit hostname;
+          username = "alice";
+          modules = [
+            ./machines/${hostname}/conf.nix
+          ];
+        };
       };
 
       darwinConfigurations."Keis-MacBook-Pro" = let pkgs = mkPkgs "aarch64-darwin"; in nix-darwin.lib.darwinSystem {
