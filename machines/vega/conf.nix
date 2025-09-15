@@ -108,7 +108,7 @@
     libGL
     pulseaudio
   ];
-  environment.gnome.excludePackages = (with pkgs; [
+  environment.gnome.excludePackages = with pkgs; [
     gnome-photos
     gnome-tour
     gedit
@@ -125,7 +125,7 @@
     hitori
     atomix
     seahorse
-  ]);
+  ];
   environment.variables = {
     LD_LIBRARY_PATH = "$LD_LIBRARY_PATH:${pkgs.libGL}/lib";
   };
@@ -156,18 +156,20 @@
     pinentryPackage = pkgs.pinentry-curses;
   };
 
-  hardware.graphics = {
-    enable = true;
-  };
-  hardware.nvidia = {
-    open = false;
-    modesetting.enable = true;
-    nvidiaSettings = false;
-    powerManagement.enable = true;
-  };
-  hardware.bluetooth.settings = {
-    General = {
-      Experimental = true;
+  hardware = {
+    graphics = {
+      enable = true;
+    };
+    nvidia = {
+      open = false;
+      modesetting.enable = true;
+      nvidiaSettings = false;
+      powerManagement.enable = true;
+    };
+    bluetooth.settings = {
+      General = {
+        Experimental = true;
+      };
     };
   };
 

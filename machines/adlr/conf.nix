@@ -57,9 +57,11 @@
 
   nix.enable = false;
   programs.zsh.enable = true;
-  system.configurationRevision = configurationRevision;
-  system.stateVersion = 5;
-  system.primaryUser = "kei";
+  system = {
+    inherit configurationRevision;
+    stateVersion = 5;
+    primaryUser = "kei";
+  };
   nixpkgs.hostPlatform = "aarch64-darwin";
   users.users.kei = {
     name = "kei";

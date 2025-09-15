@@ -6,7 +6,7 @@
     profiles.default = {
       enableUpdateCheck = false;
       enableExtensionUpdateCheck = false;
-      extensions = (with pkgs.vscode-extensions; [
+      extensions = with pkgs.vscode-extensions; [
         svelte.svelte-vscode
         banacorn.agda-mode
         llvm-vs-code-extensions.vscode-clangd
@@ -79,7 +79,7 @@
           version = "2.1.7";
           sha256 = "H3/mXHmtuLknG1k74nFcp+E2VnJ286R4Rlo8GdHb4ag=";
         }
-      ]);
+      ];
       keybindings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/keybindings.json);
       userSettings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/settings.json);
     };
