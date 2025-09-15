@@ -29,7 +29,7 @@
   services.displayManager.defaultSession = "xfce";
   services.libinput.enable = true;
 
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
 
   users.defaultUserShell = pkgs.zsh;
   users.users.${username} = {

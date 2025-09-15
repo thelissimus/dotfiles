@@ -46,6 +46,9 @@
       options = "caps:escape,grp:alt_shift_toggle";
       variant = "altgr-intl,,";
     };
+    videoDrivers = [ "nvidia" ];
+  };
+  services = {
     displayManager = {
       gdm.enable = true;
       gdm.wayland = false;
@@ -53,7 +56,6 @@
     desktopManager = {
       gnome.enable = true;
     };
-    videoDrivers = [ "nvidia" ];
   };
 
   services.openssh.enable = true;
