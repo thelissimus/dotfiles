@@ -17,7 +17,18 @@
     apple-fonts.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs @ { self, nixpkgs, nix-darwin, nix-homebrew, home-manager, devshell, apple-fonts, nur, k, ... }:
+  outputs =
+    inputs @ { self
+    , nixpkgs
+    , nix-darwin
+    , nix-homebrew
+    , home-manager
+    , devshell
+    , apple-fonts
+    , nur
+    , k
+    , ...
+    }:
     let
       mkPkgs = system: import nixpkgs {
         localSystem = { inherit system; };
@@ -36,6 +47,7 @@
           nur.overlays.default
         ];
       };
+
       mkNixos =
         { system
         , hostname
@@ -62,6 +74,7 @@
           ])
           ++ modules;
         };
+
       mkDarwin =
         { system
         , hostname
@@ -92,6 +105,7 @@
             }
           ] ++ modules;
         };
+
       systems = [ "x86_64-linux" "aarch64-darwin" ];
       mkDevShell = system:
         let pkgs = mkPkgs system; in pkgs.devshell.mkShell {
