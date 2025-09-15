@@ -10,6 +10,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     devshell.url = "github:numtide/devshell";
     devshell.inputs.nixpkgs.follows = "nixpkgs";
+    flake-parts.url = "github:hercules-ci/flake-parts";
     nur.url = "github:nix-community/NUR";
     k.url = "github:runtimeverification/k";
     k.inputs.nixpkgs.follows = "nixpkgs";
@@ -24,6 +25,7 @@
     , nix-homebrew
     , home-manager
     , devshell
+    , flake-parts
     , apple-fonts
     , nur
     , k
@@ -82,10 +84,11 @@
         , conf
         , home
         , modules ? [ ]
+        , configurationRevision
         }:
         let pkgs = mkPkgs system; in nix-darwin.lib.darwinSystem {
           inherit pkgs;
-          specialArgs = { inherit inputs hostname username; configurationRevision = self.rev or self.dirtyRev or null; };
+          specialArgs = { inherit inputs hostname username configurationRevision; };
           modules = [
             ./modules/core/nix.nix
             conf
@@ -134,40 +137,48 @@
           ];
         };
     in
-    {
-      legacyPackages = nixpkgs.lib.genAttrs systems (system: mkPkgs system);
-      formatter = nixpkgs.lib.genAttrs systems (system: (mkPkgs system).nixpkgs-fmt);
-      devShells = nixpkgs.lib.genAttrs systems (system: { default = mkDevShell system; });
-
-      nixosConfigurations = {
-        vega = mkNixos {
-          system = "x86_64-linux";
-          hostname = "vega";
-          username = "helix";
-          conf = ./machines/vega/conf.nix;
-          home = ./machines/vega/home.nix;
-          modules = [
-            ./modules/services/postgres.nix
-          ];
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      inherit systems;
+      perSystem = { system, ... }:
+        let pkgs = mkPkgs system; in
+        {
+          legacyPackages = pkgs;
+          formatter = pkgs.nixpkgs-fmt;
+          devShells.default = mkDevShell system;
         };
 
-        fklr = mkNixos {
-          system = "x86_64-linux";
-          hostname = "fklr";
-          username = "alice";
-          conf = ./machines/fklr/conf.nix;
+      flake = {
+        nixosConfigurations = {
+          vega = mkNixos {
+            system = "x86_64-linux";
+            hostname = "vega";
+            username = "helix";
+            conf = ./machines/vega/conf.nix;
+            home = ./machines/vega/home.nix;
+            modules = [
+              ./modules/services/postgres.nix
+            ];
+          };
+
+          fklr = mkNixos {
+            system = "x86_64-linux";
+            hostname = "fklr";
+            username = "alice";
+            conf = ./machines/fklr/conf.nix;
+          };
         };
+
+        darwinConfigurations = {
+          "Keis-MacBook-Pro" = mkDarwin {
+            system = "aarch64-darwin";
+            hostname = "adlr";
+            username = "kei";
+            conf = ./machines/adlr/conf.nix;
+            home = ./machines/adlr/home.nix;
+            configurationRevision = self.rev or self.dirtyRev or null;
+          };
+        };
+        darwinPackages = self.darwinConfigurations."Keis-MacBook-Pro".pkgs;
       };
-
-      darwinConfigurations = {
-        "Keis-MacBook-Pro" = mkDarwin {
-          system = "aarch64-darwin";
-          hostname = "adlr";
-          username = "kei";
-          conf = ./machines/adlr/conf.nix;
-          home = ./machines/adlr/home.nix;
-        };
-      };
-      darwinPackages = self.darwinConfigurations."Keis-MacBook-Pro".pkgs;
     };
 }
