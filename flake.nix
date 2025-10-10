@@ -19,7 +19,7 @@
   };
 
   outputs =
-    inputs @ { self
+    { self
     , nixpkgs
     , nix-darwin
     , nix-homebrew
@@ -30,7 +30,7 @@
     , nur
     , k
     , ...
-    }:
+    }@inputs:
     let
       mkPkgs = system: import nixpkgs {
         localSystem = { inherit system; };
