@@ -46,7 +46,7 @@
 	},
 	"editor.renderFinalNewline": "dimmed",
 	"editor.renderLineHighlight": "gutter",
-	"editor.renderWhitespace": "trailing",
+	"editor.renderWhitespace": "boundary",
 	"diffEditor.ignoreTrimWhitespace": false,
 	"editor.rulers": [100, 120],
 	"editor.smoothScrolling": true,
