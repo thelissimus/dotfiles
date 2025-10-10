@@ -81,8 +81,8 @@ in
     # Lean
     elan
     z3
-    llvmPackages_15.clang-unwrapped
-    llvmPackages_15.libllvm
+    llvmPackages_19.clang-unwrapped
+    llvmPackages_19.libllvm
     # Zig
     zig
     zls
