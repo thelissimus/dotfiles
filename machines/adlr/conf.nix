@@ -1,7 +1,6 @@
 { pkgs, configurationRevision, ... }: {
   environment.systemPackages = with pkgs; [
     vim
-    time
     radicle-node
     radicle-httpd
   ];
