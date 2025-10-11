@@ -58,11 +58,13 @@ in
     # k
     # Coq
     coq
+    rocqPackages.stdlib
     coqPackages.stdpp
     coqPackages.iris
     coqPackages.HoTT
     coqPackages.mathcomp
     coqPackages.coq-lsp
+    coqPackages.vscoq-language-server
     # OCaml
     ocaml
     opam

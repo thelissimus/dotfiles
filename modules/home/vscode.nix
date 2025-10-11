@@ -77,8 +77,8 @@
         {
           name = "vscoq";
           publisher = "maximedenes";
-          version = "2.1.7";
-          sha256 = "H3/mXHmtuLknG1k74nFcp+E2VnJ286R4Rlo8GdHb4ag=";
+          version = "2.2.6";
+          sha256 = "QBUTOFhdksHGkpYqgQIF2u+WodYH5PmMMvGFHwEEEIk=";
         }
       ];
       keybindings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/keybindings.json);
