@@ -64,7 +64,6 @@ in
     coqPackages.HoTT
     coqPackages.mathcomp
     coqPackages.coq-lsp
-    coqPackages.vscoq-language-server
     # OCaml
     ocaml
     opam
