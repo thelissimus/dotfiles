@@ -80,6 +80,18 @@
           version = "2.2.6";
           sha256 = "QBUTOFhdksHGkpYqgQIF2u+WodYH5PmMMvGFHwEEEIk=";
         }
+        {
+          name = "coq-lsp";
+          publisher = "ejgallego";
+          version = "0.2.4";
+          sha256 = "s2f2i3sNZ3EdCHDgkYPPiXDp25cViAZy+DpnDxfWaSo=";
+        }
+        {
+          name = "wasm-wasi-core";
+          publisher = "ms-vscode";
+          version = "1.0.2";
+          sha256 = "hrzPNPaG8LPNMJq/0uyOS8jfER1Q0CyFlwR42KmTz8g=";
+        }
       ];
       keybindings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/keybindings.json);
       userSettings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/settings.json);
