@@ -75,12 +75,6 @@
           sha256 = "FJRDm1H3GLBfSKBSFgVspCjByy9m+j9OStlU+/pMfs8=";
         }
         {
-          name = "vscoq";
-          publisher = "maximedenes";
-          version = "2.2.6";
-          sha256 = "QBUTOFhdksHGkpYqgQIF2u+WodYH5PmMMvGFHwEEEIk=";
-        }
-        {
           name = "coq-lsp";
           publisher = "ejgallego";
           version = "0.2.4";
