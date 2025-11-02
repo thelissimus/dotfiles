@@ -39,10 +39,11 @@
       "obs"
       "obsidian"
       "orbstack"
+      "prismlauncher"
       "qbittorrent"
       "sioyek"
-      "steam"
       "slack"
+      "steam"
       "telegram-desktop"
       "ticktick"
       "ungoogled-chromium"
@@ -52,8 +53,8 @@
       "wezterm"
       "zed"
       "zen"
-      "zotero"
       "zoom"
+      "zotero"
       "zulip"
     ];
   };
