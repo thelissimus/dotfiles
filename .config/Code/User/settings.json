@@ -20,7 +20,7 @@
 		"editor.wordWrapColumn": 120,
 		"vim.textwidth": 120
 	},
-	"agdaMode.connection.paths": ["agda"],
+	"agdaMode.connection.paths": ["agda", "/etc/profiles/per-user/kei/bin/agda"],
 	"breadcrumbs.enabled": false,
 	"diffEditor.diffAlgorithm": "advanced",
 	"editor.bracketPairColorization.enabled": true,
@@ -83,6 +83,7 @@
 	},
 	"gitlens.codeLens.enabled": false,
 	"haskell.formattingProvider": "ormolu",
+	"haskell.cabalFormattingProvider": "cabal-fmt",
 	"haskell.manageHLS": "PATH",
 	"mergeEditor.diffAlgorithm": "advanced",
 	"nix.enableLanguageServer": true,
