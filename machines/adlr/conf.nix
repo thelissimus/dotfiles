@@ -1,4 +1,4 @@
-{ pkgs, configurationRevision, ... }: {
+{ pkgs, username, configurationRevision, ... }: {
   environment.systemPackages = with pkgs; [
     vim
     radicle-node
@@ -58,10 +58,10 @@
   programs.zsh.enable = true;
   system.configurationRevision = configurationRevision;
   system.stateVersion = 5;
-  system.primaryUser = "kei";
+  system.primaryUser = username;
   nixpkgs.hostPlatform = "aarch64-darwin";
-  users.users.kei = {
-    name = "kei";
-    home = "/Users/kei";
+  users.users.${username} = {
+    name = username;
+    home = "/Users/${username}";
   };
 }
