@@ -1,6 +1,7 @@
 { pkgs, ... }:
 let
   h = pkgs.haskell.packages."ghc912";
+  hpkgs = pkgs.haskellPackages;
 in
 {
   home.file.".ghci".source = ../../.config/.ghci;
@@ -9,9 +10,9 @@ in
     h.ghc
     h.cabal-install
     h.haskell-language-server
-    h.cabal-fmt
+    hpkgs.cabal-fmt
     h.fourmolu
     h.hlint
-    h.ghcprofview
+    hpkgs.ghcprofview
   ];
 }
