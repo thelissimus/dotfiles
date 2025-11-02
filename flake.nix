@@ -84,7 +84,7 @@
         }:
         let pkgs = mkPkgs system; in nix-darwin.lib.darwinSystem {
           inherit pkgs;
-          specialArgs = { inherit inputs hostname username configurationRevision; };
+          specialArgs = { inherit inputs system hostname username configurationRevision; };
           modules = [
             ./modules/core/nix.nix
             conf

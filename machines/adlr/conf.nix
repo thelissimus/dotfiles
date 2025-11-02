@@ -1,4 +1,4 @@
-{ pkgs, username, configurationRevision, ... }: {
+{ pkgs, system, username, configurationRevision, ... }: {
   environment.systemPackages = with pkgs; [
     vim
     radicle-node
@@ -59,7 +59,7 @@
   system.configurationRevision = configurationRevision;
   system.stateVersion = 5;
   system.primaryUser = username;
-  nixpkgs.hostPlatform = "aarch64-darwin";
+  nixpkgs.hostPlatform = system;
   users.users.${username} = {
     name = username;
     home = "/Users/${username}";
