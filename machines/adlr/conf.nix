@@ -47,7 +47,7 @@
       "vlc"
       "wezterm"
       "zed"
-      "zen-browser"
+      "zen"
       "zotero"
       "zoom"
       "zulip"
