@@ -104,33 +104,15 @@
             }
           ] ++ modules;
         };
-
+    in
+    flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
         "x86_64-linux"
         "aarch64-darwin"
       ];
-    in
-    flake-parts.lib.mkFlake { inherit inputs; } {
-      inherit systems;
 
       perSystem = { system, pkgs, ... }: {
-        _module.args.pkgs = import nixpkgs {
-          localSystem = { inherit system; };
-          config = {
-            permittedInsecurePackages = [
-              "electron-32.3.3"
-            ];
-            allowUnfree = true;
-          };
-          overlays = [
-            (_: _: {
-              apple-fonts = apple-fonts.packages.${system};
-            })
-            k.overlay
-            nur.overlays.default
-          ];
-        };
-
+        _module.args.pkgs = mkPkgs system;
         formatter = pkgs.nixpkgs-fmt;
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
