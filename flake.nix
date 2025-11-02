@@ -100,6 +100,7 @@
                 enable = true;
                 enableRosetta = true;
                 user = username;
+                autoMigrate = true;
               };
             }
           ] ++ modules;
