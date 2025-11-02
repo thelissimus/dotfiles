@@ -8,8 +8,6 @@
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    devshell.url = "github:numtide/devshell";
-    devshell.inputs.nixpkgs.follows = "nixpkgs";
     flake-parts.url = "github:hercules-ci/flake-parts";
     nur.url = "github:nix-community/NUR";
     k.url = "github:runtimeverification/k";
@@ -24,7 +22,6 @@
     , nix-darwin
     , nix-homebrew
     , home-manager
-    , devshell
     , flake-parts
     , apple-fonts
     , nur
@@ -44,7 +41,6 @@
           (_: _: {
             apple-fonts = apple-fonts.packages.${system};
           })
-          devshell.overlays.default
           k.overlay
           nur.overlays.default
         ];
@@ -109,43 +105,41 @@
           ] ++ modules;
         };
 
-      systems = [ "x86_64-linux" "aarch64-darwin" ];
-      mkDevShell = system:
-        let pkgs = mkPkgs system; in pkgs.devshell.mkShell {
+      systems = [
+        "x86_64-linux"
+        "aarch64-darwin"
+      ];
+    in
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      inherit systems;
+
+      perSystem = { system, pkgs, ... }: {
+        _module.args.pkgs = import nixpkgs {
+          localSystem = { inherit system; };
+          config = {
+            permittedInsecurePackages = [
+              "electron-32.3.3"
+            ];
+            allowUnfree = true;
+          };
+          overlays = [
+            (_: _: {
+              apple-fonts = apple-fonts.packages.${system};
+            })
+            k.overlay
+            nur.overlays.default
+          ];
+        };
+
+        formatter = pkgs.nixpkgs-fmt;
+        devShells.default = pkgs.mkShell {
           packages = with pkgs; [
             nixpkgs-fmt
             deadnix
             statix
           ];
-          commands = [
-            {
-              name = "fmt";
-              command = "nix fmt .";
-            }
-            {
-              name = "check";
-              command = "nix flake check";
-            }
-            {
-              name = "deadnix-check";
-              command = "deadnix .";
-            }
-            {
-              name = "statix-check";
-              command = "statix check .";
-            }
-          ];
         };
-    in
-    flake-parts.lib.mkFlake { inherit inputs; } {
-      inherit systems;
-      perSystem = { system, ... }:
-        let pkgs = mkPkgs system; in
-        {
-          legacyPackages = pkgs;
-          formatter = pkgs.nixpkgs-fmt;
-          devShells.default = mkDevShell system;
-        };
+      };
 
       flake = {
         nixosConfigurations = {
