@@ -36,6 +36,7 @@
       "keka"
       "linear-linear"
       "macfuse"
+      "mullvad-vpn"
       "obs"
       "obsidian"
       "orbstack"
