@@ -42,6 +42,7 @@
       "orbstack"
       "prismlauncher"
       "qbittorrent"
+      "simplex"
       "sioyek"
       "slack"
       "steam"

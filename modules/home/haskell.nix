@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  h = pkgs.haskell.packages."ghc912";
+  h = pkgs.haskell.packages.ghc912;
   hpkgs = pkgs.haskellPackages;
 in
 {
