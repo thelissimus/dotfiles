@@ -35,6 +35,7 @@
       "keepassxc"
       "keka"
       "linear-linear"
+      "lulu"
       "macfuse"
       "mullvad-vpn"
       "obs"
