@@ -3,6 +3,9 @@
   programs.git = {
     enable = true;
     lfs.enable = true;
-    difftastic.enable = true;
+  };
+  programs.difftastic = {
+    enable = true;
+    git.enable = true;
   };
 }
