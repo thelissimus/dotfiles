@@ -82,7 +82,7 @@
 		"**/.metals": true
 	},
 	"gitlens.codeLens.enabled": false,
-	"haskell.formattingProvider": "ormolu",
+	"haskell.formattingProvider": "fourmolu",
 	"haskell.cabalFormattingProvider": "cabal-fmt",
 	"haskell.manageHLS": "PATH",
 	"mergeEditor.diffAlgorithm": "advanced",
@@ -131,7 +131,7 @@
 	"window.restoreFullscreen": true,
 	"window.title": "${dirty}${separator}${rootName}${separator}${profileName}${separator}",
 	"window.titleBarStyle": "custom",
-	"window.zoomLevel": 0.5,
+	"window.zoomLevel": 1,
 	"workbench.colorTheme": "Gruvbox Dark Medium",
 	"workbench.iconTheme": "material-icon-theme",
 	"workbench.productIconTheme": "material-product-icons"
