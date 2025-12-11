@@ -20,6 +20,7 @@
       "anki"
       "betterdisplay"
       "chatgpt"
+      "claude"
       "deepl"
       "discord"
       "figma"

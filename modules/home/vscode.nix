@@ -10,6 +10,7 @@
         svelte.svelte-vscode
         banacorn.agda-mode
         llvm-vs-code-extensions.vscode-clangd
+        anthropic.claude-code
         editorconfig.editorconfig
         usernamehw.errorlens
         dbaeumer.vscode-eslint
@@ -17,6 +18,7 @@
         eamodio.gitlens
         jdinhlife.gruvbox
         haskell.haskell
+        ms-toolsai.jupyter
         justusadam.language-haskell
         james-yu.latex-workshop
         bierner.markdown-mermaid
