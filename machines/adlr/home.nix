@@ -37,6 +37,7 @@ in
     mdbook
     mdbook-toc
     texlive.combined.scheme-medium
+    slipshow
     # Media
     ffmpeg-full
     yt-dlp
