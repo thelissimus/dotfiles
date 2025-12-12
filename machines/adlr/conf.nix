@@ -19,7 +19,6 @@
       "alt-tab"
       "anki"
       "betterdisplay"
-      "chatgpt"
       "claude"
       "deepl"
       "discord"
