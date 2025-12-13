@@ -17,6 +17,7 @@
     casks = [
       "alloy"
       "alt-tab"
+      "amethyst"
       "anki"
       "betterdisplay"
       "claude"
