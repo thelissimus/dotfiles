@@ -10,7 +10,6 @@
         svelte.svelte-vscode
         banacorn.agda-mode
         llvm-vs-code-extensions.vscode-clangd
-        anthropic.claude-code
         editorconfig.editorconfig
         usernamehw.errorlens
         dbaeumer.vscode-eslint
@@ -87,6 +86,12 @@
           publisher = "ms-vscode";
           version = "1.0.2";
           sha256 = "hrzPNPaG8LPNMJq/0uyOS8jfER1Q0CyFlwR42KmTz8g=";
+        }
+        {
+          name = "claude-code";
+          publisher = "anthropic";
+          version = "2.0.65";
+          sha256 = "QDUW5VXhFE6eSg1A+kbyMznys/o6EfVsU7AoilLGa+g=";
         }
       ];
       keybindings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/keybindings.json);
