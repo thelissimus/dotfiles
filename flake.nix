@@ -32,9 +32,6 @@
       mkPkgs = system: import nixpkgs {
         localSystem = { inherit system; };
         config = {
-          permittedInsecurePackages = [
-            "electron-32.3.3"
-          ];
           allowUnfree = true;
         };
         overlays = [
