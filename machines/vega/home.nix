@@ -155,12 +155,11 @@ in
   };
 
   home.packages = with pkgs; [
-    floorp
+    floorp-bin
     ticktick
     slack
     zulip
     keepassxc
-    stacer
     qbittorrent
     transmission_4-gtk
     baobab
@@ -186,7 +185,7 @@ in
     obsidian
     mdbook
     mdbook-toc
-    poppler_utils
+    poppler-utils
     newsboat
     # Media
     ffmpeg-full
@@ -206,7 +205,7 @@ in
     # C
     gcc
     gdb
-    llvmPackages_16.clang-unwrapped
+    llvmPackages_19.clang-unwrapped
     # JS
     nodejs_20
     nodePackages.pnpm
