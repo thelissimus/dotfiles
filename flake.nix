@@ -2,22 +2,29 @@
   description = "flakes for m[A]chines";
 
   inputs = {
+    # nix modules
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    flake-parts.url = "github:hercules-ci/flake-parts";
-    nur.url = "github:nix-community/NUR";
-    k.url = "github:runtimeverification/k";
-    k.inputs.nixpkgs.follows = "nixpkgs";
 
+    # tools
+    flake-parts.url = "github:hercules-ci/flake-parts";
+
+    # overlays
+    nur.url = "github:nix-community/NUR";
+    k-framework.url = "github:runtimeverification/k";
+    k-framework.inputs.nixpkgs.follows = "nixpkgs";
+
+    # homebrew taps
     nikitabobko-tap = {
       url = "github:nikitabobko/homebrew-tap";
       flake = false;
     };
 
+    # local
     apple-fonts.url = "path:pkgs/apple-fonts";
     apple-fonts.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -29,9 +36,6 @@
     , nix-homebrew
     , home-manager
     , flake-parts
-    , apple-fonts
-    , nur
-    , k
     , ...
     }@inputs:
     let
@@ -42,10 +46,10 @@
         };
         overlays = [
           (_: _: {
-            apple-fonts = apple-fonts.packages.${system};
+            apple-fonts = inputs.apple-fonts.packages.${system};
           })
-          k.overlay
-          nur.overlays.default
+          inputs.k-framework.overlay
+          inputs.nur.overlays.default
         ];
       };
 
