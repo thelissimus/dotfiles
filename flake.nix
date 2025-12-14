@@ -83,9 +83,11 @@
           ++ (if home == null then [ ] else [
             home-manager.nixosModules.home-manager
             {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.${username} = import home;
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.${username} = import home;
+              };
             }
           ])
           ++ modules;
@@ -108,9 +110,11 @@
             conf
             home-manager.darwinModules.home-manager
             {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.${username} = import home;
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.${username} = import home;
+              };
             }
             nix-homebrew.darwinModules.nix-homebrew
             {

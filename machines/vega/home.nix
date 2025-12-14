@@ -21,15 +21,17 @@ in
     zed
   ];
 
-  home.stateVersion = "23.05";
+  home = {
+    stateVersion = "23.05";
 
-  home.file.".npmrc".source = ../../.config/.npmrc;
-  home.file.".sqliterc".source = ../../.config/.sqliterc;
+    file.".npmrc".source = ../../.config/.npmrc;
+    file.".sqliterc".source = ../../.config/.sqliterc;
 
-  home.sessionPath = [
-    "$HOME/.npm-global/bin"
-    "$HOME/.local/bin"
-  ];
+    sessionPath = [
+      "$HOME/.npm-global/bin"
+      "$HOME/.local/bin"
+    ];
+  };
 
   gtk = {
     enable = true;

@@ -5,9 +5,11 @@
       ./hardware.nix
     ];
 
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.swraid.enable = false;
+  boot = {
+    loader.grub.enable = true;
+    loader.grub.device = "/dev/sda";
+    swraid.enable = false;
+  };
 
   networking.hostName = hostname;
   networking.networkmanager.enable = true;
@@ -15,21 +17,23 @@
   time.timeZone = "Etc/GMT-5";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  services.xserver = {
-    enable = true;
-    xkb = {
-      layout = "us,ru";
-      options = "caps:escape";
+  services = {
+    xserver = {
+      enable = true;
+      xkb = {
+        layout = "us,ru";
+        options = "caps:escape";
+      };
+      displayManager = {
+        lightdm.enable = true;
+      };
+      desktopManager.xfce.enable = true;
     };
-    displayManager = {
-      lightdm.enable = true;
-    };
-    desktopManager.xfce.enable = true;
-  };
-  services.displayManager.defaultSession = "xfce";
-  services.libinput.enable = true;
 
-  services.pulseaudio.enable = false;
+    displayManager.defaultSession = "xfce";
+    libinput.enable = true;
+    pulseaudio.enable = false;
+  };
 
   users.defaultUserShell = pkgs.zsh;
   users.users.${username} = {

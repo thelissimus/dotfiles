@@ -4,22 +4,26 @@
       ./hardware.nix
     ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelParams = [
-    "nvidia.NVreg_RegistryDwords=EnableBrightnessControl=1"
-  ];
-  boot.supportedFilesystems = [ "ntfs" ];
-  boot.swraid.enable = false;
+  boot = {
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
+    kernelParams = [
+      "nvidia.NVreg_RegistryDwords=EnableBrightnessControl=1"
+    ];
+    supportedFilesystems = [ "ntfs" ];
+    swraid.enable = false;
+  };
 
-  networking.hostName = hostname;
-  networking.extraHosts =
-    ''
-      127.0.0.1 www.twitch.tv
-      127.0.0.1 x.com
-      127.0.0.1 firefly.local
-    '';
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = hostname;
+    extraHosts =
+      ''
+        127.0.0.1 www.twitch.tv
+        127.0.0.1 x.com
+        127.0.0.1 firefly.local
+      '';
+    networkmanager.enable = true;
+  };
 
   time.timeZone = "Etc/GMT-5";
   i18n = {
@@ -39,20 +43,22 @@
     };
   };
 
-  services.xserver = {
-    enable = true;
-    xkb = {
-      layout = "us,ru,de";
-      options = "caps:escape,grp:alt_shift_toggle";
-      variant = "altgr-intl,,";
-    };
-    videoDrivers = [ "nvidia" ];
-  };
   services = {
+    xserver = {
+      enable = true;
+      xkb = {
+        layout = "us,ru,de";
+        options = "caps:escape,grp:alt_shift_toggle";
+        variant = "altgr-intl,,";
+      };
+      videoDrivers = [ "nvidia" ];
+    };
+
     displayManager = {
       gdm.enable = true;
       gdm.wayland = false;
     };
+
     desktopManager = {
       gnome.enable = true;
     };
@@ -92,42 +98,47 @@
   };
 
   virtualisation.docker.enable = true;
-  environment.shells = with pkgs; [ zsh ];
-  environment.systemPackages = with pkgs; [
-    docker-compose
-    file
-    vim
-    wget
-    gnumake
-    xclip
-    lsof
-    strace
-    zip
-    unzip
-    fdupes
-    libGL
-    pulseaudio
-  ];
-  environment.gnome.excludePackages = (with pkgs; [
-    gnome-photos
-    gnome-tour
-    gedit
-    cheese
-    gnome-music
-    gnome-console
-    gnome-terminal
-    epiphany
-    geary
-    evince
-    totem
-    tali
-    iagno
-    hitori
-    atomix
-    seahorse
-  ]);
-  environment.variables = {
-    LD_LIBRARY_PATH = "$LD_LIBRARY_PATH:${pkgs.libGL}/lib";
+  environment = {
+    shells = with pkgs; [ zsh ];
+
+    systemPackages = with pkgs; [
+      docker-compose
+      file
+      vim
+      wget
+      gnumake
+      xclip
+      lsof
+      strace
+      zip
+      unzip
+      fdupes
+      libGL
+      pulseaudio
+    ];
+
+    gnome.excludePackages = with pkgs; [
+      gnome-photos
+      gnome-tour
+      gedit
+      cheese
+      gnome-music
+      gnome-console
+      gnome-terminal
+      epiphany
+      geary
+      evince
+      totem
+      tali
+      iagno
+      hitori
+      atomix
+      seahorse
+    ];
+
+    variables = {
+      LD_LIBRARY_PATH = "$LD_LIBRARY_PATH:${pkgs.libGL}/lib";
+    };
   };
 
   fonts = {
@@ -144,30 +155,36 @@
     };
   };
 
-  programs.steam.enable = true;
-  programs.zsh.enable = true;
-  programs.ssh.extraConfig = ''
-    Host *
-    ServerAliveInterval 120
-  '';
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-    pinentryPackage = pkgs.pinentry-curses;
+  programs = {
+    steam.enable = true;
+    zsh.enable = true;
+    ssh.extraConfig = ''
+      Host *
+      ServerAliveInterval 120
+    '';
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+      pinentryPackage = pkgs.pinentry-curses;
+    };
   };
 
-  hardware.graphics = {
-    enable = true;
-  };
-  hardware.nvidia = {
-    open = false;
-    modesetting.enable = true;
-    nvidiaSettings = false;
-    powerManagement.enable = true;
-  };
-  hardware.bluetooth.settings = {
-    General = {
-      Experimental = true;
+  hardware = {
+    graphics = {
+      enable = true;
+    };
+
+    nvidia = {
+      open = false;
+      modesetting.enable = true;
+      nvidiaSettings = false;
+      powerManagement.enable = true;
+    };
+
+    bluetooth.settings = {
+      General = {
+        Experimental = true;
+      };
     };
   };
 
