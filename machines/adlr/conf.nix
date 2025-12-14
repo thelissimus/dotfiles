@@ -64,9 +64,11 @@
 
   nix.enable = false;
   programs.zsh.enable = true;
-  system.configurationRevision = configurationRevision;
-  system.stateVersion = 5;
-  system.primaryUser = username;
+  system = {
+    inherit configurationRevision;
+    stateVersion = 5;
+    primaryUser = username;
+  };
   nixpkgs.hostPlatform = system;
   users.users.${username} = {
     name = username;
