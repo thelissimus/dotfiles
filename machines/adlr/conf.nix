@@ -12,9 +12,9 @@
       cleanup = "zap";
     };
 
-    taps = [ ];
     brews = [ ];
     casks = [
+      "nikitabobko/tap/aerospace"
       "alloy"
       "alt-tab"
       "amethyst"
