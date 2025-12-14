@@ -12,6 +12,12 @@
     nur.url = "github:nix-community/NUR";
     k.url = "github:runtimeverification/k";
     k.inputs.nixpkgs.follows = "nixpkgs";
+
+    nikitabobko-tap = {
+      url = "github:nikitabobko/homebrew-tap";
+      flake = false;
+    };
+
     apple-fonts.url = "path:pkgs/apple-fonts";
     apple-fonts.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -97,9 +103,16 @@
                 enable = true;
                 enableRosetta = true;
                 user = username;
+                taps = {
+                  "nikitabobko/homebrew-tap" = inputs.nikitabobko-tap;
+                };
+                mutableTaps = false;
                 autoMigrate = true;
               };
             }
+            ({ config, ... }: {
+              homebrew.taps = builtins.attrNames config.nix-homebrew.taps;
+            })
           ] ++ modules;
         };
     in
