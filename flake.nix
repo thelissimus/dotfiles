@@ -14,7 +14,13 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
 
     # overlays
-    nur.url = "github:nix-community/NUR";
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-parts.follows = "flake-parts";
+      };
+    };
     k-framework.url = "github:runtimeverification/k";
     k-framework.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -25,8 +31,13 @@
     };
 
     # local
-    apple-fonts.url = "path:pkgs/apple-fonts";
-    apple-fonts.inputs.nixpkgs.follows = "nixpkgs";
+    apple-fonts = {
+      url = "path:pkgs/apple-fonts";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-parts.follows = "flake-parts";
+      };
+    };
   };
 
   outputs =
