@@ -146,27 +146,27 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": [
-          "k",
+          "k-framework",
           "nixpkgs"
         ],
         "rv-nix-tools": [
-          "k",
+          "k-framework",
           "rv-nix-tools"
         ],
         "some-cabal-hashes-lib": "some-cabal-hashes-lib",
         "z3": "z3"
       },
       "locked": {
-        "lastModified": 1752802358,
-        "narHash": "sha256-pwv2jqljmGxhGMyJG5yyLo8MgfkxYniQEEcU7Zrm4LQ=",
+        "lastModified": 1765530571,
+        "narHash": "sha256-J/bk2fbAKxS47p5tz5cPLQcUt5Cr6W1pI69gxB1Ce5E=",
         "owner": "runtimeverification",
         "repo": "haskell-backend",
-        "rev": "7d84039d7be22dbc4f6ff76488deed21e23a581f",
+        "rev": "30450a881c20f4214ac0a7aa15b63fa6841c4c70",
         "type": "github"
       },
       "original": {
         "owner": "runtimeverification",
-        "ref": "v0.1.135",
+        "ref": "v0.1.143",
         "repo": "haskell-backend",
         "type": "github"
       }
@@ -208,10 +208,10 @@
         "type": "github"
       }
     },
-    "k": {
+    "k-framework": {
       "inputs": {
         "flake-utils": [
-          "k",
+          "k-framework",
           "llvm-backend",
           "utils"
         ],
@@ -223,7 +223,7 @@
         "nixpkgs-unstable": "nixpkgs-unstable",
         "pyproject-build-systems": "pyproject-build-systems",
         "pyproject-nix": [
-          "k",
+          "k-framework",
           "uv2nix",
           "pyproject-nix"
         ],
@@ -231,11 +231,11 @@
         "uv2nix": "uv2nix"
       },
       "locked": {
-        "lastModified": 1763152138,
-        "narHash": "sha256-9TeZRFTWy/e9dZQnsZg2Kp0oj0Jews0b2q43vULKmQY=",
+        "lastModified": 1765608766,
+        "narHash": "sha256-YqOnSjA6AVG+C0wqSurRVZXX9Kj6vL+t9aKgbi7hrwA=",
         "owner": "runtimeverification",
         "repo": "k",
-        "rev": "e064582a5a4e0f00bc8c32bee86f4d1382887ea2",
+        "rev": "b417a2d8393e48b36de009205da2ec2932457e58",
         "type": "github"
       },
       "original": {
@@ -250,7 +250,7 @@
         "fmt-src": "fmt-src",
         "immer-src": "immer-src",
         "nixpkgs": [
-          "k",
+          "k-framework",
           "nixpkgs"
         ],
         "pybind11-src": "pybind11-src",
@@ -375,11 +375,11 @@
     },
     "nixpkgs-unstable": {
       "locked": {
-        "lastModified": 1762977756,
-        "narHash": "sha256-4PqRErxfe+2toFJFgcRKZ0UI9NSIOJa+7RXVtBhy4KE=",
+        "lastModified": 1765472234,
+        "narHash": "sha256-9VvC20PJPsleGMewwcWYKGzDIyjckEz8uWmT0vCDYK0=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "c5ae371f1a6a7fd27823bc500d9390b38c05fa55",
+        "rev": "2fbfb1d73d239d2402a8fe03963e37aab15abe8b",
         "type": "github"
       },
       "original": {
@@ -476,16 +476,16 @@
     "pyproject-build-systems": {
       "inputs": {
         "nixpkgs": [
-          "k",
+          "k-framework",
           "nixpkgs"
         ],
         "pyproject-nix": [
-          "k",
+          "k-framework",
           "uv2nix",
           "pyproject-nix"
         ],
         "uv2nix": [
-          "k",
+          "k-framework",
           "uv2nix"
         ]
       },
@@ -507,7 +507,7 @@
     "pyproject-nix": {
       "inputs": {
         "nixpkgs": [
-          "k",
+          "k-framework",
           "uv2nix",
           "nixpkgs"
         ]
@@ -548,7 +548,7 @@
         "apple-fonts": "apple-fonts",
         "flake-parts": "flake-parts_2",
         "home-manager": "home-manager",
-        "k": "k",
+        "k-framework": "k-framework",
         "nikitabobko-tap": "nikitabobko-tap",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
@@ -661,7 +661,7 @@
     "uv2nix": {
       "inputs": {
         "nixpkgs": [
-          "k",
+          "k-framework",
           "nixpkgs-unstable"
         ],
         "pyproject-nix": "pyproject-nix"
