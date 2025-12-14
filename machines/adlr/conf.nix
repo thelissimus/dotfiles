@@ -52,7 +52,6 @@
       "ticktick"
       "ungoogled-chromium"
       "unnaturalscrollwheels"
-      "visual-studio-code"
       "vlc"
       "wezterm"
       "zed"
