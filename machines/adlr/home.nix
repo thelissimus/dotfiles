@@ -23,6 +23,7 @@ in
     gnupg
     pinentry_mac
     libqalculate
+    librsvg
     # CLI
     difftastic
     htop
