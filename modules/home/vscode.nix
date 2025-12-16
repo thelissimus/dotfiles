@@ -17,6 +17,7 @@
         eamodio.gitlens
         jdinhlife.gruvbox
         haskell.haskell
+        ms-python.python
         ms-toolsai.jupyter
         justusadam.language-haskell
         james-yu.latex-workshop
