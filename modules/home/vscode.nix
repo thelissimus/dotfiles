@@ -21,7 +21,11 @@
         ms-toolsai.jupyter
         justusadam.language-haskell
         james-yu.latex-workshop
+        leanprover.lean4
+        sumneko.lua
         bierner.markdown-mermaid
+        bierner.markdown-checkbox
+        bierner.markdown-preview-github-styles
         pkief.material-icon-theme
         pkief.material-product-icons
         jnoortheen.nix-ide
@@ -45,24 +49,6 @@
           publisher = "DongyuZhao";
           version = "0.1.6";
           sha256 = "wYMxjMY7colRKWb0qDpMC07+hYhIxh5KcibO43yczPs=";
-        }
-        {
-          name = "lean4";
-          publisher = "leanprover";
-          version = "0.0.178";
-          sha256 = "ByhiTGwlQgNkFf0BirO+QSDiXbQfR6RLQA8jM4B1+O4=";
-        }
-        {
-          name = "markdown-checkbox";
-          publisher = "bierner";
-          version = "0.4.0";
-          sha256 = "AoPcdN/67WOzarnF+GIx/nans38Jan8Z5D0StBWIbkk=";
-        }
-        {
-          name = "markdown-preview-github-styles";
-          publisher = "bierner";
-          version = "2.0.3";
-          sha256 = "yuF6TJSv0V2OvkBwqwAQKRcHCAXNL+NW8Q3s+dMFnLY=";
         }
         {
           name = "markdowntable";
