@@ -46,7 +46,7 @@
           name = "sf-pro";
           version = "0.3.0";
 
-          src = ./pkgs/apple-fonts/SF-Pro.dmg;
+          src = ./.fonts/SF-Pro.dmg;
 
           unpackPhase = ''
             undmg $src
