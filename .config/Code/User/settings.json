@@ -31,7 +31,7 @@
 	"editor.fontLigatures": false,
 	"editor.fontSize": 15,
 	"editor.fontWeight": "600",
-	"editor.hover.enabled": false,
+	"editor.hover.enabled": "on",
 	"editor.indentSize": "tabSize",
 	"editor.inlayHints.enabled": "off",
 	"editor.inlayHints.fontFamily": "SF Pro Display",
@@ -66,21 +66,10 @@
 	"files.eol": "\n",
 	"files.exclude": {
 		"**/.DS_Store": true,
-		"**/.git": true,
-		"**/.hg": true,
-		"**/.lsp": true,
-		"**/.svn": true,
-		"**/.idea": true,
-		"**/CVS": true,
 		"**/Thumbs.db": true
 	},
 	"files.insertFinalNewline": true,
 	"files.trimTrailingWhitespace": true,
-	"files.watcherExclude": {
-		"**/.ammonite": true,
-		"**/.bloop": true,
-		"**/.metals": true
-	},
 	"gitlens.codeLens.enabled": false,
 	"haskell.formattingProvider": "fourmolu",
 	"haskell.cabalFormattingProvider": "cabal-fmt",
