@@ -1,5 +1,4 @@
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
-local lspconfig = require('lspconfig')
 local cmp = require('cmp')
 
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
@@ -31,23 +30,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end,
 })
 
-local servers =
-  { 'asm_lsp'
-  , 'clangd'
-  , 'gopls'
-  , 'leanls'
-  , 'nil_ls'
-  , 'metals'
-  , 'racket_langserver'
-  ,
-  }
+local servers = { 'asm_lsp', 'clangd', 'gopls', 'leanls', 'nil_ls', 'metals', 'racket_langserver' }
 for _, lsp in ipairs(servers) do
-	lspconfig[lsp].setup {
+	vim.lsp.config(lsp, {
 		capabilities = capabilities,
-	}
+	})
 end
 
-lspconfig['hls'].setup {
+vim.lsp.config('hls', {
 	capabilities = capabilities,
 	filetypes = { 'haskell', 'lhaskell', 'cabal' },
 	settings = {
@@ -56,17 +46,17 @@ lspconfig['hls'].setup {
 			formattingProvider = "fourmolu",
 		}
 	}
-}
+})
 
-lspconfig['rust_analyzer'].setup {
+vim.lsp.config('rust_analyzer', {
 	settings = {
 		['rust-analyzer'] = {
 			diagnostics = {
-				enable = false;
+				enable = false,
 			}
 		}
 	}
-}
+})
 
 cmp.setup {
 	snippet = {
@@ -121,4 +111,5 @@ require("nvim-treesitter.configs").setup({
 		enable = false,
 	}
 })
+
 require("nvim-tree").setup()
