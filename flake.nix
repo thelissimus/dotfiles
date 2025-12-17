@@ -29,15 +29,6 @@
       url = "github:nikitabobko/homebrew-tap";
       flake = false;
     };
-
-    # local
-    apple-fonts = {
-      url = "path:pkgs/apple-fonts";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-parts.follows = "flake-parts";
-      };
-    };
   };
 
   outputs =
@@ -50,15 +41,43 @@
     , ...
     }@inputs:
     let
+      appleFontsOverlay = final: prev: {
+        sf-pro = prev.stdenv.mkDerivation {
+          name = "sf-pro";
+          version = "0.3.0";
+
+          src = ./pkgs/apple-fonts/SF-Pro.dmg;
+
+          unpackPhase = ''
+            undmg $src
+            7z x 'SF Pro Fonts.pkg'
+            7z x 'Payload~'
+          '';
+
+          buildInputs = [
+            prev.undmg
+            prev.p7zip
+          ];
+
+          setSourceRoot = "sourceRoot=`pwd`";
+
+          installPhase = ''
+            mkdir -p $out/share/fonts
+            mkdir -p $out/share/fonts/opentype
+            mkdir -p $out/share/fonts/truetype
+            find -name \*.otf -exec mv {} $out/share/fonts/opentype/ \;
+            find -name \*.ttf -exec mv {} $out/share/fonts/truetype/ \;
+          '';
+        };
+      };
+
       mkPkgs = system: import nixpkgs {
         localSystem = { inherit system; };
         config = {
           allowUnfree = true;
         };
         overlays = [
-          (_: _: {
-            apple-fonts = inputs.apple-fonts.packages.${system};
-          })
+          appleFontsOverlay
           inputs.k-framework.overlay
           inputs.nur.overlays.default
         ];
