@@ -146,7 +146,7 @@
       noto-fonts-cjk-sans
       iosevka-bin
       julia-mono
-      apple-fonts.sf-pro
+      sf-pro
       mononoki
     ];
     fontconfig = {
