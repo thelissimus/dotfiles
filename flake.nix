@@ -41,7 +41,7 @@
     , ...
     }@inputs:
     let
-      appleFontsOverlay = final: prev: {
+      appleFontsOverlay = _: prev: {
         sf-pro = prev.stdenv.mkDerivation {
           name = "sf-pro";
           version = "0.3.0";
