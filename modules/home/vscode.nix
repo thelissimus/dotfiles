@@ -92,7 +92,7 @@
           name = "claude-code";
           publisher = "anthropic";
           version = "2.0.65";
-          sha256 = "QDUW5VXhFE6eSg1A+kbyMznys/o6EfVsU7AoilLGa+g=";
+          sha256 = "nHZCEEWEgBdxAzpLFkQsTwNPx3JxuwhgwxKgW8LJ450=";
         }
       ];
       keybindings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/keybindings.json);

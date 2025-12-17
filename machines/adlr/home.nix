@@ -34,6 +34,7 @@ in
     tokei
     tree
     just
+    claude-code
     # Documents
     mdbook
     mdbook-toc
