@@ -31,7 +31,7 @@
 	"editor.fontLigatures": false,
 	"editor.fontSize": 15,
 	"editor.fontWeight": "600",
-	"editor.hover.enabled": "on",
+	"editor.hover.enabled": "onKeyboardModifier",
 	"editor.indentSize": "tabSize",
 	"editor.inlayHints.enabled": "off",
 	"editor.inlayHints.fontFamily": "SF Pro Display",
