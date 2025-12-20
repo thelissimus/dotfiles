@@ -80,6 +80,12 @@
           version = "2.0.65";
           sha256 = "nHZCEEWEgBdxAzpLFkQsTwNPx3JxuwhgwxKgW8LJ450=";
         }
+        {
+          name = "specforge";
+          publisher = "imiron";
+          version = "0.5.5";
+          sha256 = "yJrzOBQbNitQMbdMxWwO/VFMk3Bh4azwZEnPiIEiQr0=";
+        }
       ];
       keybindings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/keybindings.json);
       userSettings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/settings.json);
