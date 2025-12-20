@@ -84,12 +84,14 @@ in
     nixpkgs-fmt
     # Lean
     elan
-    z3
-    cvc5
-    llvmPackages_19.clang-unwrapped
-    llvmPackages_19.libllvm
     # Zig
     zig
     zls
+    # SMT
+    z3
+    cvc5
+    # LLVM
+    llvmPackages_19.clang-unwrapped
+    llvmPackages_19.libllvm
   ];
 }
