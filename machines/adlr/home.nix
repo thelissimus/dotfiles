@@ -93,5 +93,7 @@ in
     # LLVM
     llvmPackages_19.clang-unwrapped
     llvmPackages_19.libllvm
+    # .NET
+    dotnet-sdk_10
   ];
 }
