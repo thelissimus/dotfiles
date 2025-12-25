@@ -7,6 +7,7 @@ in
     zoxide
     bash
     direnv
+    emacs
     git
     haskell
     java
