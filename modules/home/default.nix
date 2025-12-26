@@ -3,7 +3,7 @@
   bash = import ./bash.nix { inherit pkgs; };
   chromium = import ./chromium.nix { inherit pkgs lib; };
   direnv = import ./direnv.nix { inherit pkgs; };
-  emacs = import ./emacs.nix { inherit pkgs; };
+  emacs = ./emacs.nix;
   firefox = import ./firefox.nix { inherit pkgs; };
   git = import ./git.nix { inherit pkgs; };
   haskell = import ./haskell.nix { inherit pkgs; };
