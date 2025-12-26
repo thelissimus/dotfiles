@@ -1,9 +1,22 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }:
+let
+  emacsPkg = config.programs.emacs.finalPackage;
+in
+{
+  home.activation.linkEmacsApp = config.lib.dag.entryAfter [ "writeBoundary" ] ''
+    app_src="${emacsPkg}/Applications/Emacs.app"
+    app_dst="$HOME/Applications/Nix Apps/Emacs.app"
+    mkdir -p "$HOME/Applications/Nix Apps"
+    rm -rf "$app_dst"
+    ${pkgs.mkalias}/bin/mkalias "$app_src" "$app_dst"
+  '';
+
+  programs.zsh.shellAliases.emacs = "open ${emacsPkg}/Applications/Emacs.app";
+
   programs.emacs = {
     enable = true;
     package = pkgs.emacs-macport;
     extraConfig = ''
-      (setq inhibit-startup-message t)
       (tool-bar-mode -1)
       (scroll-bar-mode -1)
       (menu-bar-mode -1)
