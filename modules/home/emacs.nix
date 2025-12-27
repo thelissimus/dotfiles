@@ -47,9 +47,9 @@ in
       (define-key envrc-mode-map (kbd "C-c e") 'envrc-command-map)
       (envrc-global-mode)
 
-      (setq evil-want-integration t)
       (setq evil-want-keybinding nil)
       (require 'evil)
+      (require 'evil-collection)
       (evil-mode 1)
       (evil-collection-init)
 
