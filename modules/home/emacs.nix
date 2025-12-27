@@ -43,6 +43,10 @@ in
       (evil-collection-init)
 
       (load-theme 'gruvbox-dark-medium t)
+
+      (require 'projectile)
+      (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+      (projectile-mode +1)
     '';
     extraPackages = epkgs: with epkgs; [
       dashboard
@@ -51,6 +55,7 @@ in
       evil-collection
       gruvbox-theme
       magit
+      projectile
     ];
   };
 }
