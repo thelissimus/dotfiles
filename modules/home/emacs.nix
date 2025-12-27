@@ -27,9 +27,10 @@ in
       (require 'dashboard)
       (setq dashboard-banner-logo-title "")
       (setq dashboard-startup-banner 1)
-      (setq dashboard-items '((recents . 5)
-                              (projects . 5)
-                              (bookmarks . 5)))
+      (setq dashboard-center-content t)
+      (setq dashboard-vertically-center-content t)
+      (setq dashboard-items '((recents . 5) (projects . 5) (bookmarks . 5)))
+      (setq dashboard-projects-backend 'projectile)
       (dashboard-setup-startup-hook)
 
       (require 'envrc)
