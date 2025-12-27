@@ -29,6 +29,7 @@
       "font-iosevka"
       "font-mononoki"
       "font-sf-mono"
+      "font-symbols-only-nerd-font"
       "ghostty"
       "gitbutler"
       "iina"
