@@ -44,6 +44,7 @@ in
       (dashboard-setup-startup-hook)
 
       (require 'envrc)
+      (define-key envrc-mode-map (kbd "C-c e") 'envrc-command-map)
       (envrc-global-mode)
 
       (setq evil-want-integration t)
