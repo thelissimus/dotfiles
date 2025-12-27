@@ -19,9 +19,8 @@ in
     extraConfig = ''
       (tool-bar-mode -1)
       (scroll-bar-mode -1)
-      (menu-bar-mode -1)
-      (set-face-attribute 'default nil :family "Mononoki" :height 150 :weight 'semibold)
-      (setq-default line-spacing 0.3)
+      (set-face-attribute 'default nil :family "Mononoki" :height 170 :weight 'semi-bold)
+      (setq-default line-spacing 0.2)
       (global-display-line-numbers-mode t)
       (setq display-line-numbers-type 'relative)
 
