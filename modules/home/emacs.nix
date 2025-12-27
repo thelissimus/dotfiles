@@ -24,6 +24,8 @@ in
       (global-display-line-numbers-mode t)
       (setq display-line-numbers-type 'relative)
 
+      (require 'nerd-icons)
+
       (require 'dashboard)
       (setq dashboard-banner-logo-title "")
       (setq dashboard-startup-banner 1)
@@ -31,6 +33,10 @@ in
       (setq dashboard-vertically-center-content t)
       (setq dashboard-items '((recents . 5) (projects . 5) (bookmarks . 5)))
       (setq dashboard-projects-backend 'projectile)
+      (setq dashboard-display-icons-p t)
+      (setq dashboard-icon-type 'nerd-icons)
+      (setq dashboard-set-heading-icons t)
+      (setq dashboard-set-file-icons t)
       (dashboard-setup-startup-hook)
 
       (require 'envrc)
@@ -50,6 +56,7 @@ in
     '';
     extraPackages = epkgs: with epkgs; [
       dashboard
+      nerd-icons
       envrc
       evil
       evil-collection
