@@ -25,6 +25,14 @@ in
       (global-display-line-numbers-mode t)
       (setq display-line-numbers-type 'relative)
 
+      (require 'dashboard)
+      (setq dashboard-banner-logo-title "")
+      (setq dashboard-startup-banner 1)
+      (setq dashboard-items '((recents . 5)
+                              (projects . 5)
+                              (bookmarks . 5)))
+      (dashboard-setup-startup-hook)
+
       (setq evil-want-integration t)
       (setq evil-want-keybinding nil)
       (require 'evil)
@@ -34,6 +42,7 @@ in
       (load-theme 'gruvbox-dark-medium t)
     '';
     extraPackages = epkgs: with epkgs; [
+      dashboard
       evil
       evil-collection
       gruvbox-theme
