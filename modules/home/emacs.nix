@@ -33,6 +33,9 @@ in
                               (bookmarks . 5)))
       (dashboard-setup-startup-hook)
 
+      (require 'envrc)
+      (envrc-global-mode)
+
       (setq evil-want-integration t)
       (setq evil-want-keybinding nil)
       (require 'evil)
@@ -43,6 +46,7 @@ in
     '';
     extraPackages = epkgs: with epkgs; [
       dashboard
+      envrc
       evil
       evil-collection
       gruvbox-theme
