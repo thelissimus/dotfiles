@@ -27,6 +27,9 @@ in
       evil-collection
       gruvbox-theme
       magit
+
+      vterm
+      vterm-toggle
     ];
   };
 }

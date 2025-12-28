@@ -50,4 +50,20 @@
 (evil-mode 1)
 (evil-collection-init)
 
+(with-eval-after-load 'vterm
+  (setq vterm-max-scrollback 10000))
+
+(global-set-key (kbd "C-`") #'vterm-toggle)
+(with-eval-after-load 'vterm-toggle
+  (setq vterm-toggle-scope 'project)
+  (add-to-list 'display-buffer-alist
+               '((lambda (buffer-or-name _)
+                   (let ((buffer (get-buffer buffer-or-name)))
+                     (with-current-buffer buffer
+                       (equal major-mode 'vterm-mode))))
+                  (display-buffer-reuse-window display-buffer-in-direction)
+                  (direction . bottom)
+                  (dedicated . t)
+                  (window-height . 0.4))))
+
 (load-theme 'gruvbox-dark-medium t)
