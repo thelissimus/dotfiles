@@ -5,6 +5,11 @@
 (global-display-line-numbers-mode t)
 (setq display-line-numbers-type 'relative)
 
+(setq scroll-margin 8)
+(setq scroll-conservatively 101)
+(setq scroll-preserve-screen-position t)
+(setq auto-window-vscroll nil)
+
 (setq-default fill-column 100)
 (global-display-fill-column-indicator-mode t)
 
