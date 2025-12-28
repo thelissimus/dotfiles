@@ -22,6 +22,10 @@ in
       projectile
       nerd-icons
       doom-modeline
+      treemacs
+      treemacs-evil
+      treemacs-projectile
+      treemacs-nerd-icons
 
       envrc
       evil
