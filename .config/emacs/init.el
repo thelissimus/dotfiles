@@ -8,6 +8,14 @@
 (setq-default fill-column 100)
 (global-display-fill-column-indicator-mode t)
 
+(setq-default show-trailing-whitespace t)
+(setq-default whitespace-style '(face trailing tabs tab-mark spaces space-mark))
+(add-hook 'prog-mode-hook #'whitespace-mode)
+(add-hook 'before-save-hook #'whitespace-cleanup)
+(setq-default require-final-newline t)
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+
 (require 'projectile)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (projectile-mode +1)
