@@ -5,6 +5,9 @@
 (global-display-line-numbers-mode t)
 (setq display-line-numbers-type 'relative)
 
+(setq-default fill-column 100)
+(global-display-fill-column-indicator-mode t)
+
 (require 'projectile)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (projectile-mode +1)
