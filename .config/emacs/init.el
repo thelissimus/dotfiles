@@ -4,6 +4,7 @@
 (setq-default line-spacing 0.2)
 (global-display-line-numbers-mode t)
 (setq display-line-numbers-type 'relative)
+(setq confirm-kill-emacs 'yes-or-no-p)
 
 (setq scroll-margin 8)
 (setq scroll-conservatively 101)
