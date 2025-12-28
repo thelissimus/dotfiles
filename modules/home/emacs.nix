@@ -21,6 +21,7 @@ in
       dashboard
       projectile
       nerd-icons
+      doom-modeline
 
       envrc
       evil
