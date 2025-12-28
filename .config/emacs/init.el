@@ -56,6 +56,14 @@
 (evil-mode 1)
 (evil-collection-init)
 
+(require 'treemacs)
+(require 'treemacs-evil)
+(require 'treemacs-projectile)
+(require 'treemacs-nerd-icons)
+(setq treemacs-project-follow-mode t)
+(treemacs-load-theme "nerd-icons")
+(global-set-key (kbd "C-c t") #'treemacs)
+
 (with-eval-after-load 'vterm
   (setq vterm-max-scrollback 10000))
 
