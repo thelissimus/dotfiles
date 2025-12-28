@@ -42,6 +42,7 @@
 (dashboard-setup-startup-hook)
 
 (require 'doom-modeline)
+(setq doom-modeline-height 31)
 (setq doom-modeline-total-line-number t)
 (column-number-mode t)
 (doom-modeline-mode 1)
