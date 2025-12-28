@@ -41,6 +41,11 @@
 (setq dashboard-set-file-icons t)
 (dashboard-setup-startup-hook)
 
+(require 'doom-modeline)
+(setq doom-modeline-total-line-number t)
+(column-number-mode t)
+(doom-modeline-mode 1)
+
 (require 'envrc)
 (define-key envrc-mode-map (kbd "C-c e") 'envrc-command-map)
 (envrc-global-mode)
