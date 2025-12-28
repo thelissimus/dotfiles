@@ -11,7 +11,7 @@ in
     ${pkgs.mkalias}/bin/mkalias "$app_src" "$app_dst"
   '';
 
-  programs.zsh.shellAliases.emacs = "open ${emacsPkg}/Applications/Emacs.app";
+  programs.zsh.shellAliases.emacsapp = "open ${emacsPkg}/Applications/Emacs.app";
 
   programs.emacs = {
     enable = true;
