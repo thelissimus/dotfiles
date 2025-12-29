@@ -5,6 +5,7 @@
 (global-display-line-numbers-mode t)
 (setq display-line-numbers-type 'relative)
 (setq confirm-kill-emacs 'yes-or-no-p)
+(setq ring-bell-function 'ignore)
 
 (setq scroll-margin 8)
 (setq scroll-conservatively 101)
@@ -64,6 +65,7 @@
 (setq treemacs-project-follow-mode t)
 (treemacs-load-theme "nerd-icons")
 (global-set-key (kbd "C-c t") #'treemacs)
+(add-hook 'treemacs-mode-hook (lambda () (display-line-numbers-mode -1)))
 
 (require 'winum)
 (winum-mode)
