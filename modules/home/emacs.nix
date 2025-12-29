@@ -34,6 +34,11 @@ in
       magit
       winum
 
+      vertico
+      orderless
+      marginalia
+      consult
+
       vterm
       vterm-toggle
     ];

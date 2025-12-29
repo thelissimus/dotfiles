@@ -77,6 +77,23 @@
 (global-set-key (kbd "M-8") 'winum-select-window-8)
 (global-set-key (kbd "M-0") 'winum-select-window-0-or-10)
 
+(require 'vertico)
+(vertico-mode)
+(savehist-mode)
+(setq enable-recursive-minibuffers t)
+(setq read-extended-command-predicate #'command-completion-default-include-p)
+
+(require 'orderless)
+(setq completion-styles '(orderless basic))
+(setq completion-category-overrides '((file (styles partial-completion))))
+(setq completion-category-defaults nil)
+
+(require 'marginalia)
+(marginalia-mode)
+
+(require 'consult)
+(global-set-key (kbd "C-x b") #'consult-buffer)
+
 (with-eval-after-load 'vterm
   (setq vterm-max-scrollback 10000))
 
