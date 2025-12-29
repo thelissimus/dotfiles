@@ -32,6 +32,7 @@ in
       evil-collection
       gruvbox-theme
       magit
+      winum
 
       vterm
       vterm-toggle
