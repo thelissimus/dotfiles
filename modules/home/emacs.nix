@@ -41,6 +41,7 @@ in
 
       company
       nix-mode
+      haskell-mode
 
       vterm
       vterm-toggle

@@ -107,6 +107,9 @@
 (add-hook 'nix-mode-hook #'eglot-ensure)
 (add-to-list 'eglot-server-programs '(nix-mode . ("nil")))
 
+(require 'haskell-mode)
+(add-hook 'haskell-mode-hook #'eglot-ensure)
+
 (with-eval-after-load 'vterm
   (setq vterm-max-scrollback 10000))
 
