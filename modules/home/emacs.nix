@@ -39,6 +39,7 @@ in
       marginalia
       consult
 
+      eldoc-box
       company
       nix-mode
       haskell-mode
