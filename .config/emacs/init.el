@@ -102,6 +102,11 @@
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
 
+(require 'nix-mode)
+(add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))
+(add-hook 'nix-mode-hook #'eglot-ensure)
+(add-to-list 'eglot-server-programs '(nix-mode . ("nil")))
+
 (with-eval-after-load 'vterm
   (setq vterm-max-scrollback 10000))
 

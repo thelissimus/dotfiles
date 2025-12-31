@@ -40,6 +40,7 @@ in
       consult
 
       company
+      nix-mode
 
       vterm
       vterm-toggle
