@@ -121,6 +121,7 @@
 
 (with-eval-after-load 'vterm
   (setq vterm-max-scrollback 10000))
+(add-hook 'vterm-mode-hook (lambda () (display-line-numbers-mode -1)))
 
 (global-set-key (kbd "C-`") #'vterm-toggle)
 (with-eval-after-load 'vterm-toggle
