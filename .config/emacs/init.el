@@ -99,6 +99,11 @@
 (require 'eglot)
 (setq flymake-show-diagnostics-at-end-of-line t)
 
+(require 'eldoc-box)
+(setq eldoc-box-clear-with-C-g t)
+(with-eval-after-load 'evil
+  (evil-define-key 'normal 'global (kbd "g h") 'eldoc-box-help-at-point))
+
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
 
