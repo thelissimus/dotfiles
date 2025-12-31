@@ -52,6 +52,10 @@
 (define-key envrc-mode-map (kbd "C-c e") 'envrc-command-map)
 (envrc-global-mode)
 
+(require 'magit)
+(setq magit-diff-refine-hunk 'all)
+(global-set-key (kbd "C-c g") 'magit-status)
+
 (setq evil-want-keybinding nil)
 (require 'evil)
 (require 'evil-collection)
