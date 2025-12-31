@@ -39,6 +39,8 @@ in
       marginalia
       consult
 
+      company
+
       vterm
       vterm-toggle
     ];

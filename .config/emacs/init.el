@@ -96,6 +96,12 @@
 (require 'consult)
 (global-set-key (kbd "C-x b") #'consult-buffer)
 
+(require 'eglot)
+(setq flymake-show-diagnostics-at-end-of-line t)
+
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
+
 (with-eval-after-load 'vterm
   (setq vterm-max-scrollback 10000))
 
