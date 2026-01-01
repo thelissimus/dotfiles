@@ -32,6 +32,7 @@ in
       evil-collection
       gruvbox-theme
       magit
+      diff-hl
       winum
 
       vertico
