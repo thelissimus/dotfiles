@@ -59,9 +59,14 @@
 (define-key envrc-mode-map (kbd "C-c e") 'envrc-command-map)
 (envrc-global-mode)
 
+;; git
 (require 'magit)
 (setq magit-diff-refine-hunk 'all)
 (global-set-key (kbd "C-c g") 'magit-status)
+(require 'diff-hl)
+(global-diff-hl-mode)
+(diff-hl-flydiff-mode)
+(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 
 (setq evil-want-keybinding nil)
 (require 'evil)
