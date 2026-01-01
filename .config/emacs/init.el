@@ -9,6 +9,11 @@
 (setq confirm-kill-emacs 'yes-or-no-p)
 (setq ring-bell-function 'ignore)
 
+;; perf
+(setq read-process-output-max (* 1024 1024))
+(setq gc-cons-threshold most-positive-fixnum)
+(add-hook 'emacs-startup-hook (lambda () (setq gc-cons-threshold (* 16 1024 1024))))
+
 (setq scroll-margin 8)
 (setq scroll-conservatively 101)
 (setq scroll-preserve-screen-position t)
