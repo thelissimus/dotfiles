@@ -31,6 +31,7 @@
 (setq-default tab-width 4)
 
 (require 'projectile)
+(setq projectile-enable-caching 'persistent)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (projectile-mode +1)
 
