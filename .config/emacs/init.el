@@ -1,3 +1,5 @@
+;;; init.el --- イーマックスのすべて -*- lexical-binding: t -*-
+
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (set-face-attribute 'default nil :family "Mononoki" :height 170 :weight 'semi-bold)
