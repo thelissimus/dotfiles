@@ -78,9 +78,11 @@
 (require 'treemacs)
 (require 'treemacs-evil)
 (require 'treemacs-projectile)
+(require 'treemacs-magit)
 (require 'treemacs-nerd-icons)
 (setq treemacs-project-follow-mode t)
 (treemacs-load-theme "nerd-icons")
+(treemacs-git-mode 'simple)
 (global-set-key (kbd "C-c t") #'treemacs)
 
 (require 'winum)

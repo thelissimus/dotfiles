@@ -25,6 +25,7 @@ in
       treemacs
       treemacs-evil
       treemacs-projectile
+      treemacs-magit
       treemacs-nerd-icons
 
       envrc
