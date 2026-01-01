@@ -20,12 +20,14 @@ in
     extraPackages = epkgs: with epkgs; [
       dashboard
       projectile
+      perspective
       nerd-icons
       doom-modeline
       treemacs
       treemacs-evil
       treemacs-projectile
       treemacs-magit
+      treemacs-perspective
       treemacs-nerd-icons
 
       envrc
