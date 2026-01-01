@@ -74,6 +74,8 @@
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 
 (setq evil-want-keybinding nil)
+(setq evil-want-fine-undo t)
+(setq evil-undo-system 'undo-redo)
 (require 'evil)
 (require 'evil-collection)
 (evil-mode 1)
