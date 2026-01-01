@@ -104,6 +104,7 @@
 
 (require 'eldoc-box)
 (setq eldoc-box-clear-with-C-g t)
+(setq eldoc-documentation-strategy 'eldoc-documentation-compose-eagerly)
 (with-eval-after-load 'evil
   (evil-define-key 'normal 'global (kbd "g h") 'eldoc-box-help-at-point))
 
