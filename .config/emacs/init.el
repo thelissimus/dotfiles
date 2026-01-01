@@ -2,7 +2,7 @@
 (scroll-bar-mode -1)
 (set-face-attribute 'default nil :family "Mononoki" :height 170 :weight 'semi-bold)
 (setq-default line-spacing 0.2)
-(global-display-line-numbers-mode t)
+(add-hook 'prog-mode-hook #'display-line-numbers-mode)
 (setq display-line-numbers-type 'relative)
 (setq confirm-kill-emacs 'yes-or-no-p)
 (setq ring-bell-function 'ignore)
@@ -69,7 +69,6 @@
 (setq treemacs-project-follow-mode t)
 (treemacs-load-theme "nerd-icons")
 (global-set-key (kbd "C-c t") #'treemacs)
-(add-hook 'treemacs-mode-hook (lambda () (display-line-numbers-mode -1)))
 
 (require 'winum)
 (winum-mode)
@@ -124,7 +123,6 @@
 
 (with-eval-after-load 'vterm
   (setq vterm-max-scrollback 10000))
-(add-hook 'vterm-mode-hook (lambda () (display-line-numbers-mode -1)))
 
 (global-set-key (kbd "C-`") #'vterm-toggle)
 (with-eval-after-load 'vterm-toggle
