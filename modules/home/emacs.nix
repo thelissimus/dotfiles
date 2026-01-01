@@ -36,6 +36,7 @@ in
       gruvbox-theme
       magit
       diff-hl
+      vundo
       winum
 
       vertico

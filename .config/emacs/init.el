@@ -72,6 +72,11 @@
 (global-diff-hl-mode)
 (diff-hl-flydiff-mode)
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
+(require 'vundo)
+(setq vundo-compact-display t)
+(setq vundo-glyph-alist vundo-unicode-symbols)
+(with-eval-after-load 'evil
+  (evil-define-key 'normal 'global (kbd "g u") 'vundo))
 
 (setq evil-want-keybinding nil)
 (setq evil-want-fine-undo t)
