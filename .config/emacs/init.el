@@ -35,6 +35,10 @@
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (projectile-mode +1)
 
+(require 'perspective)
+(customize-set-variable 'persp-mode-prefix-key (kbd "C-x x"))
+(persp-mode)
+
 (require 'nerd-icons)
 
 (require 'dashboard)
@@ -79,8 +83,10 @@
 (require 'treemacs-evil)
 (require 'treemacs-projectile)
 (require 'treemacs-magit)
+(require 'treemacs-perspective)
 (require 'treemacs-nerd-icons)
 (setq treemacs-project-follow-mode t)
+(treemacs-set-scope-type 'Perspectives)
 (treemacs-load-theme "nerd-icons")
 (treemacs-git-mode 'simple)
 (global-set-key (kbd "C-c t") #'treemacs)
