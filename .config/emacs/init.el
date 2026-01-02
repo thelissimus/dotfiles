@@ -32,11 +32,14 @@
 
 (require 'projectile)
 (setq projectile-enable-caching 'persistent)
+(setq projectile-cache-file ".projectile-cache.eld.log")
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (projectile-mode +1)
 
 (require 'perspective)
 (customize-set-variable 'persp-mode-prefix-key (kbd "C-x x"))
+(customize-set-variable 'persp-state-default-file "~/.emacs.perspective")
+(add-hook 'kill-emacs-hook #'persp-state-save)
 (persp-mode)
 
 (require 'nerd-icons)
