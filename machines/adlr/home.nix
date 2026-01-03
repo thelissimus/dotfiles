@@ -36,6 +36,7 @@ in
     tree
     just
     claude-code
+    wakatime-cli
     # Documents
     mdbook
     mdbook-toc
