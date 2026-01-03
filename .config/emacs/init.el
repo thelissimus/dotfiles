@@ -30,6 +30,15 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 
+;; modal editing
+(setq evil-want-keybinding nil)
+(setq evil-want-fine-undo t)
+(setq evil-undo-system 'undo-redo)
+(require 'evil)
+(require 'evil-collection)
+(evil-mode 1)
+(evil-collection-init)
+
 (require 'projectile)
 (setq projectile-enable-caching 'persistent)
 (setq projectile-cache-file ".projectile-cache.eld.log")
@@ -78,16 +87,7 @@
 (require 'vundo)
 (setq vundo-compact-display t)
 (setq vundo-glyph-alist vundo-unicode-symbols)
-(with-eval-after-load 'evil
-  (evil-define-key 'normal 'global (kbd "g u") 'vundo))
-
-(setq evil-want-keybinding nil)
-(setq evil-want-fine-undo t)
-(setq evil-undo-system 'undo-redo)
-(require 'evil)
-(require 'evil-collection)
-(evil-mode 1)
-(evil-collection-init)
+(evil-define-key 'normal 'global (kbd "g u") 'vundo)
 
 (require 'treemacs)
 (require 'treemacs-evil)
@@ -136,8 +136,7 @@
 (require 'eldoc-box)
 (setq eldoc-box-clear-with-C-g t)
 (setq eldoc-documentation-strategy 'eldoc-documentation-compose-eagerly)
-(with-eval-after-load 'evil
-  (evil-define-key 'normal 'global (kbd "g h") 'eldoc-box-help-at-point))
+(evil-define-key 'normal 'global (kbd "g h") 'eldoc-box-help-at-point)
 
 (require 'company)
 (setq company-backends '((company-capf company-dabbrev-code)))
