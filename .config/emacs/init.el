@@ -113,6 +113,9 @@
 (global-set-key (kbd "M-8") 'winum-select-window-8)
 (global-set-key (kbd "M-0") 'winum-select-window-0-or-10)
 
+(require 'wakatime-mode)
+(global-wakatime-mode)
+
 (require 'vertico)
 (vertico-mode)
 (savehist-mode)

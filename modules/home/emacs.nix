@@ -38,6 +38,7 @@ in
       diff-hl
       vundo
       winum
+      wakatime-mode
 
       vertico
       orderless
