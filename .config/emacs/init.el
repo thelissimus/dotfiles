@@ -95,7 +95,7 @@
 (require 'treemacs-magit)
 (require 'treemacs-perspective)
 (require 'treemacs-nerd-icons)
-(setq treemacs-project-follow-mode t)
+(treemacs-project-follow-mode t)
 (treemacs-set-scope-type 'Perspectives)
 (treemacs-load-theme "nerd-icons")
 (treemacs-git-mode 'simple)
