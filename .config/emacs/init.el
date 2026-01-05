@@ -96,10 +96,11 @@
 (require 'treemacs-perspective)
 (require 'treemacs-nerd-icons)
 (treemacs-project-follow-mode t)
+(treemacs-follow-mode -1)
 (treemacs-set-scope-type 'Perspectives)
 (treemacs-load-theme "nerd-icons")
 (treemacs-git-mode 'simple)
-(global-set-key (kbd "C-c t") #'treemacs)
+(global-set-key (kbd "C-c t") #'treemacs-add-and-display-current-project-exclusively)
 
 (require 'winum)
 (winum-mode)
