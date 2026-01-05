@@ -54,6 +54,10 @@
 (customize-set-variable 'persp-state-default-file "~/.emacs.perspective")
 (add-hook 'kill-emacs-hook #'persp-state-save)
 (persp-mode)
+(add-hook 'emacs-startup-hook
+          (lambda ()
+            (when (file-exists-p persp-state-default-file)
+              (persp-state-load persp-state-default-file))))
 
 (require 'nerd-icons)
 
