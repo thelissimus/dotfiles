@@ -58,6 +58,7 @@
           (lambda ()
             (when (file-exists-p persp-state-default-file)
               (persp-state-load persp-state-default-file))))
+(require 'persp-projectile)
 
 (require 'nerd-icons)
 
