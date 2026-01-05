@@ -158,6 +158,11 @@
 (with-eval-after-load 'vterm
   (setq vterm-max-scrollback 10000))
 
+(add-hook 'vterm-mode-hook
+          (lambda ()
+            (display-fill-column-indicator-mode -1)
+            (setq show-trailing-whitespace nil)))
+
 (global-set-key (kbd "C-`") #'vterm-toggle)
 (with-eval-after-load 'vterm-toggle
   (setq vterm-toggle-scope 'project)
