@@ -21,6 +21,7 @@ in
       dashboard
       projectile
       perspective
+      persp-projectile
       nerd-icons
       doom-modeline
       treemacs
