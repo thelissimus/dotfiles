@@ -9,6 +9,10 @@
 (setq confirm-kill-emacs 'yes-or-no-p)
 (setq ring-bell-function 'ignore)
 
+;; glasses
+(setq glasses-separator "-")
+(setq glasses-uncapitalize-p t)
+
 ;; perf
 (setq read-process-output-max (* 1024 1024))
 (setq gc-cons-threshold most-positive-fixnum)
