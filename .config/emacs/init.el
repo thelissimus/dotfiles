@@ -28,7 +28,7 @@
 (setq auto-window-vscroll nil)
 
 (setq-default fill-column 100)
-(global-display-fill-column-indicator-mode t)
+(global-display-fill-column-indicator-mode 1)
 
 (setq-default show-trailing-whitespace t)
 (setq-default whitespace-style '(face trailing tabs tab-mark spaces space-mark))
@@ -51,13 +51,13 @@
 (setq projectile-enable-caching 'persistent)
 (setq projectile-cache-file ".projectile-cache.eld.log")
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-(projectile-mode +1)
+(projectile-mode 1)
 
 (require 'perspective)
 (customize-set-variable 'persp-mode-prefix-key (kbd "C-x x"))
 (customize-set-variable 'persp-state-default-file "~/.emacs.perspective")
 (add-hook 'kill-emacs-hook #'persp-state-save)
-(persp-mode)
+(persp-mode 1)
 (add-hook 'emacs-startup-hook
           (lambda ()
             (when (file-exists-p persp-state-default-file)
@@ -82,20 +82,20 @@
 (require 'doom-modeline)
 (setq doom-modeline-height 31)
 (setq doom-modeline-total-line-number t)
-(column-number-mode t)
+(column-number-mode 1)
 (doom-modeline-mode 1)
 
 (require 'envrc)
 (define-key envrc-mode-map (kbd "C-c e") 'envrc-command-map)
-(envrc-global-mode)
+(envrc-global-mode 1)
 
 ;; git
 (require 'magit)
 (setq magit-diff-refine-hunk 'all)
 (global-set-key (kbd "C-c g") 'magit-status)
 (require 'diff-hl)
-(global-diff-hl-mode)
-(diff-hl-flydiff-mode)
+(global-diff-hl-mode 1)
+(diff-hl-flydiff-mode 1)
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 (require 'vundo)
 (setq vundo-compact-display t)
@@ -111,7 +111,7 @@
 (require 'treemacs-magit)
 (require 'treemacs-perspective)
 (require 'treemacs-nerd-icons)
-(treemacs-project-follow-mode t)
+(treemacs-project-follow-mode 1)
 (treemacs-follow-mode -1)
 (treemacs-set-scope-type 'Perspectives)
 (treemacs-load-theme "nerd-icons")
@@ -119,7 +119,7 @@
 (global-set-key (kbd "C-c t") #'treemacs-add-and-display-current-project-exclusively)
 
 (require 'winum)
-(winum-mode)
+(winum-mode 1)
 (global-set-key (kbd "M-1") 'winum-select-window-1)
 (global-set-key (kbd "M-2") 'winum-select-window-2)
 (global-set-key (kbd "M-3") 'winum-select-window-3)
@@ -131,11 +131,11 @@
 (global-set-key (kbd "M-0") 'winum-select-window-0-or-10)
 
 (require 'wakatime-mode)
-(global-wakatime-mode)
+(global-wakatime-mode 1)
 
 (require 'vertico)
-(vertico-mode)
-(savehist-mode)
+(vertico-mode 1)
+(savehist-mode 1)
 (setq enable-recursive-minibuffers t)
 (setq read-extended-command-predicate #'command-completion-default-include-p)
 
@@ -145,7 +145,7 @@
 (setq completion-category-defaults nil)
 
 (require 'marginalia)
-(marginalia-mode)
+(marginalia-mode 1)
 
 (require 'consult)
 (global-set-key (kbd "C-x b") #'consult-buffer)
