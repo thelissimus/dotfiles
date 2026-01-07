@@ -182,6 +182,24 @@
 (require 'haskell-mode)
 (add-hook 'haskell-mode-hook #'eglot-ensure)
 
+(require 'org)
+(setq org-directory "~/Documents/org")
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+(setq org-agenda-files (list org-directory))
+(setq org-todo-keywords '((sequence "TODO(t)" "IN-PROGRESS(p)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline org-default-notes-file "Tasks")
+         "* TODO %?\n  SCHEDULED: %t\n  %i")
+
+        ("n" "Note" entry (file+headline org-default-notes-file "Notes")
+         "* %?\n  %U\n  %i")))
+(setq org-log-done 'time)
+(setq org-log-into-drawer t)
+(add-hook 'org-mode-hook
+          (lambda ()
+            (org-indent-mode 1)
+            (visual-line-mode 1)))
+
 (with-eval-after-load 'vterm
   (setq vterm-max-scrollback 10000))
 
