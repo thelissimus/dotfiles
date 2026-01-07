@@ -101,6 +101,9 @@
 (setq vundo-compact-display t)
 (setq vundo-glyph-alist vundo-unicode-symbols)
 (evil-define-key 'normal 'global (kbd "g u") 'vundo)
+(setq undo-limit (* 80 1024 1024))
+(setq undo-strong-limit (* 120 1024 1024))
+(setq undo-outer-limit (* 360 1024 1024))
 
 (require 'treemacs)
 (require 'treemacs-evil)
