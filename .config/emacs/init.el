@@ -37,6 +37,10 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 
+(setq auto-save-default t)
+(setq auto-save-interval 200)
+(setq auto-save-timeout 10)
+
 ;; modal editing
 (setq evil-want-keybinding nil)
 (setq evil-want-fine-undo t)
