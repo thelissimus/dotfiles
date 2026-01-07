@@ -32,7 +32,6 @@
 
 (setq-default show-trailing-whitespace t)
 (setq-default whitespace-style '(face trailing tabs tab-mark spaces space-mark))
-(add-hook 'prog-mode-hook #'whitespace-mode)
 (add-hook 'before-save-hook #'whitespace-cleanup)
 (setq-default require-final-newline t)
 (setq-default indent-tabs-mode nil)
@@ -154,6 +153,7 @@
 
 (require 'eglot)
 (setq flymake-show-diagnostics-at-end-of-line t)
+(add-hook 'eglot-managed-mode-hook (lambda () (eglot-inlay-hints-mode -1)))
 
 (require 'eldoc-box)
 (setq eldoc-box-clear-with-C-g t)
