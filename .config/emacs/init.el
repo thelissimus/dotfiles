@@ -9,6 +9,10 @@
 (setq confirm-kill-emacs 'yes-or-no-p)
 (setq ring-bell-function 'ignore)
 
+;; ediff
+(setq ediff-window-setup-function #'ediff-setup-windows-plain)
+(setq ediff-split-window-function #'split-window-horizontally)
+
 ;; glasses
 (setq glasses-separator "-")
 (setq glasses-uncapitalize-p t)
