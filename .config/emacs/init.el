@@ -40,6 +40,13 @@
 (setq auto-save-default t)
 (setq auto-save-interval 200)
 (setq auto-save-timeout 10)
+(setq backup-directory-alist '(("." . "~/.emacs.d/backups/")))
+(setq backup-by-copying t)
+(setq version-control t)
+(setq delete-old-versions t)
+(setq kept-new-versions 6)
+(setq kept-old-versions 2)
+(setq auto-save-file-name-transforms '((".*" "~/.emacs.d/auto-saves/" t)))
 (setq create-lockfiles nil)
 
 ;; modal editing
