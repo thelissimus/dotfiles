@@ -166,6 +166,14 @@
 (setq company-idle-delay (lambda () (if (company-in-string-or-comment) nil 0.1)))
 (add-hook 'after-init-hook 'global-company-mode)
 
+(load-file (let ((coding-system-for-read 'utf-8))
+                (shell-command-to-string "agda --emacs-mode locate")))
+(with-eval-after-load 'agda2-mode
+  (setq agda2-highlight-face-groups 'default-faces)
+  (evil-define-key 'normal agda2-mode-map
+    (kbd "g d") 'agda2-goto-definition-keyboard
+    (kbd "g b") 'agda2-go-back))
+
 (require 'nix-mode)
 (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))
 (add-hook 'nix-mode-hook #'eglot-ensure)
