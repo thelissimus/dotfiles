@@ -40,6 +40,7 @@
 (setq auto-save-default t)
 (setq auto-save-interval 200)
 (setq auto-save-timeout 10)
+(setq create-lockfiles nil)
 
 ;; modal editing
 (setq evil-want-keybinding nil)
