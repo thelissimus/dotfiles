@@ -6,6 +6,7 @@
 (setq-default line-spacing 0.2)
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 (setq display-line-numbers-type 'relative)
+(setq display-line-numbers-width-start t)
 (setq confirm-kill-emacs 'yes-or-no-p)
 (setq ring-bell-function 'ignore)
 
