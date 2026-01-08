@@ -163,6 +163,14 @@
 (consult-customize consult--source-buffer :hidden t :default nil)
 (add-to-list 'consult-buffer-sources persp-consult-source)
 
+(require 'embark)
+(require 'embark-consult)
+(global-set-key (kbd "C-c s") 'consult-ripgrep)
+(global-set-key (kbd "C-c C-o") 'embark-export)
+
+(require 'wgrep)
+(setq wgrep-auto-save-buffer t)
+
 (require 'eglot)
 (setq flymake-show-diagnostics-at-end-of-line t)
 (add-hook 'eglot-managed-mode-hook (lambda () (eglot-inlay-hints-mode -1)))
