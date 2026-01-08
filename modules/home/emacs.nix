@@ -45,6 +45,9 @@ in
       orderless
       marginalia
       consult
+      embark
+      embark-consult
+      wgrep
 
       eldoc-box
       company
