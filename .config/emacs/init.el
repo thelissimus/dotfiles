@@ -247,3 +247,7 @@
                   (window-height . 0.4))))
 
 (load-theme 'gruvbox-dark-medium t)
+
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
+(load "~/.emacs.d/local.el" t)
