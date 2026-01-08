@@ -51,6 +51,8 @@ in
       nix-mode
       haskell-mode
 
+      paredit
+
       vterm
       vterm-toggle
     ];
