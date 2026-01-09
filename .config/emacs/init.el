@@ -258,5 +258,5 @@
 (load-theme 'gruvbox-dark-medium t)
 
 (setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
+(load custom-file t)
 (load "~/.emacs.d/local.el" t)
