@@ -38,16 +38,6 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 
-(setq auto-save-default t)
-(setq auto-save-interval 200)
-(setq auto-save-timeout 10)
-(setq backup-directory-alist '(("." . "~/.emacs.d/backups/")))
-(setq backup-by-copying t)
-(setq version-control t)
-(setq delete-old-versions t)
-(setq kept-new-versions 6)
-(setq kept-old-versions 2)
-(setq auto-save-file-name-transforms '((".*" "~/.emacs.d/auto-saves/" t)))
 (setq create-lockfiles nil)
 
 ;; modal editing
@@ -109,6 +99,11 @@
 (require 'envrc)
 (define-key envrc-mode-map (kbd "C-c e") 'envrc-command-map)
 (envrc-global-mode 1)
+
+(require 'super-save)
+(super-save-mode 1)
+(setq super-save-auto-save-when-idle t)
+(setq super-save-idle-duration 1)
 
 ;; git
 (require 'magit)
