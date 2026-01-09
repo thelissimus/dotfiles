@@ -113,6 +113,8 @@
 (global-diff-hl-mode 1)
 (diff-hl-flydiff-mode 1)
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
+(setq diff-hl-show-staged-changes nil)
+(setq diff-hl-highlight-reference-function nil)
 (require 'vundo)
 (setq vundo-compact-display t)
 (setq vundo-glyph-alist vundo-unicode-symbols)
