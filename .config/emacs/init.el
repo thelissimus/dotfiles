@@ -97,6 +97,15 @@
 (column-number-mode 1)
 (doom-modeline-mode 1)
 
+(require 'highlight-indent-guides)
+(add-hook 'prog-mode-hook #'hl-line-mode)
+(add-hook 'prog-mode-hook #'highlight-indent-guides-mode)
+(customize-set-variable 'highlight-indent-guides-method 'character)
+(customize-set-variable 'highlight-indent-guides-auto-character-face-perc 50)
+(setq highlight-indent-guides-highlighter-function
+      (lambda (lvl resp disp)
+        (and (< 0 lvl) (highlight-indent-guides--highlighter-default lvl resp disp))))
+
 (require 'envrc)
 (define-key envrc-mode-map (kbd "C-c e") 'envrc-command-map)
 (envrc-global-mode 1)

@@ -31,6 +31,8 @@ in
       treemacs-perspective
       treemacs-nerd-icons
 
+      highlight-indent-guides
+
       envrc
       evil
       evil-collection
