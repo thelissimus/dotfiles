@@ -1,5 +1,9 @@
 ;;; init.el --- イーマックスのすべて -*- lexical-binding: t -*-
 
+;;; Commentary:
+
+;;; Code:
+
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (set-face-attribute 'default nil :family "Mononoki" :height 190 :weight 'semi-bold)
@@ -270,3 +274,5 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file t)
 (load "~/.emacs.d/local.el" t)
+
+;;; init.el ends here
