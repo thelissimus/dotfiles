@@ -34,6 +34,7 @@ in
       highlight-indent-guides
 
       envrc
+      super-save
       evil
       evil-collection
       gruvbox-theme
