@@ -197,9 +197,11 @@
 (add-hook 'after-init-hook 'global-company-mode)
 
 (require 'paredit)
+(require 'enhanced-evil-paredit)
 (add-hook 'emacs-lisp-mode-hook #'paredit-mode)
 (add-hook 'eval-expression-minibuffer-setup-hook #'paredit-mode)
 (add-hook 'ielm-mode-hook #'paredit-mode)
+(add-hook 'paredit-mode-hook #'enhanced-evil-paredit-mode)
 
 (load-file (let ((coding-system-for-read 'utf-8))
                 (shell-command-to-string "agda --emacs-mode locate")))
