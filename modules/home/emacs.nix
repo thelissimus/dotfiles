@@ -32,6 +32,7 @@ in
       treemacs-nerd-icons
 
       highlight-indent-guides
+      hl-todo
 
       envrc
       super-save
@@ -48,6 +49,7 @@ in
       orderless
       marginalia
       consult
+      consult-todo
       embark
       embark-consult
       wgrep
