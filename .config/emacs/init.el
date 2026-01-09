@@ -194,6 +194,7 @@
 
 (require 'eglot)
 (setq flymake-show-diagnostics-at-end-of-line t)
+(add-hook 'prog-mode-hook #'flymake-mode)
 (add-hook 'eglot-managed-mode-hook (lambda () (eglot-inlay-hints-mode -1)))
 
 (require 'eldoc-box)
