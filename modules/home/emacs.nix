@@ -57,6 +57,7 @@ in
       haskell-mode
 
       paredit
+      enhanced-evil-paredit
 
       vterm
       vterm-toggle
