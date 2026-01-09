@@ -86,6 +86,8 @@ in
     nixpkgs-fmt
     # Lean
     elan
+    # Rust
+    rustup
     # Zig
     zig
     zls
