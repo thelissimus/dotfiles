@@ -96,6 +96,15 @@
       (lambda (lvl resp disp)
         (and (< 0 lvl) (highlight-indent-guides--highlighter-default lvl resp disp))))
 
+(require 'hl-todo)
+(setq hl-todo-keyword-faces
+      '(("TODO" . (:inherit warning :inverse-video t))
+        ("WARNING" . (:inherit warning :inverse-video t))
+        ("FIXME" . (:inherit error :inverse-video t))
+        ("HACK" . (:inherit font-lock-constant-face :inverse-video t))
+        ("NOTE" . (:inherit success :inverse-video t))))
+(global-hl-todo-mode 1)
+
 (require 'envrc)
 (define-key envrc-mode-map (kbd "C-c e") 'envrc-command-map)
 (envrc-global-mode 1)
@@ -166,6 +175,7 @@
 (marginalia-mode 1)
 
 (require 'consult)
+(require 'consult-todo)
 (global-set-key (kbd "C-x b") #'consult-buffer)
 (consult-customize consult--source-buffer :hidden t :default nil)
 (add-to-list 'consult-buffer-sources persp-consult-source)
