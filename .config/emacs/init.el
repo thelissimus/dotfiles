@@ -132,6 +132,7 @@
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 (setq diff-hl-show-staged-changes nil)
 (setq diff-hl-highlight-reference-function nil)
+(add-hook 'dired-after-readin-hook 'dired-git-info-auto-enable)
 (require 'vundo)
 (setq vundo-compact-display t)
 (setq vundo-glyph-alist vundo-unicode-symbols)
