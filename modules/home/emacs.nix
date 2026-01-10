@@ -34,6 +34,7 @@
       marginalia
       consult
       consult-todo
+      consult-hoogle
       embark
       embark-consult
       wgrep
