@@ -13,6 +13,8 @@ in
     hpkgs.cabal-fmt
     h.fourmolu
     h.hlint
+    h.hoogle
+    # h.cabal-hoogle
     # hpkgs.ghcprofview
   ];
 }

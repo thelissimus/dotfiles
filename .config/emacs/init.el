@@ -171,6 +171,7 @@
 
 (require 'consult)
 (require 'consult-todo)
+(require 'consult-hoogle)
 (global-set-key (kbd "C-x b") #'consult-buffer)
 (consult-customize consult--source-buffer :hidden t :default nil)
 (add-to-list 'consult-buffer-sources persp-consult-source)
