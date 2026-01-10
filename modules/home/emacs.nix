@@ -59,10 +59,16 @@ in
       company
       nix-ts-mode
       haskell-ts-mode
+      just-ts-mode
       (treesit-grammars.with-grammars (p: with p; [
         tree-sitter-nix
         tree-sitter-haskell
         tree-sitter-elisp
+
+        tree-sitter-bash
+        tree-sitter-json
+        tree-sitter-just
+        tree-sitter-yaml
       ]))
 
       paredit

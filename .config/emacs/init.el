@@ -234,8 +234,19 @@
 (setq haskell-ts-use-indent t)
 (require 'haskell-ts-mode)
 (add-hook 'haskell-ts-mode-hook #'eglot-ensure)
+(add-to-list 'interpreter-mode-alist '("runghc" . haskell-ts-mode))
+(add-to-list 'interpreter-mode-alist '("runhaskell" . haskell-ts-mode))
 
 (add-hook 'emacs-lisp-mode-hook (lambda () (treesit-parser-create 'elisp)))
+
+(add-to-list 'auto-mode-alist '("\\.sh\\'" . bash-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.bash\\'" . bash-ts-mode))
+(add-to-list 'interpreter-mode-alist '("sh" . bash-ts-mode))
+(add-to-list 'interpreter-mode-alist '("bash" . bash-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.json\\'" . json-ts-mode))
+(require 'just-ts-mode)
+(add-to-list 'auto-mode-alist '("/[Jj]ustfile\\'" . just-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.ya?ml\\'" . yaml-ts-mode))
 
 (require 'org)
 (setq org-directory "~/Documents/org")
