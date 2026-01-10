@@ -212,9 +212,9 @@
                 (shell-command-to-string "agda --emacs-mode locate")))
 (with-eval-after-load 'agda2-mode
   (setq agda2-highlight-face-groups 'default-faces)
-  (evil-define-key 'normal agda2-mode-map
-    (kbd "g d") 'agda2-goto-definition-keyboard
-    (kbd "g b") 'agda2-go-back))
+  (evil-define-key '(normal insert) agda2-mode-map
+    (kbd "M-.") 'agda2-goto-definition-keyboard
+    (kbd "M-,") 'agda2-go-back))
 
 (setq treesit-font-lock-level 4)
 
