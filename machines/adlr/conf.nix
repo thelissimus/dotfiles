@@ -70,6 +70,11 @@
     inherit configurationRevision;
     stateVersion = 5;
     primaryUser = username;
+
+    # to reload user settings without logout
+    activationScripts.postActivation.text = ''
+      /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+    '';
   };
   nixpkgs.hostPlatform = system;
   users.users.${username} = {
