@@ -12,13 +12,8 @@
       perspective
       persp-projectile
       nerd-icons
+      nerd-icons-dired
       doom-modeline
-      treemacs
-      treemacs-evil
-      treemacs-projectile
-      treemacs-magit
-      treemacs-perspective
-      treemacs-nerd-icons
 
       highlight-indent-guides
       hl-todo

@@ -72,6 +72,8 @@
 (require 'persp-projectile)
 
 (require 'nerd-icons)
+(require 'nerd-icons-dired)
+(add-hook 'dired-mode-hook #'nerd-icons-dired-mode)
 
 (require 'dashboard)
 (setq dashboard-banner-logo-title "")
@@ -126,6 +128,7 @@
 (require 'diff-hl)
 (global-diff-hl-mode 1)
 (diff-hl-flydiff-mode 1)
+(add-hook 'dired-mode-hook #'diff-hl-dired-mode)
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 (setq diff-hl-show-staged-changes nil)
 (setq diff-hl-highlight-reference-function nil)
@@ -136,19 +139,6 @@
 (setq undo-limit (* 80 1024 1024))
 (setq undo-strong-limit (* 120 1024 1024))
 (setq undo-outer-limit (* 360 1024 1024))
-
-(require 'treemacs)
-(require 'treemacs-evil)
-(require 'treemacs-projectile)
-(require 'treemacs-magit)
-(require 'treemacs-perspective)
-(require 'treemacs-nerd-icons)
-(treemacs-project-follow-mode 1)
-(treemacs-follow-mode -1)
-(treemacs-set-scope-type 'Perspectives)
-(treemacs-load-theme "nerd-icons")
-(treemacs-git-mode 'simple)
-(global-set-key (kbd "C-c t") #'treemacs-add-and-display-current-project-exclusively)
 
 (require 'winum)
 (winum-mode 1)
