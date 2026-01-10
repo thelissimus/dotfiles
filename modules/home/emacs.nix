@@ -25,6 +25,7 @@
       gruvbox-theme
       magit
       diff-hl
+      dired-git-info
       vundo
       winum
       wakatime-mode
