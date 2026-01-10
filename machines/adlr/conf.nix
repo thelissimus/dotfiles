@@ -71,6 +71,10 @@
     stateVersion = 5;
     primaryUser = username;
 
+    defaults = {
+      ".GlobalPreferences"."com.apple.mouse.scaling" = -1.0;
+    };
+
     # to reload user settings without logout
     activationScripts.postActivation.text = ''
       /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
