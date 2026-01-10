@@ -23,6 +23,8 @@
     };
     k-framework.url = "github:runtimeverification/k";
     k-framework.inputs.nixpkgs.follows = "nixpkgs";
+    emacs-overlay.url = "github:nix-community/emacs-overlay";
+    emacs-overlay.inputs.nixpkgs.follows = "nixpkgs";
 
     # homebrew taps
     nikitabobko-tap = {
@@ -80,6 +82,7 @@
           appleFontsOverlay
           inputs.k-framework.overlay
           inputs.nur.overlays.default
+          inputs.emacs-overlay.overlays.default
         ];
       };
 

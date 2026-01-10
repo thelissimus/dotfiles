@@ -57,8 +57,13 @@ in
       eglot-booster
       eldoc-box
       company
-      nix-mode
-      haskell-mode
+      nix-ts-mode
+      haskell-ts-mode
+      (treesit-grammars.with-grammars (p: with p; [
+        tree-sitter-nix
+        tree-sitter-haskell
+        tree-sitter-elisp
+      ]))
 
       paredit
       enhanced-evil-paredit

@@ -224,13 +224,18 @@
     (kbd "g d") 'agda2-goto-definition-keyboard
     (kbd "g b") 'agda2-go-back))
 
-(require 'nix-mode)
-(add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))
-(add-hook 'nix-mode-hook #'eglot-ensure)
-(add-to-list 'eglot-server-programs '(nix-mode . ("nil")))
+(setq treesit-font-lock-level 4)
 
-(require 'haskell-mode)
-(add-hook 'haskell-mode-hook #'eglot-ensure)
+(require 'nix-ts-mode)
+(add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-ts-mode))
+(add-hook 'nix-ts-mode-hook #'eglot-ensure)
+(add-to-list 'eglot-server-programs '(nix-ts-mode . ("nil")))
+
+(setq haskell-ts-use-indent t)
+(require 'haskell-ts-mode)
+(add-hook 'haskell-ts-mode-hook #'eglot-ensure)
+
+(add-hook 'emacs-lisp-mode-hook (lambda () (treesit-parser-create 'elisp)))
 
 (require 'org)
 (setq org-directory "~/Documents/org")
