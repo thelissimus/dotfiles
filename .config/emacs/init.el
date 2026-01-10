@@ -193,9 +193,12 @@
 (setq wgrep-auto-save-buffer t)
 
 (require 'eglot)
+(require 'eglot-booster)
+(setq eglot-booster-io-only t)
 (setq flymake-show-diagnostics-at-end-of-line t)
 (add-hook 'prog-mode-hook #'flymake-mode)
 (add-hook 'eglot-managed-mode-hook (lambda () (eglot-inlay-hints-mode -1)))
+(eglot-booster-mode 1)
 
 (require 'eldoc-box)
 (setq eldoc-box-clear-with-C-g t)

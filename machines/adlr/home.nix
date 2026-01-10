@@ -25,6 +25,7 @@ in
     pinentry_mac
     libqalculate
     librsvg
+    emacs-lsp-booster
     # CLI
     difftastic
     htop

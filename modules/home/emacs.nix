@@ -54,6 +54,7 @@ in
       embark-consult
       wgrep
 
+      eglot-booster
       eldoc-box
       company
       nix-mode
