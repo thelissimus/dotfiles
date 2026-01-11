@@ -26,6 +26,7 @@
       gruvbox-theme
       magit
       diff-hl
+      difftastic
       dired-git-info
       vundo
       winum
