@@ -247,6 +247,8 @@
 (add-to-list 'auto-mode-alist '("\\.ya?ml\\'" . yaml-ts-mode))
 
 (require 'org)
+(global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-c a") 'org-agenda)
 (setq org-directory "~/Documents/org")
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (setq org-agenda-files (list org-directory))
