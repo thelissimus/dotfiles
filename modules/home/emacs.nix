@@ -14,6 +14,7 @@
       nerd-icons
       nerd-icons-dired
       doom-modeline
+      olivetti
 
       highlight-indent-guides
       hl-todo

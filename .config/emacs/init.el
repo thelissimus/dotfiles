@@ -9,17 +9,18 @@
 (scroll-bar-mode -1)
 (set-face-attribute 'default nil :family "Mononoki" :height 180 :weight 'semi-bold)
 (setq-default line-spacing 0.2)
+(setq-default truncate-lines t)
+(setf (cdr (assq 'truncation fringe-indicator-alist)) '(nil nil))
+(setf (cdr (assq 'continuation fringe-indicator-alist)) '(nil nil))
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 (setq display-line-numbers-type 'relative)
 (setq display-line-numbers-width-start t)
 (setq confirm-kill-emacs 'yes-or-no-p)
 (setq ring-bell-function 'ignore)
 
-;; ediff
 (setq ediff-window-setup-function #'ediff-setup-windows-plain)
 (setq ediff-split-window-function #'split-window-horizontally)
 
-;; glasses
 (setq glasses-separator "-")
 (setq glasses-uncapitalize-p t)
 
@@ -33,7 +34,7 @@
 (setq scroll-preserve-screen-position t)
 (setq auto-window-vscroll nil)
 
-(setq-default fill-column 100)
+(setq-default fill-column 120)
 (global-display-fill-column-indicator-mode 1)
 
 (setq-default show-trailing-whitespace t)
@@ -93,6 +94,9 @@
 (setq doom-modeline-total-line-number t)
 (column-number-mode 1)
 (doom-modeline-mode 1)
+
+(require 'olivetti)
+(setq-default olivetti-body-width 140)
 
 (require 'highlight-indent-guides)
 (add-hook 'prog-mode-hook #'hl-line-mode)
