@@ -278,10 +278,10 @@
                '((lambda (buffer-or-name _)
                    (let ((buffer (get-buffer buffer-or-name)))
                      (with-current-buffer buffer
-                       (equal major-mode 'vterm-mode))))
-                  (display-buffer-reuse-window display-buffer-in-direction)
-                  (direction . bottom)
-                  (dedicated . t)
+                       (or (equal major-mode 'vterm-mode)
+                           (string-prefix-p vterm-buffer-name (buffer-name buffer))))))
+                  (display-buffer-reuse-window display-buffer-at-bottom)
+                  (reusable-frames . visible)
                   (window-height . 0.4))))
 
 (load-theme 'gruvbox-dark-medium t)
