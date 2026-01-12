@@ -23,6 +23,7 @@
       super-save
       evil
       evil-collection
+      evil-multiedit
       gruvbox-theme
       magit
       diff-hl
