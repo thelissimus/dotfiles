@@ -21,6 +21,7 @@
 
       envrc
       super-save
+      ws-butler
       evil
       evil-collection
       evil-multiedit

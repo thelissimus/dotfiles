@@ -39,7 +39,6 @@
 
 (setq-default show-trailing-whitespace t)
 (setq-default whitespace-style '(face trailing tabs tab-mark spaces space-mark))
-(add-hook 'before-save-hook #'whitespace-cleanup)
 (setq-default require-final-newline t)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -129,6 +128,9 @@
 (super-save-mode 1)
 (setq super-save-auto-save-when-idle t)
 (setq super-save-idle-duration 1)
+
+(require 'ws-butler)
+(add-hook 'prog-mode-hook #'ws-butler-mode)
 
 ;; git
 (require 'magit)
