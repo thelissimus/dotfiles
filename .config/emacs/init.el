@@ -52,8 +52,10 @@
 (setq evil-undo-system 'undo-redo)
 (require 'evil)
 (require 'evil-collection)
+(require 'evil-multiedit)
 (evil-mode 1)
 (evil-collection-init)
+(evil-multiedit-default-keybinds)
 
 (require 'projectile)
 (setq projectile-enable-caching 'persistent)
