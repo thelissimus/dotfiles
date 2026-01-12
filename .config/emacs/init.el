@@ -45,6 +45,8 @@
 (setq-default tab-width 4)
 
 (setq create-lockfiles nil)
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
 
 ;; modal editing
 (setq evil-want-keybinding nil)
@@ -94,6 +96,7 @@
 (require 'doom-modeline)
 (setq doom-modeline-height 31)
 (setq doom-modeline-total-line-number t)
+(setq doom-modeline-minor-modes nil)
 (column-number-mode 1)
 (doom-modeline-mode 1)
 
