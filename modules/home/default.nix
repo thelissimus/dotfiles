@@ -8,6 +8,7 @@
   git = import ./git.nix { inherit pkgs; };
   haskell = import ./haskell.nix { inherit pkgs; };
   java = import ./java.nix { inherit pkgs; };
+  jujutsu = import ./jujutsu.nix { };
   neovim = import ./neovim.nix { inherit pkgs; };
   vscode = import ./vscode.nix { inherit pkgs; };
   wezterm = import ./wezterm.nix { inherit pkgs; };
