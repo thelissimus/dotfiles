@@ -11,6 +11,7 @@ in
     git
     haskell
     java
+    jujutsu
     zsh
     neovim
     zathura
