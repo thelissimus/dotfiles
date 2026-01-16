@@ -59,6 +59,7 @@
         tree-sitter-json
         tree-sitter-just
         tree-sitter-yaml
+        tree-sitter-toml
       ]))
 
       paredit
