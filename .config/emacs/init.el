@@ -254,6 +254,7 @@
 (require 'just-ts-mode)
 (add-to-list 'auto-mode-alist '("/[Jj]ustfile\\'" . just-ts-mode))
 (add-to-list 'auto-mode-alist '("\\.ya?ml\\'" . yaml-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.toml\\'" . toml-ts-mode))
 
 (require 'org)
 (global-set-key (kbd "C-c c") 'org-capture)
