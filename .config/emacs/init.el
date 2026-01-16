@@ -106,8 +106,9 @@
 (require 'highlight-indent-guides)
 (add-hook 'prog-mode-hook #'hl-line-mode)
 (add-hook 'prog-mode-hook #'highlight-indent-guides-mode)
-(customize-set-variable 'highlight-indent-guides-method 'character)
-(customize-set-variable 'highlight-indent-guides-auto-character-face-perc 50)
+(setq highlight-indent-guides-method 'bitmap)
+(setq highlight-indent-guides-bitmap-function #'highlight-indent-guides--bitmap-line)
+(setq highlight-indent-guides-auto-character-face-perc 50)
 (setq highlight-indent-guides-highlighter-function
       (lambda (lvl resp disp)
         (and (< 0 lvl) (highlight-indent-guides--highlighter-default lvl resp disp))))
