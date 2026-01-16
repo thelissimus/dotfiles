@@ -244,6 +244,11 @@
 (add-to-list 'interpreter-mode-alist '("runghc" . haskell-ts-mode))
 (add-to-list 'interpreter-mode-alist '("runhaskell" . haskell-ts-mode))
 
+(require 'proof-general)
+(setq proof-three-window-mode-policy 'hybrid)
+(require 'company-coq)
+(add-hook 'coq-mode-hook #'company-coq-mode)
+
 (add-hook 'emacs-lisp-mode-hook (lambda () (treesit-parser-create 'elisp)))
 
 (add-to-list 'auto-mode-alist '("\\.sh\\'" . bash-ts-mode))
