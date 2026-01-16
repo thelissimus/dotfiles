@@ -47,8 +47,10 @@
       eglot-booster
       eldoc-box
       company
+      company-coq
       nix-ts-mode
       haskell-ts-mode
+      proof-general
       just-ts-mode
       (treesit-grammars.with-grammars (p: with p; [
         tree-sitter-nix
