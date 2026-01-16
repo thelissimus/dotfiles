@@ -67,6 +67,7 @@
 (require 'perspective)
 (customize-set-variable 'persp-mode-prefix-key (kbd "C-x x"))
 (customize-set-variable 'persp-state-default-file "~/.emacs.perspective")
+(customize-set-variable 'persp-modestring-short t)
 (add-hook 'kill-emacs-hook #'persp-state-save)
 (persp-mode 1)
 (add-hook 'emacs-startup-hook
