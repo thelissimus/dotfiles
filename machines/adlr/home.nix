@@ -14,6 +14,7 @@ in
     jujutsu
     zsh
     neovim
+    nushell
     zathura
     vscode
   ];
