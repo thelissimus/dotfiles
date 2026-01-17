@@ -1,6 +1,7 @@
 { pkgs, config, ... }:
 {
   programs.zsh.shellAliases.eapp = "open ${config.programs.emacs.finalPackage}/Applications/Emacs.app";
+  programs.nushell.shellAliases.eapp = "open ${config.programs.emacs.finalPackage}/Applications/Emacs.app";
 
   programs.emacs = {
     enable = true;

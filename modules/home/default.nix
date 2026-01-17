@@ -10,6 +10,7 @@
   java = import ./java.nix { inherit pkgs; };
   jujutsu = import ./jujutsu.nix { };
   neovim = import ./neovim.nix { inherit pkgs; };
+  nushell = import ./nushell.nix { };
   vscode = import ./vscode.nix { inherit pkgs; };
   wezterm = import ./wezterm.nix { inherit pkgs; };
   zathura = import ./zathura.nix { inherit pkgs; };

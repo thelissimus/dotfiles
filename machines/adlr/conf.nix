@@ -1,4 +1,5 @@
 { pkgs, system, username, configurationRevision, ... }: {
+  environment.shells = [ pkgs.nushell ];
   environment.systemPackages = with pkgs; [
     vim
     radicle-node
@@ -84,5 +85,6 @@
   users.users.${username} = {
     name = username;
     home = "/Users/${username}";
+    shell = pkgs.nushell;
   };
 }
