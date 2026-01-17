@@ -238,11 +238,8 @@
 (add-hook 'nix-ts-mode-hook #'eglot-ensure)
 (add-to-list 'eglot-server-programs '(nix-ts-mode . ("nil")))
 
-(setq haskell-ts-use-indent t)
-(require 'haskell-ts-mode)
-(add-hook 'haskell-ts-mode-hook #'eglot-ensure)
-(add-to-list 'interpreter-mode-alist '("runghc" . haskell-ts-mode))
-(add-to-list 'interpreter-mode-alist '("runhaskell" . haskell-ts-mode))
+(require 'haskell-mode)
+(add-hook 'haskell-mode-hook #'eglot-ensure)
 
 (require 'proof-general)
 (setq proof-three-window-mode-policy 'hybrid)

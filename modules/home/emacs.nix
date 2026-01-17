@@ -50,7 +50,7 @@
       company
       company-coq
       nix-ts-mode
-      haskell-ts-mode
+      haskell-mode
       proof-general
       just-ts-mode
       (treesit-grammars.with-grammars (p: with p; [
