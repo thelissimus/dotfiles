@@ -58,7 +58,7 @@
 (evil-mode 1)
 (evil-collection-init)
 (evil-multiedit-default-keybinds)
-(global-set-key (kbd "M-.") 'xref-go-forward)
+(define-key evil-normal-state-map (kbd "M-.") 'xref-go-forward)
 
 (require 'projectile)
 (setq projectile-enable-caching 'persistent)
