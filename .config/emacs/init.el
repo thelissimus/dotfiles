@@ -13,6 +13,7 @@
 (setf (cdr (assq 'truncation fringe-indicator-alist)) '(nil nil))
 (setf (cdr (assq 'continuation fringe-indicator-alist)) '(nil nil))
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
+(add-hook 'prog-mode-hook #'hl-line-mode)
 (setq display-line-numbers-type 'relative)
 (setq display-line-numbers-width-start t)
 (setq confirm-kill-emacs 'yes-or-no-p)
@@ -104,16 +105,6 @@
 (require 'olivetti)
 (setq-default olivetti-body-width 140)
 
-(require 'highlight-indent-guides)
-(add-hook 'prog-mode-hook #'hl-line-mode)
-(add-hook 'prog-mode-hook #'highlight-indent-guides-mode)
-(setq highlight-indent-guides-method 'bitmap)
-(setq highlight-indent-guides-bitmap-function #'highlight-indent-guides--bitmap-line)
-(setq highlight-indent-guides-auto-character-face-perc 50)
-(setq highlight-indent-guides-highlighter-function
-      (lambda (lvl resp disp)
-        (and (< 0 lvl) (highlight-indent-guides--highlighter-default lvl resp disp))))
-
 (require 'hl-todo)
 (setq hl-todo-keyword-faces
       '(("TODO" . (:inherit warning :inverse-video t))
@@ -131,9 +122,6 @@
 (super-save-mode 1)
 (setq super-save-auto-save-when-idle t)
 (setq super-save-idle-duration 1)
-
-(require 'ws-butler)
-(add-hook 'prog-mode-hook #'ws-butler-mode)
 
 ;; git
 (require 'magit)
