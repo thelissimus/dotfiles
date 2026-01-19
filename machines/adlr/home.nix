@@ -17,6 +17,7 @@ in
     nushell
     zathura
     vscode
+    yazi
   ];
 
   home.stateVersion = "24.05";

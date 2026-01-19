@@ -1,6 +1,6 @@
 { ... }:
 {
-  programs.zoxide = {
+  programs.yazi = {
     enable = true;
     enableNushellIntegration = true;
   };
