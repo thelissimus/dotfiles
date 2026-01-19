@@ -17,12 +17,10 @@
       doom-modeline
       olivetti
 
-      highlight-indent-guides
       hl-todo
 
       envrc
       super-save
-      ws-butler
       evil
       evil-collection
       evil-multiedit
