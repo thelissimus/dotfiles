@@ -57,6 +57,7 @@
 (evil-mode 1)
 (evil-collection-init)
 (evil-multiedit-default-keybinds)
+(global-set-key (kbd "M-.") 'xref-go-forward)
 
 (require 'projectile)
 (setq projectile-enable-caching 'persistent)
@@ -240,6 +241,9 @@
 
 (require 'haskell-mode)
 (add-hook 'haskell-mode-hook #'eglot-ensure)
+(evil-define-key 'normal haskell-mode-map
+  ">" 'haskell-indentation-indent-line
+  "<" 'haskell-indentation-indent-backwards)
 
 (require 'proof-general)
 (setq proof-three-window-mode-policy 'hybrid)
