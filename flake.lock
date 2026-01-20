@@ -507,7 +507,8 @@
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
         "nixpkgs": "nixpkgs_3",
-        "nur": "nur"
+        "nur": "nur",
+        "rvarunrathod-tap": "rvarunrathod-tap"
       }
     },
     "rv-nix-tools": {
@@ -545,6 +546,22 @@
         "owner": "runtimeverification",
         "repo": "rv-nix-tools",
         "rev": "854d4f05ea78547d46e807b414faad64cea10ae4",
+        "type": "github"
+      }
+    },
+    "rvarunrathod-tap": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1768327195,
+        "narHash": "sha256-22g5utkjPYOOSENvO9fQDoQxLw/cehpUka0S4pb9Mf4=",
+        "owner": "rvarunrathod",
+        "repo": "homebrew-tap",
+        "rev": "bf3c4daa65a83abd14350f0892a9f2c6f8573a0b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rvarunrathod",
+        "repo": "homebrew-tap",
         "type": "github"
       }
     },
