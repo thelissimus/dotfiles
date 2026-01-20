@@ -31,6 +31,10 @@
       url = "github:nikitabobko/homebrew-tap";
       flake = false;
     };
+    rvarunrathod-tap = {
+      url = "github:rvarunrathod/homebrew-tap";
+      flake = false;
+    };
   };
 
   outputs =
@@ -146,6 +150,7 @@
                 user = username;
                 taps = {
                   "nikitabobko/homebrew-tap" = inputs.nikitabobko-tap;
+                  "rvarunrathod/homebrew-tap" = inputs.rvarunrathod-tap;
                 };
                 mutableTaps = false;
                 autoMigrate = true;

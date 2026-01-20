@@ -16,6 +16,7 @@
     brews = [ ];
     casks = [
       "nikitabobko/tap/aerospace"
+      "rvarunrathod/tap/hifidelity"
       "alloy"
       "alt-tab"
       "amethyst"
