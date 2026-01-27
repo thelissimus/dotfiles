@@ -14,6 +14,8 @@
 (setf (cdr (assq 'continuation fringe-indicator-alist)) '(nil nil))
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 (add-hook 'prog-mode-hook #'hl-line-mode)
+(add-hook 'prog-mode-hook #'olivetti-mode)
+
 (setq display-line-numbers-type 'relative)
 (setq display-line-numbers-width-start t)
 (setq confirm-kill-emacs 'yes-or-no-p)
@@ -47,6 +49,10 @@
 (setq create-lockfiles nil)
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
+
+(setq insert-directory-program nil)
+(require 'ls-lisp)
+(setq ls-lisp-use-insert-directory-program nil)
 
 ;; modal editing
 (setq evil-want-keybinding nil)
