@@ -239,6 +239,11 @@
   ">" 'haskell-indentation-indent-line
   "<" 'haskell-indentation-indent-backwards)
 
+(require 'tuareg)
+(require 'utop)
+(add-hook 'tuareg-mode-hook #'eglot-ensure)
+(add-hook 'tuareg-mode-hook #'utop-minor-mode)
+
 (require 'proof-general)
 (setq proof-three-window-mode-policy 'hybrid)
 (require 'company-coq)
