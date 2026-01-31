@@ -70,6 +70,7 @@
 
         tree-sitter-svelte
         tree-sitter-typescript
+        tree-sitter-tsx
         tree-sitter-javascript
         tree-sitter-css
 
