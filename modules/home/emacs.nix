@@ -49,6 +49,8 @@
       company-coq
       nix-ts-mode
       haskell-mode
+      tuareg
+      utop
       proof-general
       (trivialBuild {
         pname = "svelte-ts-mode";

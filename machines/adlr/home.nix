@@ -77,10 +77,10 @@ in
     ocaml
     opam
     dune_3
-    ocamlPackages.merlin
     ocamlPackages.ocaml-lsp
     ocamlPackages.odoc
     ocamlPackages.ocamlformat
+    ocamlPackages.utop
     # JS
     nodejs_20
     nodePackages.pnpm
