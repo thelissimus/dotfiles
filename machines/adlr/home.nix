@@ -84,6 +84,7 @@ in
     # JS
     nodejs_20
     nodePackages.pnpm
+    svelte-language-server
     # Nix
     nil
     nixd

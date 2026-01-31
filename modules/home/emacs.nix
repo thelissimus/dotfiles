@@ -50,11 +50,26 @@
       nix-ts-mode
       haskell-mode
       proof-general
+      (trivialBuild {
+        pname = "svelte-ts-mode";
+        version = "7fdb9816535692bfd8cd85baa0f2bad052369233";
+        src = pkgs.fetchFromGitHub {
+          owner = "leafOfTree";
+          repo = "svelte-ts-mode";
+          rev = "7fdb9816535692bfd8cd85baa0f2bad052369233";
+          hash = "sha256-Fco4N5d8Oxg64xebhWh1BnsPXXnCkyX/A+cjHUew5oQ=";
+        };
+      })
       just-ts-mode
       (treesit-grammars.with-grammars (p: with p; [
         tree-sitter-nix
         tree-sitter-haskell
         tree-sitter-elisp
+
+        tree-sitter-svelte
+        tree-sitter-typescript
+        tree-sitter-javascript
+        tree-sitter-css
 
         tree-sitter-bash
         tree-sitter-json
