@@ -246,6 +246,11 @@
 
 (add-hook 'emacs-lisp-mode-hook (lambda () (treesit-parser-create 'elisp)))
 
+(require 'svelte-ts-mode)
+(add-to-list 'auto-mode-alist '("\\.svelte\\'" . svelte-ts-mode))
+(add-hook 'svelte-ts-mode-hook #'eglot-ensure)
+(add-to-list 'eglot-server-programs '(svelte-ts-mode . ("svelteserver" "--stdio")))
+
 (add-to-list 'auto-mode-alist '("\\.sh\\'" . bash-ts-mode))
 (add-to-list 'auto-mode-alist '("\\.bash\\'" . bash-ts-mode))
 (add-to-list 'interpreter-mode-alist '("sh" . bash-ts-mode))
