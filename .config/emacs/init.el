@@ -68,7 +68,6 @@
 
 (require 'projectile)
 (setq projectile-enable-caching 'persistent)
-(setq projectile-cache-file ".projectile-cache.eld.log")
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (projectile-mode 1)
 
@@ -183,7 +182,7 @@
 (require 'consult-todo)
 (require 'consult-hoogle)
 (global-set-key (kbd "C-x b") #'consult-buffer)
-(consult-customize consult--source-buffer :hidden t :default nil)
+(consult-customize consult-source-buffer :hidden t :default nil)
 (add-to-list 'consult-buffer-sources persp-consult-source)
 
 (require 'embark)
