@@ -250,6 +250,12 @@
 
 (add-hook 'emacs-lisp-mode-hook (lambda () (treesit-parser-create 'elisp)))
 
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-ts-mode))
+(add-hook 'rust-ts-mode-hook #'eglot-ensure)
+
+(add-to-list 'auto-mode-alist '("\\.py\\'" . python-ts-mode))
+(add-hook 'python-ts-mode-hook #'eglot-ensure)
+
 (require 'svelte-ts-mode)
 (add-to-list 'auto-mode-alist '("\\.svelte\\'" . svelte-ts-mode))
 (add-hook 'svelte-ts-mode-hook #'eglot-ensure)

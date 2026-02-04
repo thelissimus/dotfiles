@@ -68,6 +68,8 @@
         tree-sitter-nix
         tree-sitter-haskell
         tree-sitter-elisp
+        tree-sitter-rust
+        tree-sitter-python
 
         tree-sitter-svelte
         tree-sitter-typescript
