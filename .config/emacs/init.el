@@ -200,6 +200,9 @@
 (add-hook 'prog-mode-hook #'flymake-mode)
 (add-hook 'eglot-managed-mode-hook (lambda () (eglot-inlay-hints-mode -1)))
 (eglot-booster-mode 1)
+(setq-default eglot-workspace-configuration
+              '(:haskell (:formattingProvider "fourmolu")
+                :nil (:formatting (:command ["nixpkgs-fmt"]))))
 
 (require 'eldoc-box)
 (setq eldoc-box-clear-with-C-g t)
