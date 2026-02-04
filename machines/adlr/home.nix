@@ -104,5 +104,7 @@ in
     llvmPackages_19.libllvm
     # .NET
     # dotnet-sdk_10
+    # Python
+    pyright
   ];
 }
