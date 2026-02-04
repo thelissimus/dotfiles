@@ -7,6 +7,7 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+(which-key-mode 1)
 (set-face-attribute 'default nil :family "Mononoki" :height 180 :weight 'semi-bold)
 (setq-default line-spacing 0.2)
 (setq-default truncate-lines t)
