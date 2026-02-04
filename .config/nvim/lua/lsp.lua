@@ -101,15 +101,11 @@ vim.diagnostic.config({
 	severity_sort = false,
 })
 
-require("nvim-treesitter.configs").setup({
-	auto_install = false,
-	highlight = {
-		enable = true,
-		additional_vim_regex_highlighting = false,
-	},
-	indent = {
-		enable = false,
-	}
+vim.treesitter.start = vim.treesitter.start or function() end
+vim.api.nvim_create_autocmd("FileType", {
+	callback = function()
+		pcall(vim.treesitter.start)
+	end
 })
 
 require("nvim-tree").setup()
