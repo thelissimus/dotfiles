@@ -63,6 +63,7 @@
         };
       })
       just-ts-mode
+      markdown-mode
       (treesit-grammars.with-grammars (p: with p; [
         tree-sitter-nix
         tree-sitter-haskell
