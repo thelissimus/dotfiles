@@ -201,10 +201,16 @@
 (require 'eglot)
 (require 'eglot-booster)
 (setq eglot-booster-io-only t)
-(setq flymake-show-diagnostics-at-end-of-line t)
 (add-hook 'prog-mode-hook #'flymake-mode)
 (add-hook 'eglot-managed-mode-hook (lambda () (eglot-inlay-hints-mode -1)))
 (eglot-booster-mode 1)
+
+;; sideline instead of flymake-show-diagnostics-at-end-of-line
+;; due to cursor jumping bug (GNU bugs #73863, #76064)
+(require 'sideline)
+(require 'sideline-flymake)
+(setq sideline-backends-right '(sideline-flymake))
+(add-hook 'flymake-mode-hook #'sideline-mode)
 (setq-default eglot-workspace-configuration
               '(:haskell (:formattingProvider "fourmolu")
                 :nil (:formatting (:command ["nixpkgs-fmt"]))))
