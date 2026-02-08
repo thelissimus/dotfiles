@@ -70,6 +70,8 @@
         tree-sitter-elisp
         tree-sitter-rust
         tree-sitter-python
+        tree-sitter-c
+        tree-sitter-cpp
 
         tree-sitter-svelte
         tree-sitter-typescript
