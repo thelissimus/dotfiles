@@ -261,6 +261,14 @@
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-ts-mode))
 (add-hook 'rust-ts-mode-hook #'eglot-ensure)
 
+(add-to-list 'auto-mode-alist '("\\.c\\'" . c-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.cc\\'" . c++-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.cpp\\'" . c++-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.hpp\\'" . c++-ts-mode))
+(add-hook 'c-ts-mode-hook #'eglot-ensure)
+(add-hook 'c++-ts-mode-hook #'eglot-ensure)
+
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-ts-mode))
 (add-hook 'python-ts-mode-hook #'eglot-ensure)
 
