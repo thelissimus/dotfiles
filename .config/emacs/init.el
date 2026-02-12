@@ -167,7 +167,6 @@
 (global-wakatime-mode 1)
 
 (require 'editorconfig)
-(editorconfig-mode 1)
 
 (require 'vertico)
 (vertico-mode 1)
