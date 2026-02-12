@@ -86,6 +86,12 @@
           version = "0.5.5";
           sha256 = "yJrzOBQbNitQMbdMxWwO/VFMk3Bh4azwZEnPiIEiQr0=";
         }
+        {
+          name = "slipshow";
+          publisher = "Slipshow";
+          version = "0.0.7";
+          sha256 = "Q0/EbKFgtO29F0PmLQjDQOyEID2lsiOwET4i3lUmRO8=";
+        }
       ];
       keybindings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/keybindings.json);
       userSettings = builtins.fromJSON (builtins.readFile ../../.config/Code/User/settings.json);
