@@ -44,7 +44,7 @@ in
     # Documents
     mdbook
     mdbook-toc
-    texlive.combined.scheme-medium
+    texlive.combined.scheme-full
     slipshow
     # Media
     ffmpeg-full
