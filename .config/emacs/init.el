@@ -219,7 +219,7 @@
 (evil-define-key 'normal 'global (kbd "g h") 'eldoc-box-help-at-point)
 
 (require 'company)
-(setq company-backends '((company-capf company-dabbrev-code)))
+(setq company-backends '((company-capf company-files company-dabbrev-code)))
 (setq company-minimum-prefix-length 1)
 (setq company-idle-delay (lambda () (if (company-in-string-or-comment) nil 0.1)))
 (add-hook 'after-init-hook 'global-company-mode)
