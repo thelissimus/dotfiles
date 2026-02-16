@@ -6,6 +6,8 @@ in
   imports = with hp; [
     zoxide
     bash
+    jq
+    btop
     direnv
     emacs
     git
@@ -30,10 +32,8 @@ in
     librsvg
     emacs-lsp-booster
     # CLI
-    difftastic
-    htop
-    jq
     ripgrep
+    ripgrep-all
     rlwrap
     spek
     tokei
@@ -41,6 +41,7 @@ in
     just
     claude-code
     wakatime-cli
+    wget
     # Documents
     mdbook
     mdbook-toc

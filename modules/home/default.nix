@@ -1,7 +1,9 @@
 { pkgs, lib, ... }:
 {
   bash = import ./bash.nix { inherit pkgs; };
+  btop = import ./btop.nix { inherit pkgs; };
   chromium = import ./chromium.nix { inherit pkgs lib; };
+  jq = import ./jq.nix { inherit pkgs lib; };
   direnv = import ./direnv.nix { inherit pkgs; };
   emacs = ./emacs.nix;
   firefox = import ./firefox.nix { inherit pkgs; };
