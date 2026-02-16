@@ -8,9 +8,8 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (which-key-mode 1)
-(set-face-attribute 'default nil :family "Mononoki" :height 180 :weight 'semi-bold)
+(set-face-attribute 'default nil :family "Mononoki" :height 200 :weight 'semi-bold)
 (set-face-attribute 'fixed-pitch nil :family "Mononoki")
-(setq-default line-spacing 0.2)
 (setq-default truncate-lines t)
 (setf (cdr (assq 'truncation fringe-indicator-alist)) '(nil nil))
 (setf (cdr (assq 'continuation fringe-indicator-alist)) '(nil nil))
@@ -336,7 +335,7 @@
                   (reusable-frames . visible)
                   (window-height . 0.4))))
 
-(load-theme 'gruvbox-dark-medium t)
+(load-theme 'gruvbox-light-hard t)
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file t)
