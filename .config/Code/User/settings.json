@@ -29,13 +29,12 @@
 	"editor.cursorSurroundingLines": 8,
 	"editor.fontFamily": "'Mononoki', Iosevka, 'SF Mono', monospace",
 	"editor.fontLigatures": false,
-	"editor.fontSize": 15,
+	"editor.fontSize": 17,
 	"editor.fontWeight": "600",
 	"editor.hover.enabled": "onKeyboardModifier",
 	"editor.indentSize": "tabSize",
 	"editor.inlayHints.enabled": "off",
 	"editor.inlayHints.fontFamily": "SF Pro Display",
-	"editor.lineHeight": 1.6,
 	"editor.lineNumbers": "relative",
 	"editor.linkedEditing": true,
 	"editor.minimap.enabled": false,
@@ -121,7 +120,7 @@
 	"window.title": "${dirty}${separator}${rootName}${separator}${profileName}${separator}",
 	"window.titleBarStyle": "custom",
 	"window.zoomLevel": 1,
-	"workbench.colorTheme": "Gruvbox Dark Medium",
+	"workbench.colorTheme": "Gruvbox Light Hard",
 	"workbench.iconTheme": "material-icon-theme",
 	"workbench.productIconTheme": "material-product-icons"
 }
