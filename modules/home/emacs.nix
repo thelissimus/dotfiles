@@ -25,6 +25,7 @@
       evil-collection
       evil-multiedit
       gruvbox-theme
+      auto-dark
       magit
       diff-hl
       difftastic
