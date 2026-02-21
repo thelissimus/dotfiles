@@ -335,7 +335,9 @@
                   (reusable-frames . visible)
                   (window-height . 0.4))))
 
-(load-theme 'gruvbox-light-hard t)
+(require 'auto-dark)
+(setq auto-dark-themes '((gruvbox-dark-medium) (gruvbox-light-hard)))
+(auto-dark-mode 1)
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file t)
