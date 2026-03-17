@@ -46,8 +46,6 @@
 
       eglot-booster
       eldoc-box
-      sideline
-      sideline-flymake
       company
       company-coq
       nix-ts-mode
