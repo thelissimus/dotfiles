@@ -39,6 +39,8 @@
       "keepassxc"
       "keka"
       "linear-linear"
+      "lm-studio"
+      "losslesscut"
       "lulu"
       "macfuse"
       "mullvad-vpn"
