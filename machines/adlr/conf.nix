@@ -52,7 +52,6 @@
       "simplex"
       "sioyek"
       "slack"
-      "smoothscroll"
       "steam"
       "telegram-desktop"
       "ticktick"
