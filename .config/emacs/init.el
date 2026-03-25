@@ -279,6 +279,10 @@
 (add-to-list 'auto-mode-alist '("\\.bash\\'" . bash-ts-mode))
 (add-to-list 'interpreter-mode-alist '("sh" . bash-ts-mode))
 (add-to-list 'interpreter-mode-alist '("bash" . bash-ts-mode))
+(add-to-list 'eglot-server-programs '((sh-mode bash-ts-mode) . ("bash-language-server" "start")))
+(add-hook 'bash-ts-mode-hook #'eglot-ensure)
+(add-hook 'sh-mode-hook #'eglot-ensure)
+
 (add-to-list 'auto-mode-alist '("\\.json\\'" . json-ts-mode))
 (require 'just-ts-mode)
 (add-to-list 'auto-mode-alist '("/[Jj]ustfile\\'" . just-ts-mode))

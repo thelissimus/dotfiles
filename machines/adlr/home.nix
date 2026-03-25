@@ -64,6 +64,9 @@ in
     cornelis
     # Alloy
     alloy6
+    # Bash
+    bash-language-server
+    shellcheck
     # K Framework
     # k
     # Coq
