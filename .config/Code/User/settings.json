@@ -120,7 +120,7 @@
 	"window.title": "${dirty}${separator}${rootName}${separator}${profileName}${separator}",
 	"window.titleBarStyle": "custom",
 	"window.zoomLevel": 1,
-	"workbench.colorTheme": "Gruvbox Light Hard",
+	"workbench.colorTheme": "Gruvbox Dark Medium",
 	"workbench.iconTheme": "material-icon-theme",
 	"workbench.productIconTheme": "material-product-icons"
 }
