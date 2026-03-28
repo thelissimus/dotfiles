@@ -254,6 +254,9 @@
 (require 'company-coq)
 (add-hook 'coq-mode-hook #'company-coq-mode)
 
+(require 'tagref)
+(add-hook 'prog-mode-hook #'tagref-mode)
+
 (add-hook 'emacs-lisp-mode-hook (lambda () (treesit-parser-create 'elisp)))
 
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-ts-mode))
