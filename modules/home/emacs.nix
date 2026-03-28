@@ -63,6 +63,17 @@
           hash = "sha256-Fco4N5d8Oxg64xebhWh1BnsPXXnCkyX/A+cjHUew5oQ=";
         };
       })
+      (trivialBuild {
+        pname = "tagref";
+        version = "0c805b2cf31477ea3d99cd9758c78b0ef1f6d35a";
+        src = pkgs.fetchFromGitHub {
+          owner = "thelissimus";
+          repo = "tagref.el";
+          rev = "0c805b2cf31477ea3d99cd9758c78b0ef1f6d35a";
+          hash = "sha256-i2A/spHEkxCXvXGUXOyiuiJz2dosikiLZ85cYzvh1+8=";
+        };
+        packageRequires = [ projectile ];
+      })
       just-ts-mode
       markdown-mode
       (treesit-grammars.with-grammars (p: with p; [
