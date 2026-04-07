@@ -210,7 +210,7 @@ in
     llvmPackages_19.clang-unwrapped
     # JS
     nodejs_20
-    nodePackages.pnpm
+    pnpm
     # Nix
     nil
     nixd

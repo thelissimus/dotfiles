@@ -87,7 +87,7 @@ in
     ocamlPackages.utop
     # JS
     nodejs_20
-    nodePackages.pnpm
+    pnpm
     svelte-language-server
     # Nix
     nil
