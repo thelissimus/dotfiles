@@ -39,7 +39,6 @@ in
     tokei
     tree
     just
-    claude-code
     wakatime-cli
     wget
     # Documents

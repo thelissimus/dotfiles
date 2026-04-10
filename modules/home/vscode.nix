@@ -75,12 +75,6 @@
           sha256 = "hrzPNPaG8LPNMJq/0uyOS8jfER1Q0CyFlwR42KmTz8g=";
         }
         {
-          name = "claude-code";
-          publisher = "anthropic";
-          version = "2.0.65";
-          sha256 = "nHZCEEWEgBdxAzpLFkQsTwNPx3JxuwhgwxKgW8LJ450=";
-        }
-        {
           name = "specforge";
           publisher = "imiron";
           version = "0.5.5";
