@@ -25,6 +25,7 @@
       "claude"
       "deepl"
       "discord"
+      "vesktop"
       "figma"
       "firefox"
       "flameshot"

@@ -87,6 +87,7 @@ in
     # JS
     nodejs_20
     pnpm
+    typescript-language-server
     svelte-language-server
     # Nix
     nil
