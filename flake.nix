@@ -52,7 +52,10 @@
           name = "sf-pro";
           version = "0.3.0";
 
-          src = ./.fonts/SF-Pro.dmg;
+          src = prev.fetchurl {
+            url = "https://github.com/thelissimus/dotfiles/releases/download/sf-pro/SF-Pro.dmg";
+            sha256 = "21c701d2e5967cf0a2747617eac02eb2e1195fdd3a755628f086aa797eff3bcf";
+          };
 
           unpackPhase = ''
             undmg $src
