@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ config, pkgs, lib, ... }:
 let
   inherit (lib.hm.gvariant) mkTuple mkUint32;
   hp = import ../../modules/home { inherit pkgs lib; };
@@ -35,6 +35,7 @@ in
 
   gtk = {
     enable = true;
+    gtk4.theme = config.gtk.theme;
   };
 
   dconf.settings = {
