@@ -101,8 +101,10 @@ in
     zig
     zls
     # SMT
-    z3
-    cvc5
+    (lib.hiPrio z3)
+    (lib.hiPrio cvc5)
+    # SAW
+    saw-tools
     # LLVM
     llvmPackages_19.clang-unwrapped
     llvmPackages_19.libllvm
