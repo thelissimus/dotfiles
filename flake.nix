@@ -215,6 +215,13 @@
           };
         };
         darwinPackages = self.darwinConfigurations."Keis-MacBook-Pro".pkgs;
+
+        templates = {
+          coq = {
+            path = ./templates/coq;
+            description = "Coq: coq, stdlib, coq-lsp";
+          };
+        };
       };
     };
 }

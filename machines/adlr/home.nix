@@ -68,14 +68,6 @@ in
     shellcheck
     # K Framework
     # k
-    # Coq
-    coq
-    rocqPackages.stdlib
-    coqPackages.stdpp
-    coqPackages.iris
-    coqPackages.HoTT
-    coqPackages.mathcomp
-    coqPackages.coq-lsp
     # OCaml
     ocaml
     opam
