@@ -68,14 +68,6 @@ in
     shellcheck
     # K Framework
     # k
-    # OCaml
-    ocaml
-    opam
-    dune_3
-    ocamlPackages.ocaml-lsp
-    ocamlPackages.odoc
-    ocamlPackages.ocamlformat
-    ocamlPackages.utop
     # JS
     nodejs_20
     pnpm

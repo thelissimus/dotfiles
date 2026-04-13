@@ -217,6 +217,10 @@
         darwinPackages = self.darwinConfigurations."Keis-MacBook-Pro".pkgs;
 
         templates = {
+          ocaml = {
+            path = ./templates/ocaml;
+            description = "OCaml: dune, ocaml-lsp, ocamlformat, utop";
+          };
           coq = {
             path = ./templates/coq;
             description = "Coq: coq, stdlib, coq-lsp";
