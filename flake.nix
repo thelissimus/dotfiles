@@ -217,6 +217,10 @@
         darwinPackages = self.darwinConfigurations."Keis-MacBook-Pro".pkgs;
 
         templates = {
+          agda = {
+            path = ./templates/agda;
+            description = "Agda: standard-library";
+          };
           ocaml = {
             path = ./templates/ocaml;
             description = "OCaml: dune, ocaml-lsp, ocamlformat, utop";

@@ -52,15 +52,6 @@ in
     optipng
     # Database
     sqlite
-    # Agda
-    (agda.withPackages (ps: with ps; [
-      standard-library
-      cubical
-      _1lab
-      generics
-      cubical-mini
-    ]))
-    cornelis
     # Alloy
     alloy6
     # Bash
