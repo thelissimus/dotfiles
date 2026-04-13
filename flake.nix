@@ -217,6 +217,10 @@
         darwinPackages = self.darwinConfigurations."Keis-MacBook-Pro".pkgs;
 
         templates = {
+          haskell = {
+            path = ./templates/haskell;
+            description = "Haskell: GHC 9.12";
+          };
           agda = {
             path = ./templates/agda;
             description = "Agda: standard-library";
