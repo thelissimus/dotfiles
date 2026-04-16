@@ -103,6 +103,9 @@
 
 (require 'doom-modeline)
 (setq doom-modeline-height 31)
+(setq doom-modeline-buffer-file-name-style 'relative-to-project)
+(setq doom-modeline-column-zero-based nil)
+(setq doom-modeline-indent-info t)
 (setq doom-modeline-total-line-number t)
 (setq doom-modeline-minor-modes nil)
 (column-number-mode 1)
