@@ -19,24 +19,30 @@
         "aarch64-darwin"
       ];
 
-      perSystem = { system, pkgs, ... }:
+      perSystem = { system, config, pkgs, ... }:
         let
           hpkgs = pkgs.haskell.packages.ghc912;
 
-          githooks = git-hooks.lib.${system}.run {
-            src = ./.;
-            hooks = {
-              statix.enable = true;
-              deadnix.enable = true;
-              fourmolu.enable = true;
-              cabal-fmt.enable = true;
-              nixpkgs-fmt.enable = true;
-            };
-          };
+          template = pkgs.haskell.lib.overrideCabal (hpkgs.callCabal2nix "" ./. { }) (_: {
+            doCheck = true;
+            doHaddock = false;
+            enableLibraryProfiling = false;
+            enableExecutableProfiling = false;
+          });
         in
         {
-          checks = {
-            inherit githooks;
+          imports = [
+            git-hooks.flakeModule
+          ];
+
+          packages.default = template;
+
+          pre-commit.settings.hooks = {
+            statix.enable = true;
+            deadnix.enable = true;
+            fourmolu.enable = true;
+            cabal-fmt.enable = true;
+            nixpkgs-fmt.enable = true;
           };
 
           devShells.default = pkgs.mkShell {
@@ -53,7 +59,7 @@
             ];
 
             shellHook = ''
-              ${githooks.shellHook}
+              ${config.pre-commit.installationScript}
             '';
           };
         };
