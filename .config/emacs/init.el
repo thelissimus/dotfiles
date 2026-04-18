@@ -72,18 +72,6 @@
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (projectile-mode 1)
 
-(require 'perspective)
-(customize-set-variable 'persp-mode-prefix-key (kbd "C-x x"))
-(customize-set-variable 'persp-state-default-file "~/.emacs.perspective")
-(customize-set-variable 'persp-modestring-short t)
-(add-hook 'kill-emacs-hook #'persp-state-save)
-(persp-mode 1)
-(add-hook 'emacs-startup-hook
-          (lambda ()
-            (when (file-exists-p persp-state-default-file)
-              (persp-state-load persp-state-default-file))))
-(require 'persp-projectile)
-
 (require 'nerd-icons)
 (require 'nerd-icons-dired)
 (add-hook 'dired-mode-hook #'nerd-icons-dired-mode)
@@ -189,7 +177,6 @@
 (require 'consult-hoogle)
 (global-set-key (kbd "C-x b") #'consult-buffer)
 (consult-customize consult-source-buffer :hidden t :default nil)
-(add-to-list 'consult-buffer-sources persp-consult-source)
 
 (require 'embark)
 (require 'embark-consult)

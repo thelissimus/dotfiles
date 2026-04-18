@@ -10,8 +10,6 @@
     extraPackages = epkgs: with epkgs; [
       dashboard
       projectile
-      perspective
-      persp-projectile
       nerd-icons
       nerd-icons-dired
       doom-modeline
