@@ -67,6 +67,8 @@
 (evil-multiedit-default-keybinds)
 (define-key evil-normal-state-map (kbd "M-.") 'xref-go-forward)
 
+(require 'project)
+
 (require 'nerd-icons)
 (require 'nerd-icons-dired)
 (add-hook 'dired-mode-hook #'nerd-icons-dired-mode)
