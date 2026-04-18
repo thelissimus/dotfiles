@@ -52,6 +52,8 @@ in
     optipng
     # Database
     sqlite
+    # Agda
+    agda
     # Alloy
     alloy6
     # Bash
