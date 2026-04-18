@@ -67,11 +67,6 @@
 (evil-multiedit-default-keybinds)
 (define-key evil-normal-state-map (kbd "M-.") 'xref-go-forward)
 
-(require 'projectile)
-(setq projectile-enable-caching 'persistent)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-(projectile-mode 1)
-
 (require 'nerd-icons)
 (require 'nerd-icons-dired)
 (add-hook 'dired-mode-hook #'nerd-icons-dired-mode)
@@ -82,7 +77,7 @@
 (setq dashboard-center-content t)
 (setq dashboard-vertically-center-content t)
 (setq dashboard-items '((recents . 5) (projects . 5) (bookmarks . 5)))
-(setq dashboard-projects-backend 'projectile)
+(setq dashboard-projects-backend 'project-el)
 (setq dashboard-display-icons-p t)
 (setq dashboard-icon-type 'nerd-icons)
 (setq dashboard-set-heading-icons t)

@@ -9,7 +9,6 @@
     extraConfig = builtins.readFile ../../.config/emacs/init.el;
     extraPackages = epkgs: with epkgs; [
       dashboard
-      projectile
       nerd-icons
       nerd-icons-dired
       doom-modeline
