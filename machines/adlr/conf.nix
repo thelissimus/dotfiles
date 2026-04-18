@@ -34,7 +34,6 @@
       "font-sf-mono"
       "font-symbols-only-nerd-font"
       "ghostty"
-      "gitbutler"
       "iina"
       "iterm2"
       "keepassxc"
