@@ -41,6 +41,7 @@ in
     just
     wakatime-cli
     wget
+    gitlogue
     # Documents
     mdbook
     mdbook-toc
