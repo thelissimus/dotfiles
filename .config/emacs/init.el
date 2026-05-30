@@ -55,6 +55,11 @@
 (require 'ls-lisp)
 (setq ls-lisp-use-insert-directory-program nil)
 
+(when (boundp 'mac-command-modifier)
+  (setq mac-command-modifier 'super
+        mac-option-modifier 'meta
+        mac-right-option-modifier 'none))
+
 ;; modal editing
 (setq evil-want-keybinding nil)
 (setq evil-want-fine-undo t)
