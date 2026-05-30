@@ -39,6 +39,7 @@
       "keepassxc"
       "keka"
       "linear-linear"
+      "linearmouse"
       "lm-studio"
       "losslesscut"
       "lulu"
