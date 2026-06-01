@@ -64,7 +64,7 @@ in
     # K Framework
     # k
     # JS
-    nodejs_20
+    nodejs_24
     pnpm
     typescript-language-server
     svelte-language-server

@@ -56,7 +56,6 @@
 
     displayManager = {
       gdm.enable = true;
-      gdm.wayland = false;
     };
 
     desktopManager = {

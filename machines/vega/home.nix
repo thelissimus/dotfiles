@@ -210,7 +210,7 @@ in
     gdb
     llvmPackages_19.clang-unwrapped
     # JS
-    nodejs_20
+    nodejs_24
     pnpm
     # Nix
     nil
