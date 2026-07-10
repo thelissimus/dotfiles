@@ -46,10 +46,10 @@ in
     # Documents
     mdbook
     mdbook-toc
-    texlive.combined.scheme-full
+    texliveFull
     slipshow
     # Media
-    ffmpeg-full
+    (ffmpeg-full.override { withWhisper = false; })
     yt-dlp
     optipng
     # Database
