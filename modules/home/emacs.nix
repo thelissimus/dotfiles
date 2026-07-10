@@ -30,7 +30,6 @@
       vundo
       winum
       wakatime-mode
-      tabspaces
 
       vertico
       orderless

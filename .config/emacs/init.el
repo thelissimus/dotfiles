@@ -73,30 +73,6 @@
 (define-key evil-normal-state-map (kbd "M-.") 'xref-go-forward)
 
 (require 'project)
-(require 'tab-bar)
-(setq tab-bar-show 1)
-(setq tab-bar-close-button-show nil)
-(setq tab-bar-new-tab-choice "*scratch*")
-(setq tab-bar-tab-hints t)
-(setq tab-bar-format '(tab-bar-format-tabs tab-bar-separator))
-(tab-bar-history-mode 1)
-(require 'tabspaces)
-(setq tabspaces-use-filtered-buffers-as-default t
-      tabspaces-default-tab "Home"
-      tabspaces-remove-to-default t
-      tabspaces-session t
-      tabspaces-session-auto-restore t
-      tabspaces-include-buffers '("*scratch*"))
-(global-set-key (kbd "s-t") #'tabspaces-open-or-create-project-and-workspace)
-(global-set-key (kbd "s-T") #'tabspaces-switch-or-create-workspace)
-(global-set-key (kbd "s-w") #'tabspaces-close-workspace)
-(global-set-key (kbd "s-]") #'tab-next)
-(global-set-key (kbd "s-[") #'tab-previous)
-(global-set-key (kbd "s-x") #'execute-extended-command)
-(dotimes (i 9)
-  (global-set-key (kbd (format "s-%d" (1+ i)))
-                  (let ((n (1+ i))) (lambda () (interactive) (tab-bar-select-tab n)))))
-(tabspaces-mode 1)
 
 (require 'nerd-icons)
 (require 'nerd-icons-dired)
