@@ -57,6 +57,7 @@
       "telegram-desktop"
       "ticktick"
       "ungoogled-chromium"
+      "google-chrome"
       "unnaturalscrollwheels"
       "vlc"
       "wezterm"
