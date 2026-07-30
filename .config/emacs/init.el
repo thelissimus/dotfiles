@@ -171,6 +171,7 @@
 (global-set-key (kbd "M-0") 'winum-select-window-0-or-10)
 
 (require 'wakatime-mode)
+(setq wakatime-cli-path (executable-find "wakatime-cli"))
 (global-wakatime-mode 1)
 
 (require 'editorconfig)
