@@ -48,6 +48,7 @@ in
     mdbook-toc
     texliveFull
     slipshow
+    newsboat
     # Media
     (ffmpeg-full.override { withWhisper = false; })
     yt-dlp
