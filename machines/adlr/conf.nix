@@ -38,7 +38,7 @@
       "iterm2"
       "keepassxc"
       "keka"
-      "linear-linear"
+      "linear"
       "linearmouse"
       "lm-studio"
       "losslesscut"

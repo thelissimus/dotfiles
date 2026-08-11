@@ -1,6 +1,6 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, config, ... }:
 let
-  hp = import ../../modules/home { inherit pkgs lib; };
+  hp = import ../../modules/home { inherit pkgs lib config; };
 in
 {
   imports = with hp; [
@@ -50,7 +50,10 @@ in
     slipshow
     newsboat
     # Media
-    (ffmpeg-full.override { withWhisper = false; })
+    (ffmpeg-full.override {
+      withFrei0r = false;
+      withWhisper = false;
+    })
     yt-dlp
     optipng
     # Database

@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 let
   inherit (lib.hm.gvariant) mkTuple mkUint32;
-  hp = import ../../modules/home { inherit pkgs lib; };
+  hp = import ../../modules/home { inherit pkgs lib config; };
 in
 {
   imports = with hp; [

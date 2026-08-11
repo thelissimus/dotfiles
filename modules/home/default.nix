@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, config, ... }:
 {
   bash = import ./bash.nix { inherit pkgs; };
   btop = import ./btop.nix { inherit pkgs; };
@@ -6,7 +6,7 @@
   jq = import ./jq.nix { inherit pkgs lib; };
   direnv = import ./direnv.nix { inherit pkgs; };
   emacs = ./emacs.nix;
-  firefox = import ./firefox.nix { inherit pkgs; };
+  firefox = import ./firefox.nix { inherit pkgs config; };
   git = import ./git.nix { inherit pkgs; };
   haskell = import ./haskell.nix { inherit pkgs; };
   java = import ./java.nix { inherit pkgs; };
