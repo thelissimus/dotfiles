@@ -13,6 +13,10 @@
     , git-hooks
     , ...
     }@inputs: flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        git-hooks.flakeModule
+      ];
+
       systems = [
         "x86_64-linux"
         "aarch64-linux"
@@ -31,10 +35,6 @@
           });
         in
         {
-          imports = [
-            git-hooks.flakeModule
-          ];
-
           packages.default = template;
 
           pre-commit.settings.hooks = {
